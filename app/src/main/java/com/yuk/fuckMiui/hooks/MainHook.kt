@@ -1,11 +1,11 @@
-package com.yuk.fuckMiui.hook
+package com.yuk.fuckMiui.hooks
 
 import com.github.kyuubiran.ezxhelper.init.EzXHelperInit
 import com.github.kyuubiran.ezxhelper.utils.Log
 import com.github.kyuubiran.ezxhelper.utils.Log.logexIfThrow
-import com.yuk.fuckMiui.hook.hooks.BaseHook
-import com.yuk.fuckMiui.hook.hooks.home.DoubleTapToSleep
-import com.yuk.fuckMiui.hook.hooks.home.SetDeviceLevel
+import com.yuk.fuckMiui.hooks.modules.BaseHook
+import com.yuk.fuckMiui.hooks.modules.home.DoubleTapToSleep
+import com.yuk.fuckMiui.hooks.modules.home.SetDeviceLevel
 import de.robv.android.xposed.IXposedHookLoadPackage
 import de.robv.android.xposed.callbacks.XC_LoadPackage
 

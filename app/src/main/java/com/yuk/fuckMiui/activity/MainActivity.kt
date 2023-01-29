@@ -6,6 +6,8 @@ import cn.fkj233.ui.activity.MIUIActivity
 import cn.fkj233.ui.dialog.MIUIDialog
 import com.yuk.fuckMiui.R
 import com.yuk.fuckMiui.activity.pages.MainPage
+import com.yuk.fuckMiui.activity.pages.MenuPage
+import com.yuk.fuckMiui.activity.pages.MiuiHomePage
 import kotlin.system.exitProcess
 
 class MainActivity : MIUIActivity() {
@@ -34,5 +36,7 @@ class MainActivity : MIUIActivity() {
     init {
         activity = this
         registerPage(MainPage::class.java)
+        registerPage(MenuPage::class.java)
+        registerPage(MiuiHomePage::class.java)
     }
 }

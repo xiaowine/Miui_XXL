@@ -15,7 +15,7 @@
     <string name="restart_scope_tips">确定重启作用域么？</string>
     <string name="restart_scope_finished">作用域重启完成</string>
 
-    <string name="miuihome">MiuiHome</string>
+    <string name="miuihome">系统桌面</string>
     <string name="double_tap_to_sleep">双击熄屏</string>
     <string name="double_tap_to_sleep_tips">双击桌面空白处熄灭屏幕。</string>
 </resources>

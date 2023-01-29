@@ -1,4 +1,4 @@
-package com.yuk.fuckMiui.hook.hooks.home
+package com.yuk.fuckMiui.hooks.modules.home
 
 import android.content.Context
 import android.content.Intent
@@ -8,8 +8,8 @@ import com.github.kyuubiran.ezxhelper.utils.getObject
 import com.github.kyuubiran.ezxhelper.utils.hookAllConstructorAfter
 import com.github.kyuubiran.ezxhelper.utils.hookBefore
 import com.github.kyuubiran.ezxhelper.utils.invokeMethodAuto
-import com.yuk.fuckMiui.hook.added.constructor.DoubleTapController
-import com.yuk.fuckMiui.hook.hooks.BaseHook
+import com.yuk.fuckMiui.hooks.added.constructor.DoubleTapController
+import com.yuk.fuckMiui.hooks.modules.BaseHook
 import com.yuk.fuckMiui.utils.getBoolean
 import de.robv.android.xposed.XposedHelpers
 

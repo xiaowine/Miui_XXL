@@ -1,4 +1,4 @@
-package com.yuk.fuckMiui.hook.added.constructor
+package com.yuk.fuckMiui.hooks.added.constructor
 
 import android.content.Context
 import android.os.SystemClock

@@ -1,9 +1,9 @@
-package com.yuk.fuckMiui.hook.hooks.home
+package com.yuk.fuckMiui.hooks.modules.home
 
 import com.github.kyuubiran.ezxhelper.utils.Log
 import com.github.kyuubiran.ezxhelper.utils.findMethod
 import com.github.kyuubiran.ezxhelper.utils.hookReturnConstant
-import com.yuk.fuckMiui.hook.hooks.BaseHook
+import com.yuk.fuckMiui.hooks.modules.BaseHook
 import com.yuk.fuckMiui.utils.checkVersionCode
 import com.yuk.miuiHomeR.utils.ktx.findClass
 import com.yuk.miuiHomeR.utils.ktx.hookBeforeMethod
