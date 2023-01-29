@@ -1,10 +1,7 @@
 package com.yuk.fuckMiui.utils
 
 import android.annotation.SuppressLint
-import android.content.res.Configuration
 import android.os.Build
-import android.util.TypedValue
-import com.github.kyuubiran.ezxhelper.init.InitFields
 import com.yuk.fuckMiui.BuildConfig
 import de.robv.android.xposed.XSharedPreferences
 import java.io.BufferedReader
@@ -12,18 +9,6 @@ import java.io.DataOutputStream
 import java.io.IOException
 import java.io.InputStreamReader
 import java.util.*
-
-fun dp2px(dpValue: Float): Int = TypedValue.applyDimension(
-    TypedValue.COMPLEX_UNIT_DIP, dpValue, InitFields.appContext.resources.displayMetrics
-).toInt()
-
-fun px2dp(pxValue: Int): Int = (pxValue / InitFields.appContext.resources.displayMetrics.density + 0.5f).toInt()
-
-fun getDensityDpi(): Int =
-    (InitFields.appContext.resources.displayMetrics.widthPixels / InitFields.appContext.resources.displayMetrics.density).toInt()
-
-fun isDarkMode(): Boolean =
-    InitFields.appContext.resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK == Configuration.UI_MODE_NIGHT_YES
 
 @SuppressLint("PrivateApi")
 @Suppress("RECEIVER_NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS")
@@ -52,14 +37,6 @@ fun checkMiuiVersion(): Float = when (getProp("ro.miui.ui.version.name")) {
 }
 
 fun checkAndroidVersion(): String = getProp("ro.build.version.release")
-
-fun checkVersionCode(): Long = InitFields.appContext.packageManager.getPackageInfo(InitFields.appContext.packageName, 0).longVersionCode
-
-@SuppressLint("DiscouragedApi")
-fun getCornerRadiusTop(): Int {
-    val resourceId = InitFields.appContext.resources.getIdentifier("rounded_corner_radius_top", "dimen", "android")
-    return if (resourceId > 0) InitFields.appContext.resources.getDimensionPixelSize(resourceId) else 100
-}
 
 fun exec(command: String): String {
     var process: Process? = null

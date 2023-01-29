@@ -18,9 +18,11 @@ class MenuPage : BasePage() {
                     dismiss()
                 }
                 setRButton(R.string.yes) {
-                    val command = arrayOf("am force-stop com.miui.home")
+                    val command = arrayOf("am force-stop com.miui.home", "am force-stop com.android.thememanager")
                     exec(command)
                     Toast.makeText(activity, getString(R.string.restart_scope_finished), Toast.LENGTH_SHORT).show()
+                    Thread.sleep(500)
+                    dismiss()
                 }
             }.show()
         }

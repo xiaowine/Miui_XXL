@@ -16,6 +16,14 @@
     <string name="restart_scope_finished">作用域重启完成</string>
 
     <string name="miuihome">系统桌面</string>
-    <string name="double_tap_to_sleep">双击熄屏</string>
-    <string name="double_tap_to_sleep_tips">双击桌面空白处熄灭屏幕。</string>
+    <string name="miuihome_double_tap_to_sleep">双击熄屏</string>
+    <string name="miuihome_double_tap_to_sleep_tips">双击桌面空白处熄灭屏幕。</string>
+    <string name="miuihome_highend_device">解除设备限制</string>
+    <string name="miuihome_highend_device_tips">将被默认识别为高端，开启该选项不会增加 GPU 性能开销。同时去除部分日志。</string>
+
+    <string name="thememanager">主题壁纸</string>
+    <string name="thememanager_remove_ads">去广告</string>
+    <string name="thememanager_remove_ads_tips">猜你喜欢内的广告将显示为空白卡片，其余位置的广告将完全移除。</string>
+    <string name="thememanager_fuck_validate_theme">主题破解</string>
+    <string name="thememanager_fuck_validate_theme_tips">允许应用第三方主题及付费字体，需要同时勾选系统框架并重新启动。</string>
 </resources>

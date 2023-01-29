@@ -1,6 +1,6 @@
 @file:Suppress("unused")
 
-package com.yuk.miuiHomeR.utils.ktx
+package com.yuk.fuckMiui.utils
 
 import android.annotation.SuppressLint
 import android.content.res.XResources

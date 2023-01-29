@@ -16,7 +16,7 @@ import de.robv.android.xposed.XposedHelpers
 object DoubleTapToSleep : BaseHook() {
     override fun init() {
 
-        if (!getBoolean("home_double_tap_to_sleep", false)) return
+        if (!getBoolean("miuihome_double_tap_to_sleep", false)) return
         hookAllConstructorAfter("com.miui.home.launcher.Workspace") {
             var mDoubleTapControllerEx = XposedHelpers.getAdditionalInstanceField(it.thisObject, "mDoubleTapControllerEx")
             if (mDoubleTapControllerEx != null) return@hookAllConstructorAfter
@@ -40,4 +40,5 @@ object DoubleTapToSleep : BaseHook() {
             )
         }
     }
+
 }

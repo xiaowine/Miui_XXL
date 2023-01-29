@@ -4,13 +4,15 @@ import com.github.kyuubiran.ezxhelper.utils.Log
 import com.github.kyuubiran.ezxhelper.utils.findMethod
 import com.github.kyuubiran.ezxhelper.utils.hookReturnConstant
 import com.yuk.fuckMiui.hooks.modules.BaseHook
-import com.yuk.fuckMiui.utils.checkVersionCode
-import com.yuk.miuiHomeR.utils.ktx.findClass
-import com.yuk.miuiHomeR.utils.ktx.hookBeforeMethod
-import com.yuk.miuiHomeR.utils.ktx.replaceMethod
+import com.yuk.fuckMiui.utils.findClass
+import com.yuk.fuckMiui.utils.getBoolean
+import com.yuk.fuckMiui.utils.hookBeforeMethod
+import com.yuk.fuckMiui.utils.replaceMethod
 
 object SetDeviceLevel : BaseHook() {
     override fun init() {
+
+        if (!getBoolean("miuihome_highend_device", false)) return
         try {
             findMethod("com.miui.home.launcher.common.CpuLevelUtils") {
                 name == "getQualcommCpuLevel" && parameterCount == 1
@@ -88,15 +90,6 @@ object SetDeviceLevel : BaseHook() {
             Log.ex(e)
         }
         try {
-            if (checkVersionCode() <= 426004312L) "com.miui.home.launcher.MiuiHomeLog".hookBeforeMethod(
-                "setDebugLogState", Boolean::class.java
-            ) {
-                it.result = false
-            }
-        } catch (e: Throwable) {
-            Log.ex(e)
-        }
-        try {
             "com.miui.home.launcher.MiuiHomeLog".findClass().replaceMethod(
                 "log", String::class.java, String::class.java
             ) {
@@ -113,4 +106,5 @@ object SetDeviceLevel : BaseHook() {
             Log.ex(e)
         }
     }
+
 }
