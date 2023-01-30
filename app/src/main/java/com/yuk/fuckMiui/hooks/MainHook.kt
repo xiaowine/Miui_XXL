@@ -6,12 +6,14 @@ import com.github.kyuubiran.ezxhelper.utils.Log.logexIfThrow
 import com.yuk.fuckMiui.hooks.modules.BaseHook
 import com.yuk.fuckMiui.hooks.modules.android.FuckValidateTheme
 import com.yuk.fuckMiui.hooks.modules.miuihome.AnimDurationRatio
+import com.yuk.fuckMiui.hooks.modules.miuihome.CategoryFeatures
 import com.yuk.fuckMiui.hooks.modules.miuihome.DisableRecentViewWallpaperDarkening
 import com.yuk.fuckMiui.hooks.modules.miuihome.DoubleTapToSleep
 import com.yuk.fuckMiui.hooks.modules.miuihome.ModifyRecentViewRemoveCardAnimation
 import com.yuk.fuckMiui.hooks.modules.miuihome.ModifyUnlockAnimation
 import com.yuk.fuckMiui.hooks.modules.miuihome.ScrollIconName
 import com.yuk.fuckMiui.hooks.modules.miuihome.SetDeviceLevel
+import com.yuk.fuckMiui.hooks.modules.miuihome.TwoXOneIconRoundedCornerFollowing
 import com.yuk.fuckMiui.hooks.modules.powerkeeper.DisableDynamicRefreshRate
 import com.yuk.fuckMiui.hooks.modules.systemui.StatusbarShowSeconds
 import com.yuk.fuckMiui.hooks.modules.thememanager.FuckTheme
@@ -53,6 +55,8 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit {
                         ModifyUnlockAnimation,
                         DisableRecentViewWallpaperDarkening,
                         ModifyRecentViewRemoveCardAnimation,
+                        CategoryFeatures,
+                        TwoXOneIconRoundedCornerFollowing,
                     )
                 }
 

@@ -25,5 +25,5 @@ dependencyResolutionManagement {
     }
 }
 
-include(":app", ":blockmiui", ":hidden-api")
+include(":app", ":blockmiui")
 rootProject.name = "FuckMiui"

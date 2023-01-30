@@ -25,13 +25,19 @@
     <string name="miuihome_anim_ratio">过渡动画速度「开关应用」</string>
     <string name="miuihome_anim_ratio_tips">生效于打开关闭应用程序时的过渡动画速度。</string>
     <string name="miuihome_anim_ratio_recent">过渡动画速度「进出后台」</string>
-    <string name="miuihome_anim_ratio_recent_tips">生效于进出最近任务时的过渡动画速度。部分版本桌面修改此项将导致异常的渐慢或渐快现象。</string>
+    <string name="miuihome_anim_ratio_recent_tips">生效于进出最近任务时的过渡动画速度。部分版本桌面修改此项将导致异常渐慢或渐快现象。</string>
     <string name="miuihome_recentwiew_wallpaper_darkening">禁用壁纸压暗效果</string>
-    <string name="miuihome_recentwiew_wallpaper_darkening_tips">这将禁用进出最近任务时的壁纸从压暗到渐亮的效果。</string>
+    <string name="miuihome_recentwiew_wallpaper_darkening_tips">这将禁用进出最近任务时壁纸从压暗逐渐变亮的效果。</string>
     <string name="miuihome_recentview_remove_card_animation">修改划卡动画</string>
     <string name="miuihome_recentview_remove_card_animation_tips">修改最近任务移除卡片的动画效果。</string>
     <string name="miuihome_unlock_animation">优化解锁动画</string>
-    <string name="miuihome_unlock_animation_tips">优化解锁时从锁屏过渡到桌面时的过渡效果。</string>
+    <string name="miuihome_unlock_animation_tips">优化解锁时从锁屏过渡到桌面的过渡效果。</string>
+    <string name="miuihome_hide_allapps_category_all">移除「全部」分页</string>
+    <string name="miuihome_hide_allapps_category_all_tips">移除抽屉内应用分组的「全部」分页。</string>
+    <string name="miuihome_hide_allapps_category_paging_edit">移除「编辑」按钮</string>
+    <string name="miuihome_hide_allapps_category_paging_edit_tips">移除抽屉内应用分页的「编辑」按钮。</string>
+    <string name="two_x_one_icon_rounded_corner_following">「1x2 &amp; 2x1」图标圆角跟随</string>
+    <string name="two_x_one_icon_rounded_corner_following_tips">将 MIUI 脑抽设计的 2x1 及 1x2 图标大圆角改为正常小圆角。</string>
 
     <string name="thememanager">主题壁纸</string>
     <string name="thememanager_remove_ads">去广告</string>
