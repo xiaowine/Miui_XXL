@@ -2,27 +2,28 @@
     xmlns:aapt="http://schemas.android.com/aapt"
     android:width="200dp"
     android:height="200dp"
-    android:viewportWidth="1080"
-    android:viewportHeight="1080">
-    <path android:pathData="M0,0h1080v1080h-1080z">
+    android:autoMirrored="true"
+    android:viewportWidth="2000"
+    android:viewportHeight="2000">
+    <path android:pathData="M250,250h1500v1500h-1500z">
         <aapt:attr name="android:fillColor">
             <gradient
-                android:endX="1080"
-                android:endY="1080"
+                android:endX="2000"
+                android:endY="2000"
                 android:startX="0"
                 android:startY="0"
                 android:type="linear">
                 <item
-                    android:color="#FFDB5554"
+                    android:color="#FF7CBDA8"
                     android:offset="0" />
                 <item
-                    android:color="#FFDF6D4E"
+                    android:color="#FF6EBEE2"
                     android:offset="0.3" />
                 <item
-                    android:color="#FFE7A149"
+                    android:color="#FF8F98C9"
                     android:offset="0.7" />
                 <item
-                    android:color="#FFE8C74D"
+                    android:color="#FFB791BD"
                     android:offset="1" />
             </gradient>
         </aapt:attr>
