@@ -12,8 +12,8 @@
     <string name="reboot_system">重启系统</string>
     <string name="reboot_system_tips">确定重启系统么？</string>
     <string name="restart_scope">重启作用域</string>
-    <string name="restart_scope_tips">确定重启作用域么？</string>
-    <string name="restart_scope_finished">作用域重启完成</string>
+    <string name="restart_scope_tips">确定重启作用域应用么？</string>
+    <string name="restart_scope_finished">作用域应用重启完成</string>
 
     <string name="miuihome">系统桌面</string>
     <string name="miuihome_double_tap_to_sleep">双击熄屏</string>
@@ -38,4 +38,12 @@
     <string name="thememanager_remove_ads_tips">猜你喜欢内的广告将显示为空白卡片，其余位置的广告将完全移除。</string>
     <string name="thememanager_fuck_validate_theme">主题破解</string>
     <string name="thememanager_fuck_validate_theme_tips">允许应用第三方主题及付费字体，需要同时勾选系统框架并重新启动。</string>
+
+    <string name="systemui">系统界面</string>
+    <string name="systemui_statusbar_show_seconds">时间显秒</string>
+    <string name="systemui_statusbar_show_seconds_tips">状态栏位置的时间显示秒钟，不包括通知栏及控制中心。</string>
+
+    <string name="powerkeeper">电量和性能</string>
+    <string name="powerkeeper_disable_dynamic_refresh_rate">禁用动态刷新率</string>
+    <string name="powerkeeper_disable_dynamic_refresh_rate_tips">同时禁用云控，实现除相机外全局高帧率。</string>
 </resources>

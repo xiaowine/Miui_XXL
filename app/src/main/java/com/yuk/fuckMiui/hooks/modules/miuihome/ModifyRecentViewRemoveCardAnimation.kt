@@ -1,4 +1,4 @@
-package com.yuk.fuckMiui.hooks.modules.home
+package com.yuk.fuckMiui.hooks.modules.miuihome
 
 import android.animation.ObjectAnimator
 import android.view.MotionEvent

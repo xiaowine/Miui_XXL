@@ -8,6 +8,8 @@ import com.yuk.fuckMiui.R
 import com.yuk.fuckMiui.activity.pages.MainPage
 import com.yuk.fuckMiui.activity.pages.MenuPage
 import com.yuk.fuckMiui.activity.pages.MiuiHomePage
+import com.yuk.fuckMiui.activity.pages.PowerKeeperPage
+import com.yuk.fuckMiui.activity.pages.SystemUIPage
 import com.yuk.fuckMiui.activity.pages.ThemeManagerPage
 import kotlin.system.exitProcess
 
@@ -39,6 +41,8 @@ class MainActivity : MIUIActivity() {
         registerPage(MainPage::class.java)
         registerPage(MenuPage::class.java)
         registerPage(MiuiHomePage::class.java)
+        registerPage(PowerKeeperPage::class.java)
+        registerPage(SystemUIPage::class.java)
         registerPage(ThemeManagerPage::class.java)
     }
 }

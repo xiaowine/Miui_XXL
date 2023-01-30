@@ -1,4 +1,4 @@
-package com.yuk.fuckMiui.hooks.modules.home
+package com.yuk.fuckMiui.hooks.modules.miuihome
 
 import com.github.kyuubiran.ezxhelper.utils.Log
 import com.github.kyuubiran.ezxhelper.utils.findMethod

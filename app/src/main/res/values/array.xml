@@ -2,7 +2,9 @@
 <resources>
     <string-array name="xposed_scope">
         <item>android</item>
+        <item>com.android.systemui</item>
         <item>com.android.thememanager</item>
         <item>com.miui.home</item>
+        <item>com.miui.powerkeeper</item>
     </string-array>
 </resources>

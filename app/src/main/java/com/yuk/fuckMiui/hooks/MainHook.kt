@@ -5,13 +5,15 @@ import com.github.kyuubiran.ezxhelper.utils.Log
 import com.github.kyuubiran.ezxhelper.utils.Log.logexIfThrow
 import com.yuk.fuckMiui.hooks.modules.BaseHook
 import com.yuk.fuckMiui.hooks.modules.android.FuckValidateTheme
-import com.yuk.fuckMiui.hooks.modules.home.AnimDurationRatio
-import com.yuk.fuckMiui.hooks.modules.home.DisableRecentViewWallpaperDarkening
-import com.yuk.fuckMiui.hooks.modules.home.DoubleTapToSleep
-import com.yuk.fuckMiui.hooks.modules.home.ModifyRecentViewRemoveCardAnimation
-import com.yuk.fuckMiui.hooks.modules.home.ModifyUnlockAnimation
-import com.yuk.fuckMiui.hooks.modules.home.ScrollIconName
-import com.yuk.fuckMiui.hooks.modules.home.SetDeviceLevel
+import com.yuk.fuckMiui.hooks.modules.miuihome.AnimDurationRatio
+import com.yuk.fuckMiui.hooks.modules.miuihome.DisableRecentViewWallpaperDarkening
+import com.yuk.fuckMiui.hooks.modules.miuihome.DoubleTapToSleep
+import com.yuk.fuckMiui.hooks.modules.miuihome.ModifyRecentViewRemoveCardAnimation
+import com.yuk.fuckMiui.hooks.modules.miuihome.ModifyUnlockAnimation
+import com.yuk.fuckMiui.hooks.modules.miuihome.ScrollIconName
+import com.yuk.fuckMiui.hooks.modules.miuihome.SetDeviceLevel
+import com.yuk.fuckMiui.hooks.modules.powerkeeper.DisableDynamicRefreshRate
+import com.yuk.fuckMiui.hooks.modules.systemui.StatusbarShowSeconds
 import com.yuk.fuckMiui.hooks.modules.thememanager.FuckTheme
 import com.yuk.fuckMiui.hooks.modules.thememanager.RemoveAds
 import de.robv.android.xposed.IXposedHookLoadPackage
@@ -19,7 +21,7 @@ import de.robv.android.xposed.IXposedHookZygoteInit
 import de.robv.android.xposed.callbacks.XC_LoadPackage
 
 private const val TAG = "FuckMiui"
-private val PACKAGE_NAME_HOOKED = setOf("com.miui.home", "com.android.thememanager", "android")
+private val PACKAGE_NAME_HOOKED = setOf("android", "com.android.systemui", "com.android.thememanager", "com.miui.home", "com.miui.powerkeeper")
 
 class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit {
 
@@ -58,6 +60,18 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit {
                     initHooks(
                         RemoveAds,
                         FuckTheme,
+                    )
+                }
+
+                "com.android.systemui" -> {
+                    initHooks(
+                        StatusbarShowSeconds,
+                    )
+                }
+
+                "com.miui.powerkeeper" -> {
+                    initHooks(
+                        DisableDynamicRefreshRate,
                     )
                 }
 
