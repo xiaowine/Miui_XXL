@@ -1,17 +1,19 @@
 package com.yuk.fuckMiui.hooks
 
-import android.app.Application
-import android.content.Context
 import com.github.kyuubiran.ezxhelper.init.EzXHelperInit
 import com.github.kyuubiran.ezxhelper.utils.Log
 import com.github.kyuubiran.ezxhelper.utils.Log.logexIfThrow
 import com.yuk.fuckMiui.hooks.modules.BaseHook
 import com.yuk.fuckMiui.hooks.modules.android.FuckValidateTheme
+import com.yuk.fuckMiui.hooks.modules.home.AnimDurationRatio
+import com.yuk.fuckMiui.hooks.modules.home.DisableRecentViewWallpaperDarkening
 import com.yuk.fuckMiui.hooks.modules.home.DoubleTapToSleep
+import com.yuk.fuckMiui.hooks.modules.home.ModifyRecentViewRemoveCardAnimation
+import com.yuk.fuckMiui.hooks.modules.home.ModifyUnlockAnimation
+import com.yuk.fuckMiui.hooks.modules.home.ScrollIconName
 import com.yuk.fuckMiui.hooks.modules.home.SetDeviceLevel
 import com.yuk.fuckMiui.hooks.modules.thememanager.FuckTheme
 import com.yuk.fuckMiui.hooks.modules.thememanager.RemoveAds
-import com.yuk.fuckMiui.utils.hookBeforeMethod
 import de.robv.android.xposed.IXposedHookLoadPackage
 import de.robv.android.xposed.IXposedHookZygoteInit
 import de.robv.android.xposed.callbacks.XC_LoadPackage
@@ -42,7 +44,13 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit {
 
                 "com.miui.home" -> {
                     initHooks(
-                        SetDeviceLevel, DoubleTapToSleep
+                        SetDeviceLevel,
+                        DoubleTapToSleep,
+                        ScrollIconName,
+                        AnimDurationRatio,
+                        ModifyUnlockAnimation,
+                        DisableRecentViewWallpaperDarkening,
+                        ModifyRecentViewRemoveCardAnimation,
                     )
                 }
 

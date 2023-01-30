@@ -81,9 +81,3 @@ fun exec(commands: Array<String>): String {
     }
     return stringBuilder.toString()
 }
-
-fun getBoolean(key: String, defValue: Boolean): Boolean {
-    val prefs = XSharedPreferences(BuildConfig.APPLICATION_ID, "FuckMiuiConfig")
-    if (prefs.hasFileChanged()) prefs.reload()
-    return prefs.getBoolean(key, defValue)
-}

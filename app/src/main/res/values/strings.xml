@@ -20,6 +20,18 @@
     <string name="miuihome_double_tap_to_sleep_tips">双击桌面空白处熄灭屏幕。</string>
     <string name="miuihome_highend_device">解除设备限制</string>
     <string name="miuihome_highend_device_tips">将被默认识别为高端，开启该选项不会增加 GPU 性能开销。同时去除部分日志。</string>
+    <string name="miuihome_scroll_icon_name">滚动显示应用名称</string>
+    <string name="miuihome_scroll_icon_name_tips">过长的应用名称将滚动进行显示，不再进行换行。</string>
+    <string name="miuihome_anim_ratio">过渡动画速度「开关应用」</string>
+    <string name="miuihome_anim_ratio_tips">生效于打开关闭应用程序时的过渡动画速度。</string>
+    <string name="miuihome_anim_ratio_recent">过渡动画速度「进出后台」</string>
+    <string name="miuihome_anim_ratio_recent_tips">生效于进出最近任务时的过渡动画速度。部分版本桌面修改此项将导致异常的渐慢或渐快现象。</string>
+    <string name="miuihome_recentwiew_wallpaper_darkening">禁用壁纸压暗效果</string>
+    <string name="miuihome_recentwiew_wallpaper_darkening_tips">这将禁用进出最近任务时的壁纸从压暗到渐亮的效果。</string>
+    <string name="miuihome_recentview_remove_card_animation">修改划卡动画</string>
+    <string name="miuihome_recentview_remove_card_animation_tips">修改最近任务移除卡片的动画效果。</string>
+    <string name="miuihome_unlock_animation">优化解锁动画</string>
+    <string name="miuihome_unlock_animation_tips">优化解锁时从锁屏过渡到桌面时的过渡效果。</string>
 
     <string name="thememanager">主题壁纸</string>
     <string name="thememanager_remove_ads">去广告</string>

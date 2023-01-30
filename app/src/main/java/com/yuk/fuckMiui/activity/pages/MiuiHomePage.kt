@@ -16,7 +16,23 @@ class MiuiHomePage : BasePage() {
         )
         TextSummaryWithSwitch(
             TextSummaryV(textId = R.string.miuihome_highend_device, tipsId = R.string.miuihome_highend_device_tips),
-            SwitchV("miuihome_highend_device", true)
+            SwitchV("miuihome_highend_device", false)
         )
+        TextSummaryWithSwitch(
+            TextSummaryV(textId = R.string.miuihome_recentwiew_wallpaper_darkening, tipsId = R.string.miuihome_recentwiew_wallpaper_darkening_tips),
+            SwitchV("miuihome_recentwiew_wallpaper_darkening", false)
+        )
+        TextSummaryWithSwitch(
+            TextSummaryV(textId = R.string.miuihome_unlock_animation, tipsId = R.string.miuihome_unlock_animation_tips),
+            SwitchV("miuihome_unlock_animation", false)
+        )
+        TextSummaryWithSwitch(
+            TextSummaryV(textId = R.string.miuihome_recentview_remove_card_animation, tipsId = R.string.miuihome_recentview_remove_card_animation_tips),
+            SwitchV("miuihome_recentview_remove_card_animation", false)
+        )
+        TextSummary(textId = R.string.miuihome_anim_ratio, tipsId = R.string.miuihome_anim_ratio_tips)
+        SeekBarWithText("miuihome_anim_ratio", 0, 300, 100)
+        TextSummary(textId = R.string.miuihome_anim_ratio_recent, tipsId = R.string.miuihome_anim_ratio_recent_tips)
+        SeekBarWithText("miuihome_anim_ratio_recent", 0, 300, 100)
     }
 }
