@@ -8,6 +8,7 @@ import com.github.kyuubiran.ezxhelper.utils.getObjectAs
 import com.github.kyuubiran.ezxhelper.utils.hookAfter
 import com.github.kyuubiran.ezxhelper.utils.putObject
 import com.yuk.miuiXXL.hooks.modules.BaseHook
+import com.yuk.miuiXXL.utils.findClass
 import com.yuk.miuiXXL.utils.getBoolean
 import miui.drm.DrmManager
 
@@ -15,14 +16,18 @@ object FuckTheme : BaseHook() {
     override fun init() {
 
         if (!getBoolean("thememanager_fuck_validate_theme", false)) return
-        try {
-            findMethod("com.android.thememanager.controller.online.c") {
-                parameterCount == 1 && returnType == DrmManager.DrmResult::class.java
-            }.hookAfter {
-                it.result = DrmManager.DrmResult.DRM_SUCCESS
+        var letter = 'a'
+        for (i in 0..25) {
+            val classIfExists = ("com.android.thememanager.controller.online.${letter}").findClass()
+            try {
+                findMethod(classIfExists) {
+                    parameterCount == 1 && returnType == DrmManager.DrmResult::class.java
+                }.hookAfter {
+                    it.result = DrmManager.DrmResult.DRM_SUCCESS
+                }
+            } catch (t: Throwable) {
+                letter++
             }
-        } catch (t: Throwable) {
-            Log.ex(t)
         }
         try {
             findAllMethods("com.android.thememanager.detail.theme.model.OnlineResourceDetail") {

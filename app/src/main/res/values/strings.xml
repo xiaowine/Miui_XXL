@@ -64,9 +64,16 @@
     <string name="systemui">系统界面</string>
     <string name="systemui_statusbar_show_seconds">时间显秒</string>
     <string name="systemui_statusbar_show_seconds_summary">状态栏位置的时间显示秒钟，不包括通知栏及控制中心。</string>
+    <string name="systemui_lockscreen_show_current">锁屏显示充电电流</string>
+    <string name="systemui_lockscreen_show_current_summary">充电时锁屏界面底部显示瞬间电流。</string>
+    <string name="systemui_lockscreen_show_current_title">当前电流：</string>
+    <string name="systemui_lockscreen_remove_minus">移除锁屏负一屏</string>
+    <string name="systemui_lockscreen_remove_minus_summary">移除锁屏界面左下角图标及负一屏功能。</string>
+    <string name="systemui_lockscreen_remove_camera">移除锁屏相机</string>
+    <string name="systemui_lockscreen_remove_camera_summary">移除锁屏界面右下角图标及相机功能。</string>
 
     <string name="powerkeeper">电量和性能</string>
-    <string name="powerkeeper_disable_dynamic_refresh_rate">禁用动态刷新率</string>
-    <string name="powerkeeper_disable_dynamic_refresh_rate_summary">同时禁用云控，实现除相机外全局高帧率。</string>
+    <string name="powerkeeper_disable_dynamic_refresh_rate">锁定刷新率</string>
+    <string name="powerkeeper_disable_dynamic_refresh_rate_summary">禁用动态刷新率，实现除相机外全局高帧率。</string>
 
 </resources>

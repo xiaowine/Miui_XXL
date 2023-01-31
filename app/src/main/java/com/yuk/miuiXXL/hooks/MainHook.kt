@@ -17,6 +17,9 @@ import com.yuk.miuiXXL.hooks.modules.miuihome.SetDeviceLevel
 import com.yuk.miuiXXL.hooks.modules.miuihome.ShortcutAddSmallWindow
 import com.yuk.miuiXXL.hooks.modules.miuihome.TwoXOneIconRoundedCornerFollowing
 import com.yuk.miuiXXL.hooks.modules.powerkeeper.DisableDynamicRefreshRate
+import com.yuk.miuiXXL.hooks.modules.systemui.LockScreenShowCurrent
+import com.yuk.miuiXXL.hooks.modules.systemui.RemoveLockScreenCamera
+import com.yuk.miuiXXL.hooks.modules.systemui.RemoveLockScreenMinus
 import com.yuk.miuiXXL.hooks.modules.systemui.StatusbarShowSeconds
 import com.yuk.miuiXXL.hooks.modules.thememanager.FuckTheme
 import com.yuk.miuiXXL.hooks.modules.thememanager.RemoveAds
@@ -75,6 +78,9 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit {
                 "com.android.systemui" -> {
                     initHooks(
                         StatusbarShowSeconds,
+                        LockScreenShowCurrent,
+                        RemoveLockScreenMinus,
+                        RemoveLockScreenCamera,
                     )
                 }
 
