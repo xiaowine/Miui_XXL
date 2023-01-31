@@ -20,7 +20,7 @@
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
 
--keep class com.yuk.fuckMiui.hooks.MainHook {
+-keep class com.yuk.miuiXXL.hooks.MainHook {
     <init>();
 }
 

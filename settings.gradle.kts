@@ -26,4 +26,4 @@ dependencyResolutionManagement {
 }
 
 include(":app", ":blockmiui")
-rootProject.name = "FuckMiui"
+rootProject.name = "Miui XXL"

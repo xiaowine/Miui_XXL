@@ -1,5 +1,5 @@
 <div align="center">
 
-<h1>FuckMiui</h1>
+<h1>Miui XXL</h1>
 
 </div>

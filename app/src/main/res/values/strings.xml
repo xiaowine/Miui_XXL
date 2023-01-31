@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name" translatable="false">FuckMiui</string>
+    <string name="app_name" translatable="false">Miui XXL</string>
     <string name="xposed_description">自用大杂烩</string>
 
     <string name="tips">提示</string>
@@ -21,12 +21,12 @@
     <string name="android_corepacth_downgr_summary">允许应用在安装新版本的情况下直接覆盖安装旧版本。</string>
     <string name="android_corepacth_authcreak">禁用软件包管理器签名验证</string>
     <string name="android_corepacth_authcreak_summary">关闭安装应用时的签名验证，可以安装被篡改的应用。</string>
-    <string name="android_corepacth_digestCreak">禁用 APK 签名验证</string>
+    <string name="android_corepacth_digestCreak">禁用应用签名验证</string>
     <string name="android_corepacth_digestCreak_summary">允许直接覆盖安装同包名不同签名的应用。</string>
-    <string name="android_corepacth_UsePreSig">始终使用已装 APP 的签名</string>
-    <string name="android_corepacth_UsePreSig_summary">安装时总是使用已安装应用的签名。\n不是一般的<b>危险</b>，仅在绝对需要时启用。</string>
+    <string name="android_corepacth_UsePreSig">安装时始终使用已安装应用的签名</string>
+    <string name="android_corepacth_UsePreSig_summary">不是一般的<b>危险</b>，仅在绝对需要时启用。</string>
     <string name="android_corepacth_enhancedMode">增强模式</string>
-    <string name="android_corepacth_enhancedMode_summary">可以解决一些 APP 内部的完整性校验，一般不需要开启。</string>
+    <string name="android_corepacth_enhancedMode_summary">可以解决一些应用内部的完整性校验，一般不需要开启。</string>
 
     <string name="miuihome">系统桌面</string>
     <string name="miuihome_double_tap_to_sleep">双击熄屏</string>
@@ -49,8 +49,8 @@
     <string name="miuihome_hide_allapps_category_all_summary">移除抽屉内应用分组的「全部」分页。</string>
     <string name="miuihome_hide_allapps_category_paging_edit">移除「编辑」按钮</string>
     <string name="miuihome_hide_allapps_category_paging_edit_summary">移除抽屉内应用分页的「编辑」按钮。</string>
-    <string name="miuihome_two_x_one_icon_rounded_corner_following">「1x2 &amp; 2x1」图标圆角跟随</string>
-    <string name="miuihome_two_x_one_icon_rounded_corner_following_summary">将 MIUI 脑抽设计的 2x1 及 1x2 图标大圆角改为正常小圆角。</string>
+    <string name="miuihome_two_x_one_icon_rounded_corner_following">图标圆角跟随「1x2 &amp; 2x1」</string>
+    <string name="miuihome_two_x_one_icon_rounded_corner_following_summary">将 MIUI 脑抽设计的大圆角 2x1 &amp; 1x2 图标改为正常小圆角。</string>
 
     <string name="thememanager">主题壁纸</string>
     <string name="thememanager_remove_ads">去广告</string>
