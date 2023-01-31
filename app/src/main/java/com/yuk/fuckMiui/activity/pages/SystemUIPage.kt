@@ -11,8 +11,9 @@ class SystemUIPage : BasePage() {
     override fun onCreate() {
         TitleText(textId = R.string.systemui)
         TextSummaryWithSwitch(
-            TextSummaryV(textId = R.string.systemui_statusbar_show_seconds, tipsId = R.string.systemui_statusbar_show_seconds_tips),
+            TextSummaryV(textId = R.string.systemui_statusbar_show_seconds, tipsId = R.string.systemui_statusbar_show_seconds_summary),
             SwitchV("systemui_statusbar_show_seconds", false)
         )
     }
+
 }
