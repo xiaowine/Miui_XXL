@@ -5,6 +5,7 @@ import com.github.kyuubiran.ezxhelper.utils.Log
 import com.github.kyuubiran.ezxhelper.utils.Log.logexIfThrow
 import com.yuk.fuckMiui.hooks.modules.BaseHook
 import com.yuk.fuckMiui.hooks.modules.android.FuckValidateTheme
+import com.yuk.fuckMiui.hooks.modules.android.corepatch.CorePatchMainHook
 import com.yuk.fuckMiui.hooks.modules.miuihome.AnimDurationRatio
 import com.yuk.fuckMiui.hooks.modules.miuihome.CategoryFeatures
 import com.yuk.fuckMiui.hooks.modules.miuihome.DisableRecentViewWallpaperDarkening
@@ -29,6 +30,7 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit {
 
     override fun initZygote(startupParam: IXposedHookZygoteInit.StartupParam) {
         EzXHelperInit.initZygote(startupParam)
+        CorePatchMainHook().initZygote(startupParam)
         initHooks(FuckValidateTheme)
     }
 
@@ -41,6 +43,7 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit {
             // Init hooks
             when (lpparam.packageName) {
                 "android" -> {
+                    CorePatchMainHook().handleLoadPackage(lpparam)
                     initHooks(
                         FuckValidateTheme,
                     )

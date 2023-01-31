@@ -31,6 +31,6 @@
     public static void throw*(...);
 }
 
-#-ontobfuscate
+-dontobfuscate
 -allowaccessmodification
 -overloadaggressively

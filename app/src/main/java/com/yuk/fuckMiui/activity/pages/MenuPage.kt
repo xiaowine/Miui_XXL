@@ -13,7 +13,7 @@ class MenuPage : BasePage() {
         Text(textId = R.string.restart_scope) {
             MIUIDialog(activity) {
                 setTitle(R.string.tips)
-                setMessage(R.string.restart_scope_tips)
+                setMessage(R.string.restart_scope_summary)
                 setLButton(R.string.cancel) {
                     dismiss()
                 }
@@ -34,7 +34,7 @@ class MenuPage : BasePage() {
         Text(textId = R.string.reboot_system) {
             MIUIDialog(activity) {
                 setTitle(R.string.tips)
-                setMessage(R.string.reboot_system_tips)
+                setMessage(R.string.reboot_system_summary)
                 setLButton(R.string.cancel) {
                     dismiss()
                 }
@@ -44,4 +44,5 @@ class MenuPage : BasePage() {
             }.show()
         }
     }
+
 }

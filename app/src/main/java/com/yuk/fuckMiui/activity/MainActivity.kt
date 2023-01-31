@@ -5,6 +5,7 @@ import android.os.Bundle
 import cn.fkj233.ui.activity.MIUIActivity
 import cn.fkj233.ui.dialog.MIUIDialog
 import com.yuk.fuckMiui.R
+import com.yuk.fuckMiui.activity.pages.AndroidPage
 import com.yuk.fuckMiui.activity.pages.MainPage
 import com.yuk.fuckMiui.activity.pages.MenuPage
 import com.yuk.fuckMiui.activity.pages.MiuiHomePage
@@ -40,6 +41,7 @@ class MainActivity : MIUIActivity() {
         activity = this
         registerPage(MainPage::class.java)
         registerPage(MenuPage::class.java)
+        registerPage(AndroidPage::class.java)
         registerPage(MiuiHomePage::class.java)
         registerPage(PowerKeeperPage::class.java)
         registerPage(SystemUIPage::class.java)

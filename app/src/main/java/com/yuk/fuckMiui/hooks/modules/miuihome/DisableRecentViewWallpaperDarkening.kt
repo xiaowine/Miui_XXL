@@ -16,7 +16,6 @@ object DisableRecentViewWallpaperDarkening : BaseHook() {
             it.args[0] = 0.0f
             it.thisObject.putObject("mCurrentAlpha", 0.0f)
         }
-
     }
 
 }
