@@ -15,6 +15,10 @@ class SecurityCenterPage : BasePage() {
             TextSummaryV(textId = R.string.securitycenter_skip_warning_wait_time, tipsId = R.string.securitycenter_skip_warning_wait_time_summary),
             SwitchV("securitycenter_skip_warning_wait_time", false)
         )
+        TextSummaryWithSwitch(
+            TextSummaryV(textId = R.string.securitycenter_show_battery_temperature, tipsId = R.string.securitycenter_show_battery_temperature_summary),
+            SwitchV("securitycenter_show_battery_temperature", false)
+        )
     }
 
 }

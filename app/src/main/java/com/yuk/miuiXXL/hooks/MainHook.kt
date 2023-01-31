@@ -17,6 +17,7 @@ import com.yuk.miuiXXL.hooks.modules.miuihome.SetDeviceLevel
 import com.yuk.miuiXXL.hooks.modules.miuihome.ShortcutAddSmallWindow
 import com.yuk.miuiXXL.hooks.modules.miuihome.TwoXOneIconRoundedCornerFollowing
 import com.yuk.miuiXXL.hooks.modules.powerkeeper.DisableDynamicRefreshRate
+import com.yuk.miuiXXL.hooks.modules.securitycenter.ShowBatteryTemperature
 import com.yuk.miuiXXL.hooks.modules.securitycenter.SkipWarningWaitTime
 import com.yuk.miuiXXL.hooks.modules.systemui.LockScreenShowCurrent
 import com.yuk.miuiXXL.hooks.modules.systemui.RemoveLockScreenCamera
@@ -95,6 +96,7 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit {
                 "com.miui.securitycenter" -> {
                     initHooks(
                         SkipWarningWaitTime,
+                        ShowBatteryTemperature,
                     )
                 }
 

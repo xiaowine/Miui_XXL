@@ -24,7 +24,7 @@
     <string name="android_corepacth_digestCreak">禁用应用签名验证</string>
     <string name="android_corepacth_digestCreak_summary">允许直接覆盖安装同包名不同签名的应用。</string>
     <string name="android_corepacth_UsePreSig">安装时始终使用已安装应用的签名</string>
-    <string name="android_corepacth_UsePreSig_summary">不是一般的<b>危险</b>，仅在绝对需要时启用。</string>
+    <string name="android_corepacth_UsePreSig_summary">不是一般的<font color='#FF0000'><b>危险</b></font>，仅在绝对需要时启用。</string>
     <string name="android_corepacth_enhancedMode">增强模式</string>
     <string name="android_corepacth_enhancedMode_summary">可以解决一些应用内部的完整性校验，一般不需要开启。</string>
 
@@ -79,5 +79,7 @@
     <string name="securitycenter">手机管家</string>
     <string name="securitycenter_skip_warning_wait_time">跳过警告等待</string>
     <string name="securitycenter_skip_warning_wait_time_summary">跳过大部分危险选项的等待确认倒计时时间。</string>
+    <string name="securitycenter_show_battery_temperature">显示具体温度</string>
+    <string name="securitycenter_show_battery_temperature_summary">省电与电池内电池页当前温度显示具体温度。</string>
 
 </resources>
