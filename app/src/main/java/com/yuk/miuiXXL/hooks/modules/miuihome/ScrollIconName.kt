@@ -1,5 +1,6 @@
 package com.yuk.miuiXXL.hooks.modules.miuihome
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.text.TextUtils
 import android.view.View
@@ -14,6 +15,7 @@ import com.yuk.miuiXXL.utils.getObjectField
 import com.yuk.miuiXXL.utils.hookAfterMethod
 
 object ScrollIconName : BaseHook() {
+    @SuppressLint("DiscouragedApi")
     override fun init() {
 
         if (!getBoolean("miuihome_scroll_icon_name", false)) return
@@ -70,6 +72,7 @@ object ScrollIconName : BaseHook() {
             Log.ex(e)
         }
     }
+
     private fun mTitleScrolling(mTitle: TextView) {
         mTitle.ellipsize = TextUtils.TruncateAt.MARQUEE
         mTitle.isHorizontalFadingEdgeEnabled = true

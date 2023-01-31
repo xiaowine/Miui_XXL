@@ -10,6 +10,7 @@ import com.yuk.miuiXXL.activity.pages.MainPage
 import com.yuk.miuiXXL.activity.pages.MenuPage
 import com.yuk.miuiXXL.activity.pages.MiuiHomePage
 import com.yuk.miuiXXL.activity.pages.PowerKeeperPage
+import com.yuk.miuiXXL.activity.pages.SecurityCenterPage
 import com.yuk.miuiXXL.activity.pages.SystemUIPage
 import com.yuk.miuiXXL.activity.pages.ThemeManagerPage
 import kotlin.system.exitProcess
@@ -44,6 +45,7 @@ class MainActivity : MIUIActivity() {
         registerPage(AndroidPage::class.java)
         registerPage(MiuiHomePage::class.java)
         registerPage(PowerKeeperPage::class.java)
+        registerPage(SecurityCenterPage::class.java)
         registerPage(SystemUIPage::class.java)
         registerPage(ThemeManagerPage::class.java)
     }

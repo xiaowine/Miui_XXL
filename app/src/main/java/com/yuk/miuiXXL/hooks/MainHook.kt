@@ -17,6 +17,7 @@ import com.yuk.miuiXXL.hooks.modules.miuihome.SetDeviceLevel
 import com.yuk.miuiXXL.hooks.modules.miuihome.ShortcutAddSmallWindow
 import com.yuk.miuiXXL.hooks.modules.miuihome.TwoXOneIconRoundedCornerFollowing
 import com.yuk.miuiXXL.hooks.modules.powerkeeper.DisableDynamicRefreshRate
+import com.yuk.miuiXXL.hooks.modules.securitycenter.SkipWarningWaitTime
 import com.yuk.miuiXXL.hooks.modules.systemui.LockScreenShowCurrent
 import com.yuk.miuiXXL.hooks.modules.systemui.RemoveLockScreenCamera
 import com.yuk.miuiXXL.hooks.modules.systemui.RemoveLockScreenMinus
@@ -28,7 +29,8 @@ import de.robv.android.xposed.IXposedHookZygoteInit
 import de.robv.android.xposed.callbacks.XC_LoadPackage
 
 private const val TAG = "Miui XXL"
-private val PACKAGE_NAME_HOOKED = setOf("android", "com.android.systemui", "com.android.thememanager", "com.miui.home", "com.miui.powerkeeper")
+private val PACKAGE_NAME_HOOKED =
+    setOf("android", "com.android.systemui", "com.android.thememanager", "com.miui.home", "com.miui.powerkeeper", "com.miui.securitycenter")
 
 class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit {
 
@@ -87,6 +89,12 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit {
                 "com.miui.powerkeeper" -> {
                     initHooks(
                         DisableDynamicRefreshRate,
+                    )
+                }
+
+                "com.miui.securitycenter" -> {
+                    initHooks(
+                        SkipWarningWaitTime,
                     )
                 }
 

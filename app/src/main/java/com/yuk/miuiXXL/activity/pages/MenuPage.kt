@@ -22,6 +22,7 @@ class MenuPage : BasePage() {
                         "am force-stop com.miui.home",
                         "am force-stop com.android.thememanager",
                         "am force-stop com.miui.powerkeeper",
+                        "am force-stop com.miui.securitycenter",
                         "killall com.android.systemui"
                     )
                     exec(command)

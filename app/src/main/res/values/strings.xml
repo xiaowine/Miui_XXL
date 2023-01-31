@@ -76,4 +76,8 @@
     <string name="powerkeeper_disable_dynamic_refresh_rate">锁定刷新率</string>
     <string name="powerkeeper_disable_dynamic_refresh_rate_summary">禁用动态刷新率，实现除相机外全局高帧率。</string>
 
+    <string name="securitycenter">手机管家</string>
+    <string name="securitycenter_skip_warning_wait_time">跳过警告等待</string>
+    <string name="securitycenter_skip_warning_wait_time_summary">跳过大部分危险选项的等待确认倒计时时间。</string>
+
 </resources>

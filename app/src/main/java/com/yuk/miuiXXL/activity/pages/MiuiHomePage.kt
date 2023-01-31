@@ -28,29 +28,28 @@ class MiuiHomePage : BasePage() {
             SwitchV("miuihome_unlock_animation", false)
         )
         TextSummaryWithSwitch(
-            TextSummaryV(
-                textId = R.string.miuihome_recentview_remove_card_animation, tipsId = R.string.miuihome_recentview_remove_card_animation_summary
-            ), SwitchV("miuihome_recentview_remove_card_animation", false)
+            TextSummaryV(textId = R.string.miuihome_recentview_remove_card_animation, tipsId = R.string.miuihome_recentview_remove_card_animation_summary),
+            SwitchV("miuihome_recentview_remove_card_animation", false)
         )
         TextSummaryWithSwitch(
-            TextSummaryV(
-                textId = R.string.miuihome_hide_allapps_category_all, tipsId = R.string.miuihome_hide_allapps_category_all_summary
-            ), SwitchV("miuihome_hide_allapps_category_all", false)
+            TextSummaryV(textId = R.string.miuihome_hide_allapps_category_all, tipsId = R.string.miuihome_hide_allapps_category_all_summary),
+            SwitchV("miuihome_hide_allapps_category_all", false)
         )
         TextSummaryWithSwitch(
-            TextSummaryV(
-                textId = R.string.miuihome_hide_allapps_category_paging_edit, tipsId = R.string.miuihome_hide_allapps_category_paging_edit_summary
-            ), SwitchV("miuihome_hide_allapps_category_paging_edit", false)
+            TextSummaryV(textId = R.string.miuihome_hide_allapps_category_paging_edit, tipsId = R.string.miuihome_hide_allapps_category_paging_edit_summary),
+            SwitchV("miuihome_hide_allapps_category_paging_edit", false)
         )
         TextSummaryWithSwitch(
-            TextSummaryV(
-                textId = R.string.miuihome_two_x_one_icon_rounded_corner_following, tipsId = R.string.miuihome_two_x_one_icon_rounded_corner_following_summary
-            ), SwitchV("miuihome_two_x_one_icon_rounded_corner_following", false)
+            TextSummaryV(textId = R.string.miuihome_two_x_one_icon_rounded_corner_following, tipsId = R.string.miuihome_two_x_one_icon_rounded_corner_following_summary),
+            SwitchV("miuihome_two_x_one_icon_rounded_corner_following", false)
         )
         TextSummaryWithSwitch(
-            TextSummaryV(
-                textId = R.string.miuihome_shortcut_add_small_window, tipsId = R.string.miuihome_shortcut_add_small_window_summary
-            ), SwitchV("miuihome_shortcut_add_small_window", false)
+            TextSummaryV(textId = R.string.miuihome_shortcut_add_small_window, tipsId = R.string.miuihome_shortcut_add_small_window_summary),
+            SwitchV("miuihome_shortcut_add_small_window", false)
+        )
+        TextSummaryWithSwitch(
+            TextSummaryV(textId = R.string.miuihome_scroll_icon_name, tipsId = R.string.miuihome_scroll_icon_name_summary),
+            SwitchV("miuihome_scroll_icon_name", false)
         )
         TextSummary(textId = R.string.miuihome_anim_ratio, tipsId = R.string.miuihome_anim_ratio_summary)
         SeekBarWithText("miuihome_anim_ratio", 0, 300, 100)
