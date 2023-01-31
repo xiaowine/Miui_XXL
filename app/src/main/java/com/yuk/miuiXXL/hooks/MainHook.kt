@@ -5,6 +5,7 @@ import com.github.kyuubiran.ezxhelper.utils.Log
 import com.github.kyuubiran.ezxhelper.utils.Log.logexIfThrow
 import com.yuk.miuiXXL.hooks.modules.BaseHook
 import com.yuk.miuiXXL.hooks.modules.android.FuckValidateTheme
+import com.yuk.miuiXXL.hooks.modules.android.MaxWallpaperScale
 import com.yuk.miuiXXL.hooks.modules.android.corepatch.CorePatchMainHook
 import com.yuk.miuiXXL.hooks.modules.miuihome.AnimDurationRatio
 import com.yuk.miuiXXL.hooks.modules.miuihome.CategoryFeatures
@@ -53,6 +54,7 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit {
                     CorePatchMainHook().handleLoadPackage(lpparam)
                     initHooks(
                         FuckValidateTheme,
+                        MaxWallpaperScale,
                     )
                 }
 

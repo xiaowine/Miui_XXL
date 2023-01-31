@@ -31,7 +31,7 @@ class MainActivity : MIUIActivity() {
                 setTitle(R.string.tips)
                 setMessage(R.string.not_support)
                 setCancelable(false)
-                setRButton(R.string.yes) {
+                setRButton(R.string.done) {
                     exitProcess(0)
                 }
             }.show()

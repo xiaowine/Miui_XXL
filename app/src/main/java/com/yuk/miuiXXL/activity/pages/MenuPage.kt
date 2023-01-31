@@ -17,7 +17,7 @@ class MenuPage : BasePage() {
                 setLButton(R.string.cancel) {
                     dismiss()
                 }
-                setRButton(R.string.yes) {
+                setRButton(R.string.done) {
                     val command = arrayOf(
                         "am force-stop com.miui.home",
                         "am force-stop com.android.thememanager",
@@ -39,7 +39,7 @@ class MenuPage : BasePage() {
                 setLButton(R.string.cancel) {
                     dismiss()
                 }
-                setRButton(R.string.yes) {
+                setRButton(R.string.done) {
                     exec("/system/bin/sync;/system/bin/svc power reboot || reboot")
                 }
             }.show()
