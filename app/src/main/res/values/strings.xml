@@ -51,6 +51,9 @@
     <string name="miuihome_hide_allapps_category_paging_edit_summary">移除抽屉内应用分页的「编辑」按钮。</string>
     <string name="miuihome_two_x_one_icon_rounded_corner_following">图标圆角跟随「1x2 &amp; 2x1」</string>
     <string name="miuihome_two_x_one_icon_rounded_corner_following_summary">将 MIUI 脑抽设计的大圆角 2x1 &amp; 1x2 图标改为正常小圆角。</string>
+    <string name="miuihome_shortcut_add_small_window">快捷菜单添加小窗</string>
+    <string name="miuihome_shortcut_add_small_window_summary">桌面图标长按快捷菜单位置添加快速打开小窗。</string>
+    <string name="miuihome_shortcut_add_small_window_title">小窗</string>
 
     <string name="thememanager">主题壁纸</string>
     <string name="thememanager_remove_ads">去广告</string>

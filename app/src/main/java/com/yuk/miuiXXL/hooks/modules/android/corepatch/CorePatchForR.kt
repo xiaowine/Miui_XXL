@@ -112,7 +112,6 @@ open class CorePatchForR : XposedHelper(), IXposedHookLoadPackage, IXposedHookZy
         signingDetailsArgs[1] = 1
         val parseResult = XposedHelpers.findClassIfExists("android.content.pm.parsing.result.ParseResult", loadPackageParam.classLoader)
         hookAllMethods("android.util.jar.StrictJarVerifier", loadPackageParam.classLoader, "verifyBytes", object : XC_MethodHook() {
-
             public override fun afterHookedMethod(param: MethodHookParam) {
                 super.afterHookedMethod(param)
                 if (prefs().getBoolean("digestCreak", true)) {
@@ -127,7 +126,6 @@ open class CorePatchForR : XposedHelper(), IXposedHookLoadPackage, IXposedHookZy
             }
         })
         hookAllMethods("android.util.apk.ApkSignatureVerifier", loadPackageParam.classLoader, "verifyV1Signature", object : XC_MethodHook() {
-
             public override fun afterHookedMethod(methodHookParam: MethodHookParam) {
                 if (prefs().getBoolean("authcreak", true)) {
                     val throwable = methodHookParam.throwable

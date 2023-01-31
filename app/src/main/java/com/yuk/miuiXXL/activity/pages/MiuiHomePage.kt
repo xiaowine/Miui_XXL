@@ -47,6 +47,11 @@ class MiuiHomePage : BasePage() {
                 textId = R.string.miuihome_two_x_one_icon_rounded_corner_following, tipsId = R.string.miuihome_two_x_one_icon_rounded_corner_following_summary
             ), SwitchV("miuihome_two_x_one_icon_rounded_corner_following", false)
         )
+        TextSummaryWithSwitch(
+            TextSummaryV(
+                textId = R.string.miuihome_shortcut_add_small_window, tipsId = R.string.miuihome_shortcut_add_small_window_summary
+            ), SwitchV("miuihome_shortcut_add_small_window", false)
+        )
         TextSummary(textId = R.string.miuihome_anim_ratio, tipsId = R.string.miuihome_anim_ratio_summary)
         SeekBarWithText("miuihome_anim_ratio", 0, 300, 100)
         TextSummary(textId = R.string.miuihome_anim_ratio_recent, tipsId = R.string.miuihome_anim_ratio_recent_summary)

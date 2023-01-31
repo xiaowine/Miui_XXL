@@ -14,6 +14,7 @@ import com.yuk.miuiXXL.hooks.modules.miuihome.ModifyRecentViewRemoveCardAnimatio
 import com.yuk.miuiXXL.hooks.modules.miuihome.ModifyUnlockAnimation
 import com.yuk.miuiXXL.hooks.modules.miuihome.ScrollIconName
 import com.yuk.miuiXXL.hooks.modules.miuihome.SetDeviceLevel
+import com.yuk.miuiXXL.hooks.modules.miuihome.ShortcutAddSmallWindow
 import com.yuk.miuiXXL.hooks.modules.miuihome.TwoXOneIconRoundedCornerFollowing
 import com.yuk.miuiXXL.hooks.modules.powerkeeper.DisableDynamicRefreshRate
 import com.yuk.miuiXXL.hooks.modules.systemui.StatusbarShowSeconds
@@ -23,7 +24,7 @@ import de.robv.android.xposed.IXposedHookLoadPackage
 import de.robv.android.xposed.IXposedHookZygoteInit
 import de.robv.android.xposed.callbacks.XC_LoadPackage
 
-private const val TAG = "FuckMiui"
+private const val TAG = "Miui XXL"
 private val PACKAGE_NAME_HOOKED = setOf("android", "com.android.systemui", "com.android.thememanager", "com.miui.home", "com.miui.powerkeeper")
 
 class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit {
@@ -60,6 +61,7 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit {
                         ModifyRecentViewRemoveCardAnimation,
                         CategoryFeatures,
                         TwoXOneIconRoundedCornerFollowing,
+                        ShortcutAddSmallWindow,
                     )
                 }
 
