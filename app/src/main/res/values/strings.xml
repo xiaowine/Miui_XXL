@@ -90,4 +90,8 @@
     <string name="securitycenter_show_battery_temperature">显示具体温度</string>
     <string name="securitycenter_show_battery_temperature_summary">省电与电池内电池页当前温度显示具体温度。</string>
 
+    <string name="updater">系统更新</string>
+    <string name="updater_fuck_vab_update">移除更新验证</string>
+    <string name="updater_fuck_vab_update_summary">- 仅支持 <font color='#FF0000'><b>VAB</b></font> 机型，其余机型请不要开启。\n- 无需内测试资格即可刷入完整内测包。\n- 拥有权限的用户将无法接收更新，亦可用于屏蔽更新。\n- 仅官方系统使用。</string>
+
 </resources>

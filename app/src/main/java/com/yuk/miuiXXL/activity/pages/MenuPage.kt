@@ -21,6 +21,7 @@ class MenuPage : BasePage() {
                     val command = arrayOf(
                         "am force-stop com.miui.home",
                         "am force-stop com.android.thememanager",
+                        "am force-stop com.android.updater",
                         "am force-stop com.miui.powerkeeper",
                         "am force-stop com.miui.securitycenter",
                         "killall com.android.systemui"
@@ -40,7 +41,7 @@ class MenuPage : BasePage() {
                     dismiss()
                 }
                 setRButton(R.string.done) {
-                    exec("/system/bin/sync;/system/bin/svc power reboot || reboot")
+                    exec("reboot")
                 }
             }.show()
         }

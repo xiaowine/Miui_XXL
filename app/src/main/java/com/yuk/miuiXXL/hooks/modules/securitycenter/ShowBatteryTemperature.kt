@@ -15,11 +15,11 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import cn.fkj233.ui.activity.dp2px
 import com.github.kyuubiran.ezxhelper.utils.findMethod
+import com.github.kyuubiran.ezxhelper.utils.getObjectAs
 import com.github.kyuubiran.ezxhelper.utils.hookAfter
 import com.github.kyuubiran.ezxhelper.utils.hookBefore
 import com.yuk.miuiXXL.hooks.modules.BaseHook
 import com.yuk.miuiXXL.utils.getBoolean
-import com.yuk.miuiXXL.utils.getObjectField
 
 
 object ShowBatteryTemperature : BaseHook() {
@@ -56,7 +56,7 @@ object ShowBatteryTemperature : BaseHook() {
             val context = AndroidAppHelper.currentApplication().applicationContext
             val isDarkMode = context.resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK == Configuration.UI_MODE_NIGHT_YES
             val currentTemperatureState = context.resources.getIdentifier("current_temperature_state", "id", "com.miui.securitycenter")
-            val view = it.thisObject.getObjectField("a") as View
+            val view = it.thisObject.getObjectAs<View>("a")
 
             val textView = view.findViewById<TextView>(currentTemperatureState)
             textView.apply {

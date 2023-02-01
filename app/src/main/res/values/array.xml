@@ -4,6 +4,7 @@
         <item>android</item>
         <item>com.android.systemui</item>
         <item>com.android.thememanager</item>
+        <item>com.android.updater</item>
         <item>com.miui.home</item>
         <item>com.miui.powerkeeper</item>
         <item>com.miui.securitycenter</item>

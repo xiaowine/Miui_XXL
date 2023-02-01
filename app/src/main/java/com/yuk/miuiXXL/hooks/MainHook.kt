@@ -26,13 +26,21 @@ import com.yuk.miuiXXL.hooks.modules.systemui.RemoveLockScreenMinus
 import com.yuk.miuiXXL.hooks.modules.systemui.StatusbarShowSeconds
 import com.yuk.miuiXXL.hooks.modules.thememanager.FuckTheme
 import com.yuk.miuiXXL.hooks.modules.thememanager.RemoveAds
+import com.yuk.miuiXXL.hooks.modules.updater.VABUpdate
 import de.robv.android.xposed.IXposedHookLoadPackage
 import de.robv.android.xposed.IXposedHookZygoteInit
 import de.robv.android.xposed.callbacks.XC_LoadPackage
 
 private const val TAG = "Miui XXL"
-private val PACKAGE_NAME_HOOKED =
-    setOf("android", "com.android.systemui", "com.android.thememanager", "com.miui.home", "com.miui.powerkeeper", "com.miui.securitycenter")
+private val PACKAGE_NAME_HOOKED = setOf(
+    "android",
+    "com.android.systemui",
+    "com.android.thememanager",
+    "com.android.updater",
+    "com.miui.home",
+    "com.miui.powerkeeper",
+    "com.miui.securitycenter"
+)
 
 class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit {
 
@@ -58,6 +66,28 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit {
                     )
                 }
 
+                "com.android.systemui" -> {
+                    initHooks(
+                        StatusbarShowSeconds,
+                        LockScreenShowCurrent,
+                        RemoveLockScreenMinus,
+                        RemoveLockScreenCamera,
+                    )
+                }
+
+                "com.android.thememanager" -> {
+                    initHooks(
+                        RemoveAds,
+                        FuckTheme,
+                    )
+                }
+
+                "com.android.updater" -> {
+                    initHooks(
+                        VABUpdate,
+                    )
+                }
+
                 "com.miui.home" -> {
                     initHooks(
                         SetDeviceLevel,
@@ -70,22 +100,6 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit {
                         CategoryFeatures,
                         TwoXOneIconRoundedCornerFollowing,
                         ShortcutAddSmallWindow,
-                    )
-                }
-
-                "com.android.thememanager" -> {
-                    initHooks(
-                        RemoveAds,
-                        FuckTheme,
-                    )
-                }
-
-                "com.android.systemui" -> {
-                    initHooks(
-                        StatusbarShowSeconds,
-                        LockScreenShowCurrent,
-                        RemoveLockScreenMinus,
-                        RemoveLockScreenCamera,
                     )
                 }
 
