@@ -1,97 +1,96 @@
 <resources>
     <string name="app_name" translatable="false">Miui XXL</string>
-    <string name="xposed_description">自用大杂烩</string>
+    <string name="xposed_description">Self-use chowder</string>
+    <string name="tips">Tips</string>
+    <string name="not_support">The module is not activated. Please activate the module and try again</string>
 
-    <string name="tips">提示</string>
-    <string name="not_support">模块未激活，请激活模块后重试。</string>
+    <string name="done">Done</string>
+    <string name="cancel">Cancel</string>
 
-    <string name="done">确定</string>
-    <string name="cancel">取消</string>
+    <string name="def">Default: </string>
+    <string name="current">Current: </string>
 
-    <string name="def">默认：</string>
-    <string name="current">当前：</string>
+    <string name="reboot">Restart</string>
+    <string name="reboot_system">Restart the system</string>
+    <string name="reboot_system_summary">Are you sure to restart the system?</string>
+    <string name="restart_scope">Restart Scope</string>
+    <string name="restart_scope_finished">Scope application restart completed</string>
+    <string name="restart_scope_summary">Are you sure to restart the scope application?</string>
 
-    <string name="reboot">重启</string>
-    <string name="reboot_system">重启系统</string>
-    <string name="reboot_system_summary">确定重启系统么？</string>
-    <string name="restart_scope">重启作用域</string>
-    <string name="restart_scope_summary">确定重启作用域应用么？</string>
-    <string name="restart_scope_finished">作用域应用重启完成</string>
+    <string name="menu">Menu</string>
+    <string name="other">Other</string>
 
-    <string name="menu">菜单</string>
-    <string name="other">其他</string>
+    <string name="android">System Framework</string>
+    <string name="android_corepacth">Core cracking</string>
+    <string name="android_corepacth_UsePreSig">Always use the signature of the installed app when installing</string>
+    <string name="android_corepacth_UsePreSig_summary">Not ordinary <font color="#FF0000"><b>dangerous</b></font> Enable only when absolutely needed</string>
+    <string name="android_corepacth_authcreak">Disable package manager signature verification</string>
+    <string name="android_corepacth_authcreak_summary">Turn off the signature verification when installing the application, you can install the tampered application</string>
+    <string name="android_corepacth_digestCreak">Disable app signature verification</string>
+    <string name="android_corepacth_digestCreak_summary">Allows direct overwriting of applications with different signatures of the same package name</string>
+    <string name="android_corepacth_downgr">Allow downgrading and installing apps</string>
+    <string name="android_corepacth_downgr_summary">Allows the app to directly overwrite the installation of the old version while installing the new version</string>
+    <string name="android_corepacth_enhancedMode">Enhanced mode</string>
+    <string name="android_corepacth_enhancedMode_summary">Can solve the integrity verification inside some applications, generally do not need to be turned on</string>
+    <string name="android_max_wallpaper_scale">Wallpaper zoom</string>
+    <string name="android_max_wallpaper_scale_summary">The wallpaper zoom magnification when the system desktop switch is applied</string>
 
-    <string name="android">系统框架</string>
-    <string name="android_corepacth">核心破解</string>
-    <string name="android_corepacth_downgr">允许降级安装应用</string>
-    <string name="android_corepacth_downgr_summary">允许应用在安装新版本的情况下直接覆盖安装旧版本。</string>
-    <string name="android_corepacth_authcreak">禁用软件包管理器签名验证</string>
-    <string name="android_corepacth_authcreak_summary">关闭安装应用时的签名验证，可以安装被篡改的应用。</string>
-    <string name="android_corepacth_digestCreak">禁用应用签名验证</string>
-    <string name="android_corepacth_digestCreak_summary">允许直接覆盖安装同包名不同签名的应用。</string>
-    <string name="android_corepacth_UsePreSig">安装时始终使用已安装应用的签名</string>
-    <string name="android_corepacth_UsePreSig_summary">不是一般的<font color='#FF0000'><b>危险</b></font>，仅在绝对需要时启用。</string>
-    <string name="android_corepacth_enhancedMode">增强模式</string>
-    <string name="android_corepacth_enhancedMode_summary">可以解决一些应用内部的完整性校验，一般不需要开启。</string>
-    <string name="android_max_wallpaper_scale">壁纸缩放</string>
-    <string name="android_max_wallpaper_scale_summary">系统桌面开关应用时的壁纸缩放倍率。</string>
+    <string name="miuihome">System launcher</string>
+    <string name="miuihome_anim_ratio">Transition animation speed「When the app is turned on or off」</string>
+    <string name="miuihome_anim_ratio_recent">Transition animation speed「In and out of the background」</string>
+    <string name="miuihome_anim_ratio_recent_summary">The speed of the transition animation that takes effect when entering and exiting the most recent task.Modifying this item on the desktop of some versions will cause abnormal deceleration or acceleration</string>
+    <string name="miuihome_anim_ratio_summary">The speed of the transition animation that takes effect when the application is opened and closed</string>
+    <string name="miuihome_double_tap_to_sleep">Double-click to turn off the screen</string>
+    <string name="miuihome_double_tap_to_sleep_summary">Double-click the blank space on the desktop to turn off the screen.</string>
+    <string name="miuihome_hide_allapps_category_all">Remove All tabs</string>
+    <string name="miuihome_hide_allapps_category_all_summary">Remove the "All" tab of the application group in the drawer</string>
+    <string name="miuihome_hide_allapps_category_paging_edit">Remove the Edit button</string>
+    <string name="miuihome_hide_allapps_category_paging_edit_summary">Remove the "Edit" button in the drawer to apply paging</string>
+    <string name="miuihome_highend_device">Remove device restrictions</string>
+    <string name="miuihome_highend_device_summary">It will be recognized as high-end by default. Turning this option on will not increase GPU performance overhead. Remove some logs at the same time.</string>
+    <string name="miuihome_recentview_remove_card_animation">Modify the card marking animation</string>
+    <string name="miuihome_recentview_remove_card_animation_summary">Modify the animation effect of the recent task removal card</string>
+    <string name="miuihome_recentwiew_wallpaper_darkening">Disable wallpaper dimming</string>
+    <string name="miuihome_recentwiew_wallpaper_darkening_summary">This will disable the effect that the wallpaper will gradually brighten from dimming when going in and out of the recent task</string>
+    <string name="miuihome_scroll_icon_name">Scroll app name</string>
+    <string name="miuihome_scroll_icon_name_summary">The application name that is too long will be scrolled and displayed without any new line</string>
+    <string name="miuihome_shortcut_add_small_window">Shortcut Menu Add Window</string>
+    <string name="miuihome_shortcut_add_small_window_summary">Press and hold the desktop icon to add a quick open window</string>
+    <string name="miuihome_shortcut_add_small_window_title">Small window</string>
+    <string name="miuihome_two_x_one_icon_rounded_corner_following">Icon fillet follows "1x2 &amp; 2x1"</string>
+    <string name="miuihome_two_x_one_icon_rounded_corner_following_summary">Change the large round corner 2x1&amp;1x2 icon designed by MIUI brain pumping to normal small round corner</string>
+    <string name="miuihome_unlock_animation">Optimize unlock animation</string>
+    <string name="miuihome_unlock_animation_summary">Optimize the transition effect from lock screen to desktop when unlocking</string>
 
-    <string name="miuihome">系统桌面</string>
-    <string name="miuihome_double_tap_to_sleep">双击熄屏</string>
-    <string name="miuihome_double_tap_to_sleep_summary">双击桌面空白处熄灭屏幕。</string>
-    <string name="miuihome_highend_device">解除设备限制</string>
-    <string name="miuihome_highend_device_summary">将被默认识别为高端，开启该选项并不会增加 GPU 性能开销。同时去除部分日志。</string>
-    <string name="miuihome_scroll_icon_name">滚动显示应用名称</string>
-    <string name="miuihome_scroll_icon_name_summary">过长的应用名称将滚动进行显示，不再进行换行。</string>
-    <string name="miuihome_anim_ratio">过渡动画速度「开关应用」</string>
-    <string name="miuihome_anim_ratio_summary">生效于打开关闭应用程序时的过渡动画速度。</string>
-    <string name="miuihome_anim_ratio_recent">过渡动画速度「进出后台」</string>
-    <string name="miuihome_anim_ratio_recent_summary">生效于进出最近任务时的过渡动画速度。部分版本桌面修改此项将导致异常渐慢或渐快现象。</string>
-    <string name="miuihome_recentwiew_wallpaper_darkening">禁用壁纸压暗效果</string>
-    <string name="miuihome_recentwiew_wallpaper_darkening_summary">这将禁用进出最近任务时壁纸从压暗逐渐变亮的效果。</string>
-    <string name="miuihome_recentview_remove_card_animation">修改划卡动画</string>
-    <string name="miuihome_recentview_remove_card_animation_summary">修改最近任务移除卡片的动画效果。</string>
-    <string name="miuihome_unlock_animation">优化解锁动画</string>
-    <string name="miuihome_unlock_animation_summary">优化解锁时从锁屏过渡到桌面的过渡效果。</string>
-    <string name="miuihome_hide_allapps_category_all">移除「全部」分页</string>
-    <string name="miuihome_hide_allapps_category_all_summary">移除抽屉内应用分组的「全部」分页。</string>
-    <string name="miuihome_hide_allapps_category_paging_edit">移除「编辑」按钮</string>
-    <string name="miuihome_hide_allapps_category_paging_edit_summary">移除抽屉内应用分页的「编辑」按钮。</string>
-    <string name="miuihome_two_x_one_icon_rounded_corner_following">图标圆角跟随「1x2 &amp; 2x1」</string>
-    <string name="miuihome_two_x_one_icon_rounded_corner_following_summary">将 MIUI 脑抽设计的大圆角 2x1 &amp; 1x2 图标改为正常小圆角。</string>
-    <string name="miuihome_shortcut_add_small_window">快捷菜单添加小窗</string>
-    <string name="miuihome_shortcut_add_small_window_summary">桌面图标长按快捷菜单位置添加快速打开小窗。</string>
-    <string name="miuihome_shortcut_add_small_window_title">小窗</string>
+    <string name="thememanager">Themes</string>
+    <string name="thememanager_fuck_validate_theme">Theme cracking</string>
+    <string name="thememanager_fuck_validate_theme_summary">Third-party themes and paid fonts are allowed to be applied, and the system framework needs to be checked and restarted at the same time.</string>
+    <string name="thememanager_remove_ads">To advertise</string>
+    <string name="thememanager_remove_ads_summary">Guess the ads in your favorite will be displayed as blank cards, and the ads in the rest will be completely removed</string>
 
-    <string name="thememanager">主题壁纸</string>
-    <string name="thememanager_remove_ads">去广告</string>
-    <string name="thememanager_remove_ads_summary">猜你喜欢内的广告将显示为空白卡片，其余位置的广告将完全移除。</string>
-    <string name="thememanager_fuck_validate_theme">主题破解</string>
-    <string name="thememanager_fuck_validate_theme_summary">允许应用第三方主题及付费字体，需要同时勾选系统框架并重新启动。</string>
+    <string name="systemui">System UI</string>
+    <string name="systemui_lockscreen_remove_camera">Remove lock screen camera</string>
+    <string name="systemui_lockscreen_remove_camera_summary">Remove the icon and camera function in the lower right corner of the lock screen interface</string>
+    <string name="systemui_lockscreen_remove_minus">Remove the lock screen minus one screen</string>
+    <string name="systemui_lockscreen_remove_minus_summary">Remove the icon at the lower left corner of the lock screen and the negative screen function</string>
+    <string name="systemui_lockscreen_show_current">Lock screen shows charging current</string>
+    <string name="systemui_lockscreen_show_current_summary">Instantaneous current is displayed at the bottom of the lock screen during charging</string>
+    <string name="systemui_lockscreen_show_current_title">Current current:</string>
+    <string name="systemui_statusbar_show_seconds">Time in seconds</string>
+    <string name="systemui_statusbar_show_seconds_summary">The time of the position of the status bar is displayed in seconds, excluding the notification bar and the control center</string>
 
-    <string name="systemui">系统界面</string>
-    <string name="systemui_statusbar_show_seconds">时间显秒</string>
-    <string name="systemui_statusbar_show_seconds_summary">状态栏位置的时间显示秒钟，不包括通知栏及控制中心。</string>
-    <string name="systemui_lockscreen_show_current">锁屏显示充电电流</string>
-    <string name="systemui_lockscreen_show_current_summary">充电时锁屏界面底部显示瞬间电流。</string>
-    <string name="systemui_lockscreen_show_current_title">当前电流：</string>
-    <string name="systemui_lockscreen_remove_minus">移除锁屏负一屏</string>
-    <string name="systemui_lockscreen_remove_minus_summary">移除锁屏界面左下角图标及负一屏功能。</string>
-    <string name="systemui_lockscreen_remove_camera">移除锁屏相机</string>
-    <string name="systemui_lockscreen_remove_camera_summary">移除锁屏界面右下角图标及相机功能。</string>
+    <string name="powerkeeper">Power and performance</string>
+    <string name="powerkeeper_disable_dynamic_refresh_rate">Lock refresh rate</string>
+    <string name="powerkeeper_disable_dynamic_refresh_rate_summary">Disable dynamic refresh rate to achieve global high frame rate except for camera</string>
 
-    <string name="powerkeeper">电量和性能</string>
-    <string name="powerkeeper_disable_dynamic_refresh_rate">锁定刷新率</string>
-    <string name="powerkeeper_disable_dynamic_refresh_rate_summary">禁用动态刷新率，实现除相机外全局高帧率。</string>
+    <string name="securitycenter">Security</string>
+    <string name="securitycenter_show_battery_temperature">Display specific temperature</string>
+    <string name="securitycenter_show_battery_temperature_summary">The specific temperature is displayed on the current temperature of the battery page of power saving and battery</string>
+    <string name="securitycenter_skip_warning_wait_time">Skip warning wait</string>
+    <string name="securitycenter_skip_warning_wait_time_summary">Skip the waiting confirmation countdown time of most dangerous options.</string>
 
-    <string name="securitycenter">手机管家</string>
-    <string name="securitycenter_skip_warning_wait_time">跳过警告等待</string>
-    <string name="securitycenter_skip_warning_wait_time_summary">跳过大部分危险选项的等待确认倒计时时间。</string>
-    <string name="securitycenter_show_battery_temperature">显示具体温度</string>
-    <string name="securitycenter_show_battery_temperature_summary">省电与电池内电池页当前温度显示具体温度。</string>
-
-    <string name="updater">系统更新</string>
-    <string name="updater_fuck_vab_update">移除更新验证</string>
-    <string name="updater_fuck_vab_update_summary">- 仅支持 <font color='#FF0000'><b>VAB</b></font> 机型，其余机型请不要开启。\n- 无需内测试资格即可刷入完整内测包。\n- 拥有权限的用户将无法接收更新，亦可用于屏蔽更新。\n- 仅官方系统使用。</string>
+    <string name="updater">Updater</string>
+    <string name="updater_fuck_vab_update">Remove update validation</string>
+    <string name="updater_fuck_vab_update_summary">-Only <font color='#FF0000'><b>VAB</b></font> models are supported. Please do not turn on other models \n-No internal test qualification is required to brush into the complete internal test package \n-Users with permissions will not be able to receive updates and can also be used to mask updates \n-Only used by the official system</string>
 
 </resources>
