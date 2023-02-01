@@ -3,6 +3,7 @@
     <string name="xposed_description">Self-use chowder</string>
     <string name="tips">Tips</string>
     <string name="not_support">The module is not activated. Please activate the module and try again</string>
+    <string name="hide_desktop_icon">Hide desktop icon</string>
 
     <string name="done">Done</string>
     <string name="cancel">Cancel</string>

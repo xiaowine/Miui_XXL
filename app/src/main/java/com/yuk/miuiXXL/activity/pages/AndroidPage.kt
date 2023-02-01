@@ -8,31 +8,14 @@ import cn.fkj233.ui.activity.view.TextSummaryV
 import cn.fkj233.ui.dialog.MIUIDialog
 import com.yuk.miuiXXL.R
 
-@BMPage("AndroidPage", "Android", hideMenu = false)
+@BMPage("AndroidPage", hideMenu = false)
 class AndroidPage : BasePage() {
+    override fun getTitle(): String {
+        setTitle(getString(R.string.android))
+        return getString(R.string.android)
+    }
+
     override fun onCreate() {
-        TitleText(textId = R.string.android)
-        Line()
-        TitleText(textId = R.string.android_corepacth)
-        TextSummaryWithSwitch(
-            TextSummaryV(textId = R.string.android_corepacth_downgr, tipsId = R.string.android_corepacth_downgr_summary), SwitchV("downgrade")
-        )
-        TextSummaryWithSwitch(
-            TextSummaryV(textId = R.string.android_corepacth_authcreak, tipsId = R.string.android_corepacth_authcreak_summary), SwitchV("authcreak")
-        )
-        TextSummaryWithSwitch(
-            TextSummaryV(textId = R.string.android_corepacth_digestCreak, tipsId = R.string.android_corepacth_digestCreak_summary),
-            SwitchV("digestCreak")
-        )
-        TextSummaryWithSwitch(
-            TextSummaryV(textId = R.string.android_corepacth_UsePreSig, tipsId = R.string.android_corepacth_UsePreSig_summary), SwitchV("UsePreSig")
-        )
-        TextSummaryWithSwitch(
-            TextSummaryV(textId = R.string.android_corepacth_enhancedMode, tipsId = R.string.android_corepacth_enhancedMode_summary),
-            SwitchV("enhancedMode")
-        )
-        Line()
-        TitleText(textId = R.string.other)
         TextSummaryArrow(
             TextSummaryV(textId = R.string.android_max_wallpaper_scale, onClickListener = {
                 MIUIDialog(activity) {
@@ -54,6 +37,25 @@ class AndroidPage : BasePage() {
                     }
                 }.show()
             })
+        )
+        Line()
+        TitleText(textId = R.string.android_corepacth)
+        TextSummaryWithSwitch(
+            TextSummaryV(textId = R.string.android_corepacth_downgr, tipsId = R.string.android_corepacth_downgr_summary), SwitchV("downgrade")
+        )
+        TextSummaryWithSwitch(
+            TextSummaryV(textId = R.string.android_corepacth_authcreak, tipsId = R.string.android_corepacth_authcreak_summary), SwitchV("authcreak")
+        )
+        TextSummaryWithSwitch(
+            TextSummaryV(textId = R.string.android_corepacth_digestCreak, tipsId = R.string.android_corepacth_digestCreak_summary),
+            SwitchV("digestCreak")
+        )
+        TextSummaryWithSwitch(
+            TextSummaryV(textId = R.string.android_corepacth_UsePreSig, tipsId = R.string.android_corepacth_UsePreSig_summary), SwitchV("UsePreSig")
+        )
+        TextSummaryWithSwitch(
+            TextSummaryV(textId = R.string.android_corepacth_enhancedMode, tipsId = R.string.android_corepacth_enhancedMode_summary),
+            SwitchV("enhancedMode")
         )
     }
 

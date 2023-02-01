@@ -6,11 +6,14 @@ import cn.fkj233.ui.activity.view.SwitchV
 import cn.fkj233.ui.activity.view.TextSummaryV
 import com.yuk.miuiXXL.R
 
-@BMPage("SystemUIPage", "SystemUI", hideMenu = false)
+@BMPage("SystemUIPage", hideMenu = false)
 class SystemUIPage : BasePage() {
+    override fun getTitle(): String {
+        setTitle(getString(R.string.systemui))
+        return getString(R.string.systemui)
+    }
+
     override fun onCreate() {
-        TitleText(textId = R.string.systemui)
-        Line()
         TextSummaryWithSwitch(
             TextSummaryV(textId = R.string.systemui_statusbar_show_seconds, tipsId = R.string.systemui_statusbar_show_seconds_summary),
             SwitchV("systemui_statusbar_show_seconds", false)

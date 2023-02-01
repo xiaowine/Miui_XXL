@@ -6,18 +6,23 @@ import cn.fkj233.ui.activity.view.SwitchV
 import cn.fkj233.ui.activity.view.TextSummaryV
 import com.yuk.miuiXXL.R
 
-@BMPage("SecurityCenterPage", "SecurityCenter", hideMenu = false)
+@BMPage("SecurityCenterPage", hideMenu = false)
 class SecurityCenterPage : BasePage() {
+    override fun getTitle(): String {
+        setTitle(getString(R.string.securitycenter))
+        return getString(R.string.securitycenter)
+    }
+
     override fun onCreate() {
-        TitleText(textId = R.string.securitycenter)
-        Line()
         TextSummaryWithSwitch(
             TextSummaryV(textId = R.string.securitycenter_skip_warning_wait_time, tipsId = R.string.securitycenter_skip_warning_wait_time_summary),
             SwitchV("securitycenter_skip_warning_wait_time", false)
         )
         TextSummaryWithSwitch(
-            TextSummaryV(textId = R.string.securitycenter_show_battery_temperature, tipsId = R.string.securitycenter_show_battery_temperature_summary),
-            SwitchV("securitycenter_show_battery_temperature", false)
+            TextSummaryV(
+                textId = R.string.securitycenter_show_battery_temperature,
+                tipsId = R.string.securitycenter_show_battery_temperature_summary
+            ), SwitchV("securitycenter_show_battery_temperature", false)
         )
     }
 

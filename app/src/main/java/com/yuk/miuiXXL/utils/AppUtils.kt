@@ -21,14 +21,14 @@ fun getProp(mKey: String, defaultValue: Boolean): Boolean =
 
 fun atLeastAndroidT(): Boolean = Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU
 
-fun checkMiuiVersion(): Float = when (getProp("ro.miui.ui.version.name")) {
-    "V140" -> 14f
-    "V130" -> 13f
-    "V125" -> 12.5f
-    "V12" -> 12f
-    "V11" -> 11f
-    "V10" -> 10f
-    else -> 0f
+fun checkMiuiVersion(): String = when (getProp("ro.miui.ui.version.name")) {
+    "V140" -> "14"
+    "V130" -> "13"
+    "V125" -> "12.5"
+    "V12" -> "12"
+    "V11" -> "11"
+    "V10" -> "10"
+    else -> "?"
 }
 
 fun checkAndroidVersion(): String = getProp("ro.build.version.release")
