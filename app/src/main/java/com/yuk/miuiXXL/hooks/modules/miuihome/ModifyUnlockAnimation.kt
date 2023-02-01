@@ -12,8 +12,8 @@ object ModifyUnlockAnimation : BaseHook() {
         findMethod("com.miui.home.launcher.compat.UserPresentAnimationCompatV12Phone") {
             name == "getSpringAnimator" && parameterCount == 6
         }.hookBefore {
-            it.args[4] = 0.5f
-            it.args[5] = 0.5f
+            it.args[4] = 0.6f
+            it.args[5] = 0.4f
         }
     }
 

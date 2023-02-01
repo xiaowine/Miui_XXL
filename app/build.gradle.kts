@@ -12,8 +12,9 @@ android {
         applicationId = namespace
         minSdk = 31
         targetSdk = 33
-        versionCode = 3
-        versionName = "0.3"
+        versionCode = 4
+        versionName = "0.4"
+        buildConfigField("String", "BUILD_TIME", "\"${System.currentTimeMillis()}\"")
     }
     buildTypes {
         named("release") {
