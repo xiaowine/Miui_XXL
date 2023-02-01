@@ -23,7 +23,7 @@
     <string name="android">System Framework</string>
     <string name="android_corepacth">Core cracking</string>
     <string name="android_corepacth_UsePreSig">Always use the signature of the installed app when installing</string>
-    <string name="android_corepacth_UsePreSig_summary">Not ordinary <font color="#FF0000"><b>dangerous</b></font> Enable only when absolutely needed</string>
+    <string name="android_corepacth_UsePreSig_summary">Not ordinary <font color="#FF0000"><b>dangerous</b></font>, Enable only when absolutely needed</string>
     <string name="android_corepacth_authcreak">Disable package manager signature verification</string>
     <string name="android_corepacth_authcreak_summary">Turn off the signature verification when installing the application, you can install the tampered application</string>
     <string name="android_corepacth_digestCreak">Disable app signature verification</string>

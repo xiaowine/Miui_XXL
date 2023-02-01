@@ -5,21 +5,21 @@
     android:viewportWidth="1800"
     android:viewportHeight="1800">
     <path
-        android:fillColor="@android:color/system_accent1_10"
+        android:fillColor="@color/ic_launcher_foreground"
         android:pathData="m782.9,726c16.6,8.5 17.1,31.3 1.4,41.2l-90.6,55.9c-15.6,9.5 -35.6,-1.4 -36,-19.4l-3.8,-105.2c-0.9,-18.5 18.5,-30.3 34.6,-21.8l94.3,49.3Z" />
     <path
-        android:fillColor="@android:color/system_accent1_10"
+        android:fillColor="@color/ic_launcher_foreground"
         android:pathData="m563.4,1032.7c0,-5.2 4.3,-9.5 9.5,-9.5h654.2c5.2,0 9.5,4.3 9.5,9.5v42.7c0,5.2 -4.3,9.5 -9.5,9.5h-654.2c-5.2,0 -9.5,-4.3 -9.5,-9.5v-42.7Z" />
     <path
-        android:fillColor="@android:color/system_accent1_10"
+        android:fillColor="@color/ic_launcher_foreground"
         android:pathData="m1198,860.3c-19.6,77.3 -90.4,134.5 -174.8,134.5 -99.5,0 -180.1,-79.6 -180.1,-177.8 0,-46.9 18.4,-89.5 48.4,-121.3 -181.9,4.1 -328.1,140 -328.1,308h673.2c0,-51.9 -13.9,-100.7 -38.6,-143.5ZM784.8,914.2c-24.2,0 -43.6,-19.4 -43.6,-43.1s19.4,-43.1 43.6,-43.1 44.1,19.4 44.1,43.1 -19.9,43.1 -44.1,43.1Z" />
     <path
-        android:fillColor="@android:color/system_accent1_10"
+        android:fillColor="@color/ic_launcher_foreground"
         android:pathData="m1025.6,663c-84.9,0 -154.1,69.2 -154.1,154.1s69.2,154.1 154.1,154.1 154.1,-69.2 154.1,-154.1 -69.2,-154.1 -154.1,-154.1ZM1099.1,857.3c0,15.6 -12.8,28.4 -28.4,28.4h-85.3c-15.6,0 -28.4,-12.8 -28.4,-28.4v-85.3c0,-15.6 12.8,-28.4 28.4,-28.4h47.5c7.9,-5.9 17.8,-9.5 28.4,-9.5 26.1,0 47.4,21.3 47.4,47.4 0,10.6 -3.5,20.4 -9.5,28.4v47.5Z" />
     <path
-        android:fillColor="@android:color/system_accent1_10"
+        android:fillColor="@color/ic_launcher_foreground"
         android:pathData="m980.6,781.5v61.6c0,8.1 6.2,14.2 14.2,14.2h66.4c8.1,0 14.2,-6.2 14.2,-14.2v-16.4c-4.5,1.4 -9.3,2.2 -14.2,2.2 -26.1,0 -47.4,-21.3 -47.4,-47.4 0,-4.9 0.8,-9.7 2.2,-14.2h-21.2c-8.1,0 -14.2,6.2 -14.2,14.2Z" />
     <path
-        android:fillColor="@android:color/system_accent1_10"
+        android:fillColor="@color/ic_launcher_foreground"
         android:pathData="m1038,781.5c0,-13.3 10.4,-23.7 23.7,-23.7s23.7,10.4 23.7,23.7 -10.4,23.7 -23.7,23.7 -23.7,-10.4 -23.7,-23.7Z" />
 </vector>

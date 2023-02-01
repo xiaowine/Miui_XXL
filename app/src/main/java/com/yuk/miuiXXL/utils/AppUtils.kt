@@ -2,8 +2,6 @@ package com.yuk.miuiXXL.utils
 
 import android.annotation.SuppressLint
 import android.os.Build
-import com.yuk.miuiXXL.BuildConfig
-import de.robv.android.xposed.XSharedPreferences
 import java.io.BufferedReader
 import java.io.DataOutputStream
 import java.io.IOException
@@ -20,9 +18,6 @@ fun getProp(mKey: String): String =
 fun getProp(mKey: String, defaultValue: Boolean): Boolean =
     Class.forName("android.os.SystemProperties").getMethod("getBoolean", String::class.java, Boolean::class.javaPrimitiveType)
         .invoke(Class.forName("android.os.SystemProperties"), mKey, defaultValue) as Boolean
-
-
-fun atLeastAndroidS(): Boolean = Build.VERSION.SDK_INT >= Build.VERSION_CODES.S
 
 fun atLeastAndroidT(): Boolean = Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU
 
