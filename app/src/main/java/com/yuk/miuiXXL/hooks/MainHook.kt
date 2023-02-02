@@ -20,7 +20,9 @@ import com.yuk.miuiXXL.hooks.modules.miuihome.TwoXOneIconRoundedCornerFollowing
 import com.yuk.miuiXXL.hooks.modules.powerkeeper.DisableDynamicRefreshRate
 import com.yuk.miuiXXL.hooks.modules.securitycenter.ShowBatteryTemperature
 import com.yuk.miuiXXL.hooks.modules.securitycenter.SkipWarningWaitTime
-import com.yuk.miuiXXL.hooks.modules.systemui.LockScreenShowCurrent
+import com.yuk.miuiXXL.hooks.modules.settings.NotificationImportance
+import com.yuk.miuiXXL.hooks.modules.systemui.DisableBluetoothRestrict
+import com.yuk.miuiXXL.hooks.modules.systemui.LockScreenShowBatteryCV
 import com.yuk.miuiXXL.hooks.modules.systemui.RemoveLockScreenCamera
 import com.yuk.miuiXXL.hooks.modules.systemui.RemoveLockScreenMinus
 import com.yuk.miuiXXL.hooks.modules.systemui.StatusbarShowSeconds
@@ -34,6 +36,7 @@ import de.robv.android.xposed.callbacks.XC_LoadPackage
 private const val TAG = "Miui XXL"
 private val PACKAGE_NAME_HOOKED = setOf(
     "android",
+    "com.android.settings",
     "com.android.systemui",
     "com.android.thememanager",
     "com.android.updater",
@@ -66,12 +69,19 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit {
                     )
                 }
 
+                "com.android.settings" -> {
+                    initHooks(
+                        NotificationImportance,
+                    )
+                }
+
                 "com.android.systemui" -> {
                     initHooks(
                         StatusbarShowSeconds,
-                        LockScreenShowCurrent,
+                        LockScreenShowBatteryCV,
                         RemoveLockScreenMinus,
                         RemoveLockScreenCamera,
+                        DisableBluetoothRestrict,
                     )
                 }
 

@@ -73,11 +73,12 @@
     <string name="systemui_statusbar_show_seconds_summary">状态栏位置的时间显示秒钟，不包括通知栏及控制中心。</string>
     <string name="systemui_lockscreen_show_current">锁屏显示充电电流</string>
     <string name="systemui_lockscreen_show_current_summary">充电时锁屏界面底部显示瞬间电流。</string>
-    <string name="systemui_lockscreen_show_current_title">当前电流：</string>
     <string name="systemui_lockscreen_remove_minus">移除锁屏负一屏</string>
     <string name="systemui_lockscreen_remove_minus_summary">移除锁屏界面左下角图标及负一屏功能。</string>
     <string name="systemui_lockscreen_remove_camera">移除锁屏相机</string>
     <string name="systemui_lockscreen_remove_camera_summary">移除锁屏界面右下角图标及相机功能。</string>
+    <string name="systemui_disable_bluetooth_restrict">禁用蓝牙临时关闭</string>
+    <string name="systemui_disable_bluetooth_restrict_summary">禁用米米对标苹果的「蓝牙临时关闭」功能。</string>
 
     <string name="powerkeeper">电量和性能</string>
     <string name="powerkeeper_disable_dynamic_refresh_rate">锁定刷新率</string>
@@ -92,5 +93,9 @@
     <string name="updater">系统更新</string>
     <string name="updater_fuck_vab_update">移除更新验证</string>
     <string name="updater_fuck_vab_update_summary">- 仅支持 <font color='#FF0000'><b>VAB</b></font> 机型，其余机型请不要开启。\n- 无需内测试资格即可刷入完整内测包。\n- 拥有权限的用户将无法接收更新，亦可用于屏蔽更新。\n- 仅官方系统使用。</string>
+
+    <string name="settings">设置</string>
+    <string name="settings_notification_importance">通知重要程度</string>
+    <string name="settings_notification_importance_summary">还原被米米阉割的原生「通知重要程度」功能。</string>
 
 </resources>

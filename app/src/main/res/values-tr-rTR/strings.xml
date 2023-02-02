@@ -75,9 +75,10 @@
     <string name="systemui_lockscreen_remove_minus_summary">Kilit ekranının sol alt köşesindeki simgeyi ve negatif ekran işlevini kaldırın</string>
     <string name="systemui_lockscreen_show_current">Kilit ekranı şarj akımını gösterir</string>
     <string name="systemui_lockscreen_show_current_summary">Şarj sırasında kilit ekranının altında anlık akım görüntülenir</string>
-    <string name="systemui_lockscreen_show_current_title">Akım akımı:</string>
     <string name="systemui_statusbar_show_seconds">Saniye cinsinden süre</string>
     <string name="systemui_statusbar_show_seconds_summary">Durum çubuğunun konumunun saati, bildirim çubuğu ve kontrol merkezi hariç olmak üzere saniye cinsinden görüntülenir</string>
+    <string name="systemui_disable_bluetooth_restrict">Disable Bluetooth Restrict</string>
+    <string name="systemui_disable_bluetooth_restrict_summary">Disable MIUI copying Apple\'s temporarily disable Bluetooth</string>
 
     <string name="powerkeeper">Güç ve performans</string>
     <string name="powerkeeper_disable_dynamic_refresh_rate">Yenileme hızını kilitle</string>

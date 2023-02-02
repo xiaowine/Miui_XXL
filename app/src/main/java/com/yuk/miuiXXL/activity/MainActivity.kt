@@ -11,6 +11,7 @@ import com.yuk.miuiXXL.activity.pages.MenuPage
 import com.yuk.miuiXXL.activity.pages.MiuiHomePage
 import com.yuk.miuiXXL.activity.pages.PowerKeeperPage
 import com.yuk.miuiXXL.activity.pages.SecurityCenterPage
+import com.yuk.miuiXXL.activity.pages.SettingsPage
 import com.yuk.miuiXXL.activity.pages.SystemUIPage
 import com.yuk.miuiXXL.activity.pages.ThemeManagerPage
 import com.yuk.miuiXXL.activity.pages.UpdaterPage
@@ -50,6 +51,7 @@ class MainActivity : MIUIActivity() {
         registerPage(SystemUIPage::class.java)
         registerPage(ThemeManagerPage::class.java)
         registerPage(UpdaterPage::class.java)
+        registerPage(SettingsPage::class.java)
 
     }
 }

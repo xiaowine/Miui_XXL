@@ -76,9 +76,10 @@
     <string name="systemui_lockscreen_remove_minus_summary">Remove the icon at the lower left corner of the lock screen and the negative screen function</string>
     <string name="systemui_lockscreen_show_current">Lock screen shows charging current</string>
     <string name="systemui_lockscreen_show_current_summary">Instantaneous current is displayed at the bottom of the lock screen during charging</string>
-    <string name="systemui_lockscreen_show_current_title">Current current:</string>
     <string name="systemui_statusbar_show_seconds">Time in seconds</string>
     <string name="systemui_statusbar_show_seconds_summary">The time of the position of the status bar is displayed in seconds, excluding the notification bar and the control center</string>
+    <string name="systemui_disable_bluetooth_restrict">Disable Bluetooth Restrict</string>
+    <string name="systemui_disable_bluetooth_restrict_summary">Disable MIUI copying Apple\'s temporarily disable Bluetooth</string>
 
     <string name="powerkeeper">Power and performance</string>
     <string name="powerkeeper_disable_dynamic_refresh_rate">Lock refresh rate</string>
@@ -93,5 +94,9 @@
     <string name="updater">Updater</string>
     <string name="updater_fuck_vab_update">Remove update validation</string>
     <string name="updater_fuck_vab_update_summary">-Only <font color='#FF0000'><b>VAB</b></font> models are supported. Please do not turn on other models \n-No internal test qualification is required to brush into the complete internal test package \n-Users with permissions will not be able to receive updates and can also be used to mask updates \n-Only used by the official system</string>
+
+    <string name="settings">Settings</string>
+    <string name="settings_notification_importance">Notification importance</string>
+    <string name="settings_notification_importance_summary">Show notification importance settings which are hidden in MIUI</string>
 
 </resources>

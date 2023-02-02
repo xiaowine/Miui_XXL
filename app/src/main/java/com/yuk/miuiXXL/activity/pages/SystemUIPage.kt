@@ -30,6 +30,11 @@ class SystemUIPage : BasePage() {
             TextSummaryV(textId = R.string.systemui_lockscreen_remove_camera, tipsId = R.string.systemui_lockscreen_remove_camera_summary),
             SwitchV("systemui_lockscreen_remove_camera", false)
         )
+        TextSummaryWithSwitch(
+            TextSummaryV(
+                textId = R.string.systemui_disable_bluetooth_restrict, tipsId = R.string.systemui_disable_bluetooth_restrict_summary
+            ), SwitchV("systemui_disable_bluetooth_restrict", false)
+        )
     }
 
 }

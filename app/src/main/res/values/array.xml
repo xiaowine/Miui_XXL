@@ -2,6 +2,7 @@
 <resources>
     <string-array name="xposed_scope">
         <item>android</item>
+        <item>com.android.settings</item>
         <item>com.android.systemui</item>
         <item>com.android.thememanager</item>
         <item>com.android.updater</item>
