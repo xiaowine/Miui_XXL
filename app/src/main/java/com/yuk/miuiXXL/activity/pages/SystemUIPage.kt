@@ -35,6 +35,11 @@ class SystemUIPage : BasePage() {
                 textId = R.string.systemui_disable_bluetooth_restrict, tipsId = R.string.systemui_disable_bluetooth_restrict_summary
             ), SwitchV("systemui_disable_bluetooth_restrict", false)
         )
+        TextSummaryWithSwitch(
+            TextSummaryV(
+                textId = R.string.systemui_wave_charge_animation, tipsId = R.string.systemui_wave_charge_animation_summary
+            ), SwitchV("systemui_wave_charge_animation", false)
+        )
     }
 
 }

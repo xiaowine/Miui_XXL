@@ -21,6 +21,7 @@
     <string name="other">Diğer</string>
 
     <string name="android">Sistem çerçevesi</string>
+    <string name="android_reboot">Etkili olması için yeniden başlatma gerektirir</string>
     <string name="android_corepacth">Çekirdek çatlaması</string>
     <string name="android_corepacth_UsePreSig">Yüklerken her zaman yüklü uygulamanın imzasını kullanın</string>
     <string name="android_corepacth_UsePreSig_summary">Çok <font color="#FF0000"><b>tehlikeli</b></font>, Yalnızca kesinlikle gerektiğinde etkinleştirin</string>
@@ -35,7 +36,7 @@
     <string name="android_max_wallpaper_scale">Duvar kağıdı yakınlaştırma</string>
     <string name="android_max_wallpaper_scale_summary">Sistem masaüstü anahtarı uygulandığında duvar kağıdı yakınlaştırma büyütme</string>
     <string name="android_remove_small_window_restriction">Küçük pencere kısıtlamasını kaldır</string>
-    <string name="android_remove_small_window_restriction_summary">Çoğu uygulamanın küçük pencerelerin açılmasını desteklemesini sağlar</string>
+    <string name="android_remove_small_window_restriction_summary">Küçük pencerelerin açılmasını desteklemek için çoğu uygulamayı kullanın, sistem başlatıcıyı ve SystemUI\'yi kontrol etmeniz gerekir</string>
 
     <string name="miuihome">MIUI Ana Sayfa</string>
     <string name="miuihome_anim_ratio">Geçiş animasyon hızı "Uygulama açıldığında veya kapatıldığında"</string>
@@ -81,6 +82,8 @@
     <string name="systemui_statusbar_show_seconds_summary">Durum çubuğunun konumunun saati, bildirim çubuğu ve kontrol merkezi hariç olmak üzere saniye cinsinden görüntülenir</string>
     <string name="systemui_disable_bluetooth_restrict">Bluetooth kısıtlamalarını devre dışı bırak</string>
     <string name="systemui_disable_bluetooth_restrict_summary">Apple\'dan klonlanan MIUI\'yi devre dışı bırakın, bluetooth\'u geçici olarak devre dışı bırakın</string>
+    <string name="systemui_wave_charge_animation">Dalga yükü animasyonunu etkinleştir</string>
+    <string name="systemui_wave_charge_animation_summary">Varsayılan şarj animasyonu yerine Mix Alpha şarj animasyonunu kullanın</string>
 
     <string name="powerkeeper">Güç ve performans</string>
     <string name="powerkeeper_disable_dynamic_refresh_rate">Yenileme hızını kilitle</string>
@@ -95,5 +98,9 @@
     <string name="updater">Sistem güncellemesi</string>
     <string name="updater_fuck_vab_update">Güncelleme doğrulamasını kaldır</string>
     <string name="updater_fuck_vab_update_summary">-Sadece  <font color='#FF0000'><b>VAB</b></font>  modelleri desteklenir. Lütfen diğer modelleri açmayın \n-Dahili test paketinin tamamını fırçalamak için dahili test yeterliliği gerekmez \n-İzinleri olan kullanıcılar güncellemeleri alamayacak ve güncellemeleri maskelemek için de kullanılabilir \n-Sadece resmi sistem tarafından kullanılır</string>
+
+    <string name="settings">Ayarlar</string>
+    <string name="settings_notification_importance">Bildirim önemi</string>
+    <string name="settings_notification_importance_summary">MIUI tarafından gizlenen bildirim önem ayarlarını göster</string>
 
 </resources>

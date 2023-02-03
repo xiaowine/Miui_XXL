@@ -12,8 +12,8 @@ import com.yuk.miuiXXL.hooks.modules.miuihome.AnimDurationRatio
 import com.yuk.miuiXXL.hooks.modules.miuihome.CategoryFeatures
 import com.yuk.miuiXXL.hooks.modules.miuihome.DisableRecentViewWallpaperDarkening
 import com.yuk.miuiXXL.hooks.modules.miuihome.DoubleTapToSleep
-import com.yuk.miuiXXL.hooks.modules.miuihome.ModifyRecentViewRemoveCardAnimation
-import com.yuk.miuiXXL.hooks.modules.miuihome.ModifyUnlockAnimation
+import com.yuk.miuiXXL.hooks.modules.miuihome.ModifyRecentViewRemoveCardAnim
+import com.yuk.miuiXXL.hooks.modules.miuihome.ModifyUnlockAnim
 import com.yuk.miuiXXL.hooks.modules.miuihome.RemoveSmallWindowRestriction2
 import com.yuk.miuiXXL.hooks.modules.miuihome.ScrollIconName
 import com.yuk.miuiXXL.hooks.modules.miuihome.SetDeviceLevel
@@ -27,7 +27,9 @@ import com.yuk.miuiXXL.hooks.modules.systemui.DisableBluetoothRestrict
 import com.yuk.miuiXXL.hooks.modules.systemui.LockScreenShowBatteryCV
 import com.yuk.miuiXXL.hooks.modules.systemui.RemoveLockScreenCamera
 import com.yuk.miuiXXL.hooks.modules.systemui.RemoveLockScreenMinus
+import com.yuk.miuiXXL.hooks.modules.systemui.RemoveSmallWindowRestriction3
 import com.yuk.miuiXXL.hooks.modules.systemui.StatusbarShowSeconds
+import com.yuk.miuiXXL.hooks.modules.systemui.WaveChargeAnim
 import com.yuk.miuiXXL.hooks.modules.thememanager.FuckValidateTheme1
 import com.yuk.miuiXXL.hooks.modules.thememanager.RemoveAds
 import com.yuk.miuiXXL.hooks.modules.updater.VABUpdate
@@ -85,6 +87,8 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit {
                         RemoveLockScreenMinus,
                         RemoveLockScreenCamera,
                         DisableBluetoothRestrict,
+                        RemoveSmallWindowRestriction3,
+                        WaveChargeAnim,
                     )
                 }
 
@@ -107,9 +111,9 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit {
                         DoubleTapToSleep,
                         ScrollIconName,
                         AnimDurationRatio,
-                        ModifyUnlockAnimation,
+                        ModifyUnlockAnim,
                         DisableRecentViewWallpaperDarkening,
-                        ModifyRecentViewRemoveCardAnimation,
+                        ModifyRecentViewRemoveCardAnim,
                         CategoryFeatures,
                         TwoXOneIconRoundedCornerFollowing,
                         ShortcutAddSmallWindow,

@@ -2,13 +2,14 @@ package com.yuk.miuiXXL.hooks.modules.miuihome
 
 import android.content.Context
 import android.content.Intent
+import android.os.SystemClock
 import android.view.MotionEvent
+import android.view.ViewConfiguration
 import com.github.kyuubiran.ezxhelper.utils.findMethod
 import com.github.kyuubiran.ezxhelper.utils.getObject
 import com.github.kyuubiran.ezxhelper.utils.hookAllConstructorAfter
 import com.github.kyuubiran.ezxhelper.utils.hookBefore
 import com.github.kyuubiran.ezxhelper.utils.invokeMethodAuto
-import com.yuk.miuiXXL.hooks.added.constructor.DoubleTapController
 import com.yuk.miuiXXL.hooks.modules.BaseHook
 import com.yuk.miuiXXL.utils.getBoolean
 import de.robv.android.xposed.XposedHelpers
@@ -38,6 +39,57 @@ object DoubleTapToSleep : BaseHook() {
                     "com.miui.app.ExtraStatusBarManager.extra_TOGGLE_ID", 10
                 )
             )
+        }
+
+    }
+
+}
+
+class DoubleTapController internal constructor(mContext: Context) {
+    private val maxDuration: Long = 500
+    private var mActionDownRawX: Float = 0f
+    private var mActionDownRawY: Float = 0f
+    private var mClickCount: Int = 0
+    private var mFirstClickRawX: Float = 0f
+    private var mFirstClickRawY: Float = 0f
+    private var mLastClickTime: Long = 0
+    private val mTouchSlop: Int = ViewConfiguration.get(mContext).scaledTouchSlop * 2
+    fun isDoubleTapEvent(motionEvent: MotionEvent): Boolean {
+        val action = motionEvent.actionMasked
+        return when {
+            action == MotionEvent.ACTION_DOWN -> {
+                mActionDownRawX = motionEvent.rawX
+                mActionDownRawY = motionEvent.rawY
+                false
+            }
+
+            action != MotionEvent.ACTION_UP -> false
+            else -> {
+                val rawX = motionEvent.rawX
+                val rawY = motionEvent.rawY
+                if (kotlin.math.abs(rawX - mActionDownRawX) <= mTouchSlop.toFloat() && kotlin.math.abs(
+                        rawY - mActionDownRawY
+                    ) <= mTouchSlop.toFloat()
+                ) {
+                    if (SystemClock.elapsedRealtime() - mLastClickTime > maxDuration || rawY - mFirstClickRawY > mTouchSlop.toFloat() || rawX - mFirstClickRawX > mTouchSlop.toFloat()) mClickCount =
+                        0
+                    mClickCount++
+                    if (mClickCount == 1) {
+                        mFirstClickRawX = rawX
+                        mFirstClickRawY = rawY
+                        mLastClickTime = SystemClock.elapsedRealtime()
+                        return false
+                    } else if (kotlin.math.abs(rawY - mFirstClickRawY) <= mTouchSlop.toFloat() && kotlin.math.abs(
+                            rawX - mFirstClickRawX
+                        ) <= mTouchSlop.toFloat() && SystemClock.elapsedRealtime() - mLastClickTime <= maxDuration
+                    ) {
+                        mClickCount = 0
+                        return true
+                    }
+                }
+                mClickCount = 0
+                false
+            }
         }
     }
 

@@ -22,6 +22,7 @@
     <string name="other">Other</string>
 
     <string name="android">System Framework</string>
+    <string name="android_reboot">Requires reboot system to take effect</string>
     <string name="android_corepacth">Core cracking</string>
     <string name="android_corepacth_UsePreSig">Always use the signature of the installed app when installing</string>
     <string name="android_corepacth_UsePreSig_summary">Not ordinary <font color="#FF0000"><b>dangerous</b></font>, Enable only when absolutely needed</string>
@@ -36,7 +37,7 @@
     <string name="android_max_wallpaper_scale">Wallpaper zoom</string>
     <string name="android_max_wallpaper_scale_summary">The wallpaper zoom magnification when the system desktop switch is applied</string>
     <string name="android_remove_small_window_restriction">Remove small window restriction</string>
-    <string name="android_remove_small_window_restriction_summary">Make most apps support small window opening, and the system launcher needs to be checked</string>
+    <string name="android_remove_small_window_restriction_summary">Make most apps support small window opening, need to check System launcher and SystemUI</string>
 
     <string name="miuihome">System launcher</string>
     <string name="miuihome_anim_ratio">Transition animation speed「When the app is turned on or off」</string>
@@ -82,6 +83,8 @@
     <string name="systemui_statusbar_show_seconds_summary">The time of the position of the status bar is displayed in seconds, excluding the notification bar and the control center</string>
     <string name="systemui_disable_bluetooth_restrict">Disable Bluetooth Restrict</string>
     <string name="systemui_disable_bluetooth_restrict_summary">Disable MIUI copying Apple\'s temporarily disable Bluetooth</string>
+    <string name="systemui_wave_charge_animation">Enable wave charge animation</string>
+    <string name="systemui_wave_charge_animation_summary">Use Mix Alpha charge animation instead of default charge animation</string>
 
     <string name="powerkeeper">Power and performance</string>
     <string name="powerkeeper_disable_dynamic_refresh_rate">Lock refresh rate</string>
