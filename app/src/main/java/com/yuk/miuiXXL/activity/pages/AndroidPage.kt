@@ -16,8 +16,13 @@ class AndroidPage : BasePage() {
     }
 
     override fun onCreate() {
+        TextSummaryWithSwitch(
+            TextSummaryV(
+                textId = R.string.android_remove_small_window_restriction, tipsId = R.string.android_remove_small_window_restriction_summary
+            ), SwitchV("android_remove_small_window_restriction")
+        )
         TextSummaryArrow(
-            TextSummaryV(textId = R.string.android_max_wallpaper_scale, onClickListener = {
+            TextSummaryV(textId = R.string.android_max_wallpaper_scale, tipsId = R.string.android_max_wallpaper_scale_summary, onClickListener = {
                 MIUIDialog(activity) {
                     setTitle(R.string.android_max_wallpaper_scale)
                     setMessage(

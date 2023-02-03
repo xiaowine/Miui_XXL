@@ -4,8 +4,9 @@ import com.github.kyuubiran.ezxhelper.init.EzXHelperInit
 import com.github.kyuubiran.ezxhelper.utils.Log
 import com.github.kyuubiran.ezxhelper.utils.Log.logexIfThrow
 import com.yuk.miuiXXL.hooks.modules.BaseHook
-import com.yuk.miuiXXL.hooks.modules.android.FuckValidateTheme
+import com.yuk.miuiXXL.hooks.modules.android.FuckValidateTheme2
 import com.yuk.miuiXXL.hooks.modules.android.MaxWallpaperScale
+import com.yuk.miuiXXL.hooks.modules.android.RemoveSmallWindowRestriction1
 import com.yuk.miuiXXL.hooks.modules.android.corepatch.CorePatchMainHook
 import com.yuk.miuiXXL.hooks.modules.miuihome.AnimDurationRatio
 import com.yuk.miuiXXL.hooks.modules.miuihome.CategoryFeatures
@@ -13,6 +14,7 @@ import com.yuk.miuiXXL.hooks.modules.miuihome.DisableRecentViewWallpaperDarkenin
 import com.yuk.miuiXXL.hooks.modules.miuihome.DoubleTapToSleep
 import com.yuk.miuiXXL.hooks.modules.miuihome.ModifyRecentViewRemoveCardAnimation
 import com.yuk.miuiXXL.hooks.modules.miuihome.ModifyUnlockAnimation
+import com.yuk.miuiXXL.hooks.modules.miuihome.RemoveSmallWindowRestriction2
 import com.yuk.miuiXXL.hooks.modules.miuihome.ScrollIconName
 import com.yuk.miuiXXL.hooks.modules.miuihome.SetDeviceLevel
 import com.yuk.miuiXXL.hooks.modules.miuihome.ShortcutAddSmallWindow
@@ -26,7 +28,7 @@ import com.yuk.miuiXXL.hooks.modules.systemui.LockScreenShowBatteryCV
 import com.yuk.miuiXXL.hooks.modules.systemui.RemoveLockScreenCamera
 import com.yuk.miuiXXL.hooks.modules.systemui.RemoveLockScreenMinus
 import com.yuk.miuiXXL.hooks.modules.systemui.StatusbarShowSeconds
-import com.yuk.miuiXXL.hooks.modules.thememanager.FuckTheme
+import com.yuk.miuiXXL.hooks.modules.thememanager.FuckValidateTheme1
 import com.yuk.miuiXXL.hooks.modules.thememanager.RemoveAds
 import com.yuk.miuiXXL.hooks.modules.updater.VABUpdate
 import de.robv.android.xposed.IXposedHookLoadPackage
@@ -50,7 +52,7 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit {
     override fun initZygote(startupParam: IXposedHookZygoteInit.StartupParam) {
         EzXHelperInit.initZygote(startupParam)
         CorePatchMainHook().initZygote(startupParam)
-        initHooks(FuckValidateTheme)
+        initHooks(FuckValidateTheme2)
     }
 
     override fun handleLoadPackage(lpparam: XC_LoadPackage.LoadPackageParam) {
@@ -64,8 +66,9 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit {
                 "android" -> {
                     CorePatchMainHook().handleLoadPackage(lpparam)
                     initHooks(
-                        FuckValidateTheme,
+                        FuckValidateTheme2,
                         MaxWallpaperScale,
+                        RemoveSmallWindowRestriction1,
                     )
                 }
 
@@ -88,7 +91,7 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit {
                 "com.android.thememanager" -> {
                     initHooks(
                         RemoveAds,
-                        FuckTheme,
+                        FuckValidateTheme1,
                     )
                 }
 
@@ -110,6 +113,7 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit {
                         CategoryFeatures,
                         TwoXOneIconRoundedCornerFollowing,
                         ShortcutAddSmallWindow,
+                        RemoveSmallWindowRestriction2,
                     )
                 }
 

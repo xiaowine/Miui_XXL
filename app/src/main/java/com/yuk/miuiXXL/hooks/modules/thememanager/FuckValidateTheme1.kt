@@ -12,7 +12,7 @@ import com.yuk.miuiXXL.utils.findClass
 import com.yuk.miuiXXL.utils.getBoolean
 import miui.drm.DrmManager
 
-object FuckTheme : BaseHook() {
+object FuckValidateTheme1 : BaseHook() {
     override fun init() {
 
         if (!getBoolean("thememanager_fuck_validate_theme", false)) return

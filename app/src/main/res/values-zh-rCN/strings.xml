@@ -34,6 +34,8 @@
     <string name="android_corepacth_enhancedMode_summary">可以解决一些应用内部的完整性校验，一般不需要开启。</string>
     <string name="android_max_wallpaper_scale">壁纸缩放</string>
     <string name="android_max_wallpaper_scale_summary">系统桌面开关应用时的壁纸缩放倍率。</string>
+    <string name="android_remove_small_window_restriction">移除小窗打开限制</string>
+    <string name="android_remove_small_window_restriction_summary">使大多数应用支持小窗口打开，需同时作用于系统桌面。</string>
 
     <string name="miuihome">系统桌面</string>
     <string name="miuihome_double_tap_to_sleep">双击熄屏</string>
@@ -66,7 +68,7 @@
     <string name="thememanager_remove_ads">去广告</string>
     <string name="thememanager_remove_ads_summary">猜你喜欢内的广告将显示为空白卡片，其余位置的广告将完全移除。</string>
     <string name="thememanager_fuck_validate_theme">主题破解</string>
-    <string name="thememanager_fuck_validate_theme_summary">允许应用第三方主题及付费字体，需要同时勾选系统框架并重新启动。</string>
+    <string name="thememanager_fuck_validate_theme_summary">允许应用第三方主题及字体，需同时作用于系统框架并重启后生效。</string>
 
     <string name="systemui">系统界面</string>
     <string name="systemui_statusbar_show_seconds">时间显秒</string>

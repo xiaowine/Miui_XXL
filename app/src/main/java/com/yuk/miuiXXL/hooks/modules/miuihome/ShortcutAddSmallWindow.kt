@@ -1,22 +1,18 @@
 package com.yuk.miuiXXL.hooks.modules.miuihome
 
 import android.app.AndroidAppHelper
-import android.app.Application
 import android.content.ComponentName
 import android.content.Intent
 import android.content.res.Configuration
 import android.os.Bundle
 import android.view.View
 import com.github.kyuubiran.ezxhelper.init.InitFields.moduleRes
-import com.github.kyuubiran.ezxhelper.utils.findMethod
-import com.github.kyuubiran.ezxhelper.utils.hookBefore
 import com.yuk.miuiXXL.R
 import com.yuk.miuiXXL.hooks.modules.BaseHook
 import com.yuk.miuiXXL.utils.callMethod
 import com.yuk.miuiXXL.utils.callStaticMethod
 import com.yuk.miuiXXL.utils.findClass
 import com.yuk.miuiXXL.utils.getBoolean
-import com.yuk.miuiXXL.utils.getInt
 import com.yuk.miuiXXL.utils.getStaticObjectField
 import com.yuk.miuiXXL.utils.hookAfterAllMethods
 import com.yuk.miuiXXL.utils.hookBeforeMethod
@@ -51,7 +47,7 @@ object ShortcutAddSmallWindow : BaseHook() {
                 val intent = Intent()
                 val mComponentName = obj.callMethod("getComponentName") as ComponentName
                 intent.action = "android.intent.action.MAIN"
-                intent.addCategory("android.intent.category.DEFAULT")
+                intent.addCategory("android.intent.category.LAUNCHER")
                 intent.component = mComponentName
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                 val callStaticMethod = mActivityUtilsCompat.callStaticMethod("makeFreeformActivityOptions", view.context, mComponentName.packageName)

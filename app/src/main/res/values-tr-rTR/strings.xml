@@ -34,6 +34,8 @@
     <string name="android_corepacth_enhancedMode_summary">Bazı uygulamaların içindeki bütünlük doğrulamasını çözebilir, genellikle açık olması gerekmez</string>
     <string name="android_max_wallpaper_scale">Duvar kağıdı yakınlaştırma</string>
     <string name="android_max_wallpaper_scale_summary">Sistem masaüstü anahtarı uygulandığında duvar kağıdı yakınlaştırma büyütme</string>
+    <string name="android_remove_small_window_restriction">Küçük pencere kısıtlamasını kaldır</string>
+    <string name="android_remove_small_window_restriction_summary">Çoğu uygulamanın küçük pencerelerin açılmasını desteklemesini sağlar</string>
 
     <string name="miuihome">MIUI Ana Sayfa</string>
     <string name="miuihome_anim_ratio">Geçiş animasyon hızı "Uygulama açıldığında veya kapatıldığında"</string>
@@ -64,7 +66,7 @@
 
     <string name="thememanager">Tema duvar kağıdı</string>
     <string name="thememanager_fuck_validate_theme">Tema crack</string>
-    <string name="thememanager_fuck_validate_theme_summary">Üçüncü taraf temaların ve ücretli yazı tiplerinin uygulanmasına izin verilir ve sistem çerçevesinin aynı anda kontrol edilmesi ve yeniden başlatılması gerekir.</string>
+    <string name="thememanager_fuck_validate_theme_summary">Üçüncü taraf temalarının ve yazı tiplerinin uygulanmasına izin verir ve kontrol edilmesi ve sistem çerçevesinin yeniden başlatılması gerekir.</string>
     <string name="thememanager_remove_ads">Reklâm yapmak</string>
     <string name="thememanager_remove_ads_summary">En sevdiğiniz reklamların boş kartlar olarak gösterileceğini ve geri kalan reklamların tamamen kaldırılacağını tahmin edin</string>
 
@@ -77,8 +79,8 @@
     <string name="systemui_lockscreen_show_current_summary">Şarj sırasında kilit ekranının altında anlık akım görüntülenir</string>
     <string name="systemui_statusbar_show_seconds">Saniye cinsinden süre</string>
     <string name="systemui_statusbar_show_seconds_summary">Durum çubuğunun konumunun saati, bildirim çubuğu ve kontrol merkezi hariç olmak üzere saniye cinsinden görüntülenir</string>
-    <string name="systemui_disable_bluetooth_restrict">Disable Bluetooth Restrict</string>
-    <string name="systemui_disable_bluetooth_restrict_summary">Disable MIUI copying Apple\'s temporarily disable Bluetooth</string>
+    <string name="systemui_disable_bluetooth_restrict">Bluetooth kısıtlamalarını devre dışı bırak</string>
+    <string name="systemui_disable_bluetooth_restrict_summary">Apple\'dan klonlanan MIUI\'yi devre dışı bırakın, bluetooth\'u geçici olarak devre dışı bırakın</string>
 
     <string name="powerkeeper">Güç ve performans</string>
     <string name="powerkeeper_disable_dynamic_refresh_rate">Yenileme hızını kilitle</string>

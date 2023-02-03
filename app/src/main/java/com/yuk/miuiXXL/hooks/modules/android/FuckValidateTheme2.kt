@@ -9,11 +9,10 @@ import com.github.kyuubiran.ezxhelper.utils.unhookAll
 import com.yuk.miuiXXL.hooks.modules.BaseHook
 import com.yuk.miuiXXL.utils.getBoolean
 import de.robv.android.xposed.XC_MethodHook
-import de.robv.android.xposed.XposedBridge
 import miui.drm.DrmManager
 import miui.drm.ThemeReceiver
 
-object FuckValidateTheme : BaseHook() {
+object FuckValidateTheme2 : BaseHook() {
     override fun init() {
 
         if (!getBoolean("thememanager_fuck_validate_theme", false)) return
