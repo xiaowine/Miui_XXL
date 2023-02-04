@@ -69,6 +69,7 @@
     <string name="thememanager">Themes</string>
     <string name="thememanager_fuck_validate_theme">Theme cracking</string>
     <string name="thememanager_fuck_validate_theme_summary">Third-party themes and fonts are allowed to be applied, and the system framework needs to be checked and restarted at the same time.</string>
+    <string name="thememanager_fuck_validate_theme_fonts_title">Free</string>
     <string name="thememanager_remove_ads">To advertise</string>
     <string name="thememanager_remove_ads_summary">Guess the ads in your favorite will be displayed as blank cards, and the ads in the rest will be completely removed</string>
 

@@ -68,6 +68,7 @@
     <string name="thememanager">Tema duvar kağıdı</string>
     <string name="thememanager_fuck_validate_theme">Tema crack</string>
     <string name="thememanager_fuck_validate_theme_summary">Üçüncü taraf temalarının ve yazı tiplerinin uygulanmasına izin verir ve kontrol edilmesi ve sistem çerçevesinin yeniden başlatılması gerekir.</string>
+    <string name="thememanager_fuck_validate_theme_fonts_title">özgür</string>
     <string name="thememanager_remove_ads">Reklâm yapmak</string>
     <string name="thememanager_remove_ads_summary">En sevdiğiniz reklamların boş kartlar olarak gösterileceğini ve geri kalan reklamların tamamen kaldırılacağını tahmin edin</string>
 

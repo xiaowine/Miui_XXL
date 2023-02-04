@@ -1,12 +1,14 @@
 package com.yuk.miuiXXL.hooks.modules.thememanager
 
 import android.widget.TextView
+import com.github.kyuubiran.ezxhelper.init.InitFields.moduleRes
 import com.github.kyuubiran.ezxhelper.utils.Log
 import com.github.kyuubiran.ezxhelper.utils.findAllMethods
 import com.github.kyuubiran.ezxhelper.utils.findMethod
 import com.github.kyuubiran.ezxhelper.utils.getObjectAs
 import com.github.kyuubiran.ezxhelper.utils.hookAfter
 import com.github.kyuubiran.ezxhelper.utils.putObject
+import com.yuk.miuiXXL.R
 import com.yuk.miuiXXL.hooks.modules.BaseHook
 import com.yuk.miuiXXL.utils.findClass
 import com.yuk.miuiXXL.utils.getBoolean
@@ -40,9 +42,9 @@ object FuckValidateTheme1 : BaseHook() {
         }
         try {
             findMethod("com.android.thememanager.basemodule.views.DiscountPriceView") {
-                name == "f" && parameterCount == 1
+                name == "f"
             }.hookAfter {
-                it.thisObject.getObjectAs<TextView>("b").text = "免费"
+                it.thisObject.getObjectAs<TextView>("b").text = moduleRes.getString(R.string.thememanager_fuck_validate_theme_fonts_title)
             }
         } catch (t: Throwable) {
             Log.ex(t)

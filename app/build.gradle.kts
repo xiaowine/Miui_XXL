@@ -54,7 +54,6 @@ android {
 
 dependencies {
     compileOnly("de.robv.android.xposed:api:82")
-    implementation(files("libs/miui-framework.jar"))
     implementation(project(":blockmiui"))
     implementation("com.github.kyuubiran:EzXHelper:1.0.3")
 }
