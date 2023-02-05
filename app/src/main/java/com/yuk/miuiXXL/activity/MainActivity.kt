@@ -7,6 +7,7 @@ import cn.fkj233.ui.dialog.MIUIDialog
 import com.yuk.miuiXXL.R
 import com.yuk.miuiXXL.activity.pages.AndroidPage
 import com.yuk.miuiXXL.activity.pages.MainPage
+import com.yuk.miuiXXL.activity.pages.MediaEditorPage
 import com.yuk.miuiXXL.activity.pages.MenuPage
 import com.yuk.miuiXXL.activity.pages.MiuiHomePage
 import com.yuk.miuiXXL.activity.pages.PowerKeeperPage
@@ -52,6 +53,7 @@ class MainActivity : MIUIActivity() {
         registerPage(ThemeManagerPage::class.java)
         registerPage(UpdaterPage::class.java)
         registerPage(SettingsPage::class.java)
+        registerPage(MediaEditorPage::class.java)
 
     }
 }

@@ -42,10 +42,13 @@ class MenuPage : BasePage() {
                 }
                 setRButton(R.string.done) {
                     val command = arrayOf(
-                        "am force-stop com.miui.home",
                         "am force-stop com.android.thememanager",
                         "am force-stop com.android.updater",
+                        "am force-stop com.miui.gallery",
+                        "am force-stop com.miui.home",
+                        "am force-stop com.miui.mediaeditor",
                         "am force-stop com.miui.powerkeeper",
+                        "am force-stop com.miui.screenshot",
                         "am force-stop com.miui.securitycenter",
                         "killall com.android.settings",
                         "killall com.android.systemui"

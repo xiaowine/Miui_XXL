@@ -38,6 +38,10 @@
     <string name="android_remove_small_window_restriction">Küçük pencere kısıtlamasını kaldır</string>
     <string name="android_remove_small_window_restriction_summary">Küçük pencerelerin açılmasını desteklemek için çoğu uygulamayı kullanın, sistem başlatıcıyı ve SystemUI\'yi kontrol etmeniz gerekir</string>
 
+    <string name="mediaeditor">Medya düzenleyici</string>
+    <string name="mediaeditor_remove_crop_restriction">Kırpma kısıtlamasını kaldır</string>
+    <string name="mediaeditor_remove_crop_restriction_summary">Galeri ve Ekran Görüntüsünü aynı anda kontrol etmeniz gerekiyor</string>
+
     <string name="miuihome">MIUI Ana Sayfa</string>
     <string name="miuihome_anim_ratio">Geçiş animasyon hızı "Uygulama açıldığında veya kapatıldığında"</string>
     <string name="miuihome_anim_ratio_recent">Geçiş animasyon hızı "Arka planda içeri ve dışarı"</string>

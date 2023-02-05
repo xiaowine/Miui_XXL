@@ -8,6 +8,7 @@ import com.yuk.miuiXXL.hooks.modules.android.FuckValidateTheme2
 import com.yuk.miuiXXL.hooks.modules.android.MaxWallpaperScale
 import com.yuk.miuiXXL.hooks.modules.android.RemoveSmallWindowRestriction1
 import com.yuk.miuiXXL.hooks.modules.android.corepatch.CorePatchMainHook
+import com.yuk.miuiXXL.hooks.modules.mediaeditor.RemoveCropRestriction
 import com.yuk.miuiXXL.hooks.modules.miuihome.AnimDurationRatio
 import com.yuk.miuiXXL.hooks.modules.miuihome.CategoryFeatures
 import com.yuk.miuiXXL.hooks.modules.miuihome.DisableRecentViewWallpaperDarkening
@@ -44,8 +45,11 @@ private val PACKAGE_NAME_HOOKED = setOf(
     "com.android.systemui",
     "com.android.thememanager",
     "com.android.updater",
+    "com.miui.gallery",
     "com.miui.home",
+    "com.miui.mediaeditor",
     "com.miui.powerkeeper",
+    "com.miui.screenshot",
     "com.miui.securitycenter"
 )
 
@@ -105,6 +109,12 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit {
                     )
                 }
 
+                "com.miui.gallery" -> {
+                    initHooks(
+                        RemoveCropRestriction,
+                    )
+                }
+
                 "com.miui.home" -> {
                     initHooks(
                         SetDeviceLevel,
@@ -121,9 +131,21 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit {
                     )
                 }
 
+                "com.miui.mediaeditor" -> {
+                    initHooks(
+                        RemoveCropRestriction,
+                    )
+                }
+
                 "com.miui.powerkeeper" -> {
                     initHooks(
                         DisableDynamicRefreshRate,
+                    )
+                }
+
+                "com.miui.screenshot" -> {
+                    initHooks(
+                        RemoveCropRestriction,
                     )
                 }
 

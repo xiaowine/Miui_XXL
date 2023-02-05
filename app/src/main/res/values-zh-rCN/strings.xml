@@ -38,6 +38,10 @@
     <string name="android_remove_small_window_restriction">移除小窗打开限制</string>
     <string name="android_remove_small_window_restriction_summary">使大多数应用支持小窗口打开，需同时作用于系统界面和系统桌面</string>
 
+    <string name="mediaeditor">相册编辑</string>
+    <string name="mediaeditor_remove_crop_restriction">取消裁切限制</string>
+    <string name="mediaeditor_remove_crop_restriction_summary">需同时作用于相册和截图</string>
+
     <string name="miuihome">系统桌面</string>
     <string name="miuihome_double_tap_to_sleep">双击熄屏</string>
     <string name="miuihome_double_tap_to_sleep_summary">双击桌面空白处熄灭屏幕</string>
