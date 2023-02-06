@@ -4,6 +4,7 @@ import com.github.kyuubiran.ezxhelper.init.EzXHelperInit
 import com.github.kyuubiran.ezxhelper.utils.Log
 import com.github.kyuubiran.ezxhelper.utils.Log.logexIfThrow
 import com.yuk.miuiXXL.hooks.modules.BaseHook
+import com.yuk.miuiXXL.hooks.modules.android.RemoveScreenshotRestriction
 import com.yuk.miuiXXL.hooks.modules.android.FuckValidateTheme2
 import com.yuk.miuiXXL.hooks.modules.android.MaxWallpaperScale
 import com.yuk.miuiXXL.hooks.modules.android.RemoveSmallWindowRestriction1
@@ -75,6 +76,7 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit {
                         FuckValidateTheme2,
                         MaxWallpaperScale,
                         RemoveSmallWindowRestriction1,
+                        RemoveScreenshotRestriction,
                     )
                 }
 

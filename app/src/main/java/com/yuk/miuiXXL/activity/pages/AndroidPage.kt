@@ -21,6 +21,11 @@ class AndroidPage : BasePage() {
                 textId = R.string.android_remove_small_window_restriction, tipsId = R.string.android_remove_small_window_restriction_summary
             ), SwitchV("android_remove_small_window_restriction")
         )
+        TextSummaryWithSwitch(
+            TextSummaryV(
+                textId = R.string.android_remove_screenshot_restriction, tipsId = R.string.android_remove_screenshot_restriction_summary
+            ), SwitchV("android_remove_screenshot_restriction")
+        )
         TextSummaryArrow(
             TextSummaryV(textId = R.string.android_max_wallpaper_scale, tipsId = R.string.android_max_wallpaper_scale_summary, onClickListener = {
                 MIUIDialog(activity) {
@@ -30,7 +35,7 @@ class AndroidPage : BasePage() {
                             safeSP.getFloat("android_max_wallpaper_scale", 1.2f)
                         }"
                     )
-                    setEditText("", "建议输入范围：1.0-2.0")
+                    setEditText("", "${activity.getString(R.string.scope)}1.0-2.0")
                     setLButton(textId = R.string.cancel) {
                         dismiss()
                     }

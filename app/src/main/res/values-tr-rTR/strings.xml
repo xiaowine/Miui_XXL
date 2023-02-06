@@ -9,6 +9,7 @@
 
     <string name="def">Varsayılan：</string>
     <string name="current">Mevcut durum：</string>
+    <string name="scope">kapsam：</string>
 
     <string name="reboot">Tekrar başlat</string>
     <string name="reboot_system">Sistemi yeniden başlatın</string>
@@ -37,6 +38,8 @@
     <string name="android_max_wallpaper_scale_summary">Sistem masaüstü anahtarı uygulandığında duvar kağıdı yakınlaştırma büyütme</string>
     <string name="android_remove_small_window_restriction">Küçük pencere kısıtlamasını kaldır</string>
     <string name="android_remove_small_window_restriction_summary">Küçük pencerelerin açılmasını desteklemek için çoğu uygulamayı kullanın, sistem başlatıcıyı ve SystemUI\'yi kontrol etmeniz gerekir</string>
+    <string name="android_remove_screenshot_restriction">Ekran görüntüsü kısıtlamalarını kaldır</string>
+    <string name="android_remove_screenshot_restriction_summary">Tüm arayüzlerin ekran görüntüsüne izin ver</string>
 
     <string name="mediaeditor">Medya düzenleyici</string>
     <string name="mediaeditor_remove_crop_restriction">Kırpma kısıtlamasını kaldır</string>

@@ -9,6 +9,7 @@
 
     <string name="def">默认：</string>
     <string name="current">当前：</string>
+    <string name="scope">范围：</string>
 
     <string name="reboot">重启</string>
     <string name="reboot_system">重启系统</string>
@@ -36,7 +37,9 @@
     <string name="android_max_wallpaper_scale">壁纸缩放</string>
     <string name="android_max_wallpaper_scale_summary">系统桌面开关应用时的壁纸缩放倍率</string>
     <string name="android_remove_small_window_restriction">移除小窗打开限制</string>
-    <string name="android_remove_small_window_restriction_summary">使大多数应用支持小窗口打开，需同时作用于系统界面和系统桌面</string>
+    <string name="android_remove_small_window_restriction_summary">使大多数应用支持小窗口打开\n需同时作用于系统界面和系统桌面</string>
+    <string name="android_remove_screenshot_restriction">取消截屏限制</string>
+    <string name="android_remove_screenshot_restriction_summary">允许对所有界面进行截图</string>
 
     <string name="mediaeditor">相册编辑</string>
     <string name="mediaeditor_remove_crop_restriction">取消裁切限制</string>
@@ -73,12 +76,12 @@
     <string name="thememanager_remove_ads">去广告</string>
     <string name="thememanager_remove_ads_summary">猜你喜欢内的广告将显示为空白卡片，其余位置的广告将完全移除</string>
     <string name="thememanager_fuck_validate_theme">主题破解</string>
-    <string name="thememanager_fuck_validate_theme_summary">允许应用第三方主题及字体，防止恢复默认主题需同时作用于系统框架并在重启后生效</string>
+    <string name="thememanager_fuck_validate_theme_summary">允许应用第三方主题并防止恢复\n需同时作用于系统框架并在重启后生效</string>
     <string name="thememanager_fuck_validate_theme_fonts_title">免费</string>
 
     <string name="systemui">系统界面</string>
     <string name="systemui_statusbar_show_seconds">时间显秒</string>
-    <string name="systemui_statusbar_show_seconds_summary">状态栏位置的时间显示秒钟，不包括通知栏及控制中心</string>
+    <string name="systemui_statusbar_show_seconds_summary">状态栏位置的时间显示秒钟\n不包括通知栏及控制中心</string>
     <string name="systemui_lockscreen_show_current">锁屏显示充电电流</string>
     <string name="systemui_lockscreen_show_current_summary">充电时锁屏界面底部显示瞬间电流</string>
     <string name="systemui_lockscreen_remove_minus">移除锁屏负一屏</string>

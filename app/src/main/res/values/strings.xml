@@ -10,6 +10,7 @@
 
     <string name="def">Default: </string>
     <string name="current">Current: </string>
+    <string name="scope">Scope: </string>
 
     <string name="reboot">Restart</string>
     <string name="reboot_system">Restart the system</string>
@@ -38,6 +39,8 @@
     <string name="android_max_wallpaper_scale_summary">The wallpaper zoom magnification when the system desktop switch is applied</string>
     <string name="android_remove_small_window_restriction">Remove small window restriction</string>
     <string name="android_remove_small_window_restriction_summary">Make most apps support small window opening, need to check System launcher and SystemUI at the same time</string>
+    <string name="android_remove_screenshot_restriction">Remove screenshot restrictions</string>
+    <string name="android_remove_screenshot_restriction_summary">Allow screenshot of all interfaces</string>
 
     <string name="mediaeditor">Media editor</string>
     <string name="mediaeditor_remove_crop_restriction">Remove crop restriction</string>
