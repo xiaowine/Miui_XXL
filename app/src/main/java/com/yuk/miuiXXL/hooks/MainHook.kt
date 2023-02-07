@@ -76,7 +76,6 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit {
             // Init hooks
             when (lpparam.packageName) {
                 "android" -> {
-                    EzXHelperInit.initHandleLoadPackage(lpparam)
                     CorePatchMainHook().handleLoadPackage(lpparam)
                     initHooks(
                         FuckValidateTheme2,
@@ -87,14 +86,12 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit {
                 }
 
                 "com.android.settings" -> {
-                    EzXHelperInit.initHandleLoadPackage(lpparam)
                     initHooks(
                         NotificationImportance,
                     )
                 }
 
                 "com.android.systemui" -> {
-                    EzXHelperInit.initHandleLoadPackage(lpparam)
                     initHooks(
                         StatusbarShowSeconds,
                         LockScreenShowBatteryCV,
@@ -107,7 +104,6 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit {
                 }
 
                 "com.android.thememanager" -> {
-                    EzXHelperInit.initHandleLoadPackage(lpparam)
                     initHooks(
                         RemoveAds,
                         FuckValidateTheme1,
@@ -115,14 +111,12 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit {
                 }
 
                 "com.android.updater" -> {
-                    EzXHelperInit.initHandleLoadPackage(lpparam)
                     initHooks(
                         VABUpdate,
                     )
                 }
 
                 "com.miui.gallery" -> {
-                    EzXHelperInit.initHandleLoadPackage(lpparam)
                     initHooks(
                         RemoveCropRestriction,
                     )
@@ -130,7 +124,6 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit {
 
                 "com.miui.home" -> {
                     Application::class.java.hookBeforeMethod("attach", Context::class.java) {
-                        EzXHelperInit.initHandleLoadPackage(lpparam)
                         initAppContext(it.args[0] as Context)
                         initHooks(
                             SetDeviceLevel,
@@ -150,28 +143,24 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit {
                 }
 
                 "com.miui.mediaeditor" -> {
-                    EzXHelperInit.initHandleLoadPackage(lpparam)
                     initHooks(
                         RemoveCropRestriction,
                     )
                 }
 
                 "com.miui.powerkeeper" -> {
-                    EzXHelperInit.initHandleLoadPackage(lpparam)
                     initHooks(
                         DisableDynamicRefreshRate,
                     )
                 }
 
                 "com.miui.screenshot" -> {
-                    EzXHelperInit.initHandleLoadPackage(lpparam)
                     initHooks(
                         RemoveCropRestriction,
                     )
                 }
 
                 "com.miui.securitycenter" -> {
-                    EzXHelperInit.initHandleLoadPackage(lpparam)
                     initHooks(
                         SkipWarningWaitTime,
                         ShowBatteryTemperature,
