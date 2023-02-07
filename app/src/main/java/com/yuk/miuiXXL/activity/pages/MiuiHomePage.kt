@@ -37,6 +37,11 @@ class MiuiHomePage : BasePage() {
             ), SwitchV("miuihome_recentview_remove_card_animation", false)
         )
         TextSummaryWithSwitch(
+            TextSummaryV(
+                textId = R.string.miuihome_blur_when_open_folder, tipsId = R.string.miuihome_blur_when_open_folder_summary
+            ), SwitchV("miuihome_blur_when_open_folder", false)
+        )
+        TextSummaryWithSwitch(
             TextSummaryV(textId = R.string.miuihome_hide_allapps_category_all, tipsId = R.string.miuihome_hide_allapps_category_all_summary),
             SwitchV("miuihome_hide_allapps_category_all", false)
         )

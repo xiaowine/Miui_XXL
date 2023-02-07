@@ -72,6 +72,9 @@
     <string name="miuihome_two_x_one_icon_rounded_corner_following_summary">Change the large round corner 2x1&amp;1x2 icon designed by MIUI brain pumping to normal small round corner</string>
     <string name="miuihome_unlock_animation">Optimize unlock animation</string>
     <string name="miuihome_unlock_animation_summary">Optimize the transition effect from lock screen to desktop when unlocking</string>
+    <string name="miuihome_blur_when_open_folder">Folder View Blur</string>
+    <string name="miuihome_blur_when_open_folder_summary">Enable Blur When Open Folder</string>
+
 
     <string name="thememanager">Themes</string>
     <string name="thememanager_fuck_validate_theme">Theme cracking</string>

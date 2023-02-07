@@ -1,16 +1,20 @@
 package com.yuk.miuiXXL.hooks
 
+import android.app.Application
+import android.content.Context
 import com.github.kyuubiran.ezxhelper.init.EzXHelperInit
+import com.github.kyuubiran.ezxhelper.init.EzXHelperInit.initAppContext
 import com.github.kyuubiran.ezxhelper.utils.Log
 import com.github.kyuubiran.ezxhelper.utils.Log.logexIfThrow
 import com.yuk.miuiXXL.hooks.modules.BaseHook
-import com.yuk.miuiXXL.hooks.modules.android.RemoveScreenshotRestriction
 import com.yuk.miuiXXL.hooks.modules.android.FuckValidateTheme2
 import com.yuk.miuiXXL.hooks.modules.android.MaxWallpaperScale
+import com.yuk.miuiXXL.hooks.modules.android.RemoveScreenshotRestriction
 import com.yuk.miuiXXL.hooks.modules.android.RemoveSmallWindowRestriction1
 import com.yuk.miuiXXL.hooks.modules.android.corepatch.CorePatchMainHook
 import com.yuk.miuiXXL.hooks.modules.mediaeditor.RemoveCropRestriction
 import com.yuk.miuiXXL.hooks.modules.miuihome.AnimDurationRatio
+import com.yuk.miuiXXL.hooks.modules.miuihome.BlurWhenOpenFolder
 import com.yuk.miuiXXL.hooks.modules.miuihome.CategoryFeatures
 import com.yuk.miuiXXL.hooks.modules.miuihome.DisableRecentViewWallpaperDarkening
 import com.yuk.miuiXXL.hooks.modules.miuihome.DoubleTapToSleep
@@ -35,6 +39,7 @@ import com.yuk.miuiXXL.hooks.modules.systemui.WaveChargeAnim
 import com.yuk.miuiXXL.hooks.modules.thememanager.FuckValidateTheme1
 import com.yuk.miuiXXL.hooks.modules.thememanager.RemoveAds
 import com.yuk.miuiXXL.hooks.modules.updater.VABUpdate
+import com.yuk.miuiXXL.utils.hookBeforeMethod
 import de.robv.android.xposed.IXposedHookLoadPackage
 import de.robv.android.xposed.IXposedHookZygoteInit
 import de.robv.android.xposed.callbacks.XC_LoadPackage
@@ -71,6 +76,7 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit {
             // Init hooks
             when (lpparam.packageName) {
                 "android" -> {
+                    EzXHelperInit.initHandleLoadPackage(lpparam)
                     CorePatchMainHook().handleLoadPackage(lpparam)
                     initHooks(
                         FuckValidateTheme2,
@@ -81,12 +87,14 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit {
                 }
 
                 "com.android.settings" -> {
+                    EzXHelperInit.initHandleLoadPackage(lpparam)
                     initHooks(
                         NotificationImportance,
                     )
                 }
 
                 "com.android.systemui" -> {
+                    EzXHelperInit.initHandleLoadPackage(lpparam)
                     initHooks(
                         StatusbarShowSeconds,
                         LockScreenShowBatteryCV,
@@ -99,6 +107,7 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit {
                 }
 
                 "com.android.thememanager" -> {
+                    EzXHelperInit.initHandleLoadPackage(lpparam)
                     initHooks(
                         RemoveAds,
                         FuckValidateTheme1,
@@ -106,52 +115,63 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit {
                 }
 
                 "com.android.updater" -> {
+                    EzXHelperInit.initHandleLoadPackage(lpparam)
                     initHooks(
                         VABUpdate,
                     )
                 }
 
                 "com.miui.gallery" -> {
+                    EzXHelperInit.initHandleLoadPackage(lpparam)
                     initHooks(
                         RemoveCropRestriction,
                     )
                 }
 
                 "com.miui.home" -> {
-                    initHooks(
-                        SetDeviceLevel,
-                        DoubleTapToSleep,
-                        ScrollIconName,
-                        AnimDurationRatio,
-                        ModifyUnlockAnim,
-                        DisableRecentViewWallpaperDarkening,
-                        ModifyRecentViewRemoveCardAnim,
-                        CategoryFeatures,
-                        TwoXOneIconRoundedCornerFollowing,
-                        ShortcutAddSmallWindow,
-                        RemoveSmallWindowRestriction2,
-                    )
+                    Application::class.java.hookBeforeMethod("attach", Context::class.java) {
+                        EzXHelperInit.initHandleLoadPackage(lpparam)
+                        initAppContext(it.args[0] as Context)
+                        initHooks(
+                            SetDeviceLevel,
+                            DoubleTapToSleep,
+                            ScrollIconName,
+                            AnimDurationRatio,
+                            ModifyUnlockAnim,
+                            DisableRecentViewWallpaperDarkening,
+                            ModifyRecentViewRemoveCardAnim,
+                            CategoryFeatures,
+                            TwoXOneIconRoundedCornerFollowing,
+                            ShortcutAddSmallWindow,
+                            RemoveSmallWindowRestriction2,
+                            BlurWhenOpenFolder,
+                        )
+                    }
                 }
 
                 "com.miui.mediaeditor" -> {
+                    EzXHelperInit.initHandleLoadPackage(lpparam)
                     initHooks(
                         RemoveCropRestriction,
                     )
                 }
 
                 "com.miui.powerkeeper" -> {
+                    EzXHelperInit.initHandleLoadPackage(lpparam)
                     initHooks(
                         DisableDynamicRefreshRate,
                     )
                 }
 
                 "com.miui.screenshot" -> {
+                    EzXHelperInit.initHandleLoadPackage(lpparam)
                     initHooks(
                         RemoveCropRestriction,
                     )
                 }
 
                 "com.miui.securitycenter" -> {
+                    EzXHelperInit.initHandleLoadPackage(lpparam)
                     initHooks(
                         SkipWarningWaitTime,
                         ShowBatteryTemperature,

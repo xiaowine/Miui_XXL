@@ -71,6 +71,8 @@
     <string name="miuihome_two_x_one_icon_rounded_corner_following_summary">MIUI beyin pompalama tarafından tasarlanan büyük yuvarlak köşe 2x1 ve 1x2 simgesini normal küçük yuvarlak köşeye değiştirin</string>
     <string name="miuihome_unlock_animation">Kilit açma animasyonunu optimize edin</string>
     <string name="miuihome_unlock_animation_summary">Kilit açarken kilit ekranından masaüstüne geçiş efektini optimize edin</string>
+    <string name="miuihome_blur_when_open_folder">Klasör Görünümü Bulanıklığı</string>
+    <string name="miuihome_blur_when_open_folder_summary">Klasörü Açarken Bulanıklaştırmayı Etkinleştir</string>
 
     <string name="thememanager">Tema duvar kağıdı</string>
     <string name="thememanager_fuck_validate_theme">Tema crack</string>

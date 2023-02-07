@@ -71,6 +71,8 @@
     <string name="miuihome_shortcut_add_small_window">快捷菜单添加小窗</string>
     <string name="miuihome_shortcut_add_small_window_summary">桌面图标长按快捷菜单位置添加快速打开小窗</string>
     <string name="miuihome_shortcut_add_small_window_title">小窗</string>
+    <string name="miuihome_blur_when_open_folder">文件夹视图模糊</string>
+    <string name="miuihome_blur_when_open_folder_summary">打开文件夹时启用模糊</string>
 
     <string name="thememanager">主题壁纸</string>
     <string name="thememanager_remove_ads">去广告</string>

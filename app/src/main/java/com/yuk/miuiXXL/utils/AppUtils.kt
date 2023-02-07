@@ -2,6 +2,7 @@ package com.yuk.miuiXXL.utils
 
 import android.annotation.SuppressLint
 import android.os.Build
+import com.github.kyuubiran.ezxhelper.init.InitFields.appContext
 import java.io.BufferedReader
 import java.io.DataOutputStream
 import java.io.IOException
@@ -18,6 +19,10 @@ fun getProp(mKey: String): String =
 fun getProp(mKey: String, defaultValue: Boolean): Boolean =
     Class.forName("android.os.SystemProperties").getMethod("getBoolean", String::class.java, Boolean::class.javaPrimitiveType)
         .invoke(Class.forName("android.os.SystemProperties"), mKey, defaultValue) as Boolean
+
+fun isAlpha(): Boolean {
+    return (appContext.packageManager.getPackageInfo(appContext.packageName, 0).versionName.contains("ALPHA", ignoreCase = true))
+}
 
 fun atLeastAndroidT(): Boolean = Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU
 
