@@ -12,7 +12,7 @@ object MaxWallpaperScale : BaseHook() {
     override fun init() {
 
         val value = getFloat("android_max_wallpaper_scale", 1.2f)
-        if (value == 1.0f) return
+        if (value == 1.2f) return
         findMethod("com.android.server.wm.WallpaperController") {
             name == "zoomOutToScale" && parameterTypes[0] == Float::class.java
         }.hookBefore {
