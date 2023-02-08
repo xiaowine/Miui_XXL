@@ -1,4 +1,6 @@
 import com.android.build.gradle.internal.api.BaseVariantOutputImpl
+import java.text.SimpleDateFormat
+
 
 plugins {
     id("com.android.application")
@@ -8,13 +10,13 @@ plugins {
 android {
     compileSdk = 33
     namespace = "com.yuk.miuiXXL"
+
     defaultConfig {
         applicationId = namespace
         minSdk = 31
         targetSdk = 33
-        versionCode = 4
-        versionName = "0.4"
-        buildConfigField("String", "BUILD_TIME", "\"${System.currentTimeMillis()}\"")
+        versionCode = 5
+        versionName = "0.5"
     }
     buildTypes {
         named("release") {
@@ -46,7 +48,7 @@ android {
         }
         applicationVariants.all {
             outputs.all {
-                (this as BaseVariantOutputImpl).outputFileName = "Miui_XXL-$versionName($versionCode)-$name.apk"
+                (this as BaseVariantOutputImpl).outputFileName = "Miui_XXL-$versionName($versionCode)-$name-${SimpleDateFormat("yyMMddHHmm").format(System.currentTimeMillis())}.apk"
             }
         }
     }

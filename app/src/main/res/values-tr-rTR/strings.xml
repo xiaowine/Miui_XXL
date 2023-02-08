@@ -99,7 +99,7 @@
     <string name="systemui_show_wifi_standard">WiFi Rozetini Göster</string>
     <string name="systemui_show_wifi_standard_summary">WiFi simgesinin sağ alt köşesi mevcut Wi-Fi protokolünü gösterir.</string>
     <string name="systemui_lockscreen_show_seconds">Kilit ekranında saniye cinsinden süre</string>
-    <string name="systemui_lockscreen_show_seconds_summary">Kilit ekranının konumunun süresi saniye cinsinden görüntülenir</string>
+    <string name="systemui_lockscreen_show_seconds_summary">Kilit ekranı konumundaki süre saniye cinsinden görüntülenir</string>
 
     <string name="powerkeeper">Güç ve performans</string>
     <string name="powerkeeper_disable_dynamic_refresh_rate">Yenileme hızını kilitle</string>
