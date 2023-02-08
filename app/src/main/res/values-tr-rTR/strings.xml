@@ -46,10 +46,12 @@
     <string name="mediaeditor_remove_crop_restriction_summary">Galeri ve Ekran Görüntüsünü aynı anda kontrol etmeniz gerekiyor</string>
 
     <string name="miuihome">MIUI Ana Sayfa</string>
+    <string name="miuihome_anim_ratio_binding">özel animasyon hızı</string>
+    <string name="miuihome_anim_ratio_binding_summary">Animasyon hızını farklı senaryolarda ayrı ayarlayın</string>
     <string name="miuihome_anim_ratio">Geçiş animasyon hızı "Uygulama açıldığında veya kapatıldığında"</string>
-    <string name="miuihome_anim_ratio_recent">Geçiş animasyon hızı "Arka planda içeri ve dışarı"</string>
-    <string name="miuihome_anim_ratio_recent_summary">En son göreve girip çıkarken etkili olan geçiş animasyonunun hızı.Bu öğeyi bazı sürümlerin masaüstünde değiştirmek anormal yavaşlamaya veya hızlanmaya neden olur</string>
     <string name="miuihome_anim_ratio_summary">Uygulama açılıp kapatıldığında etkili olan geçiş animasyonunun hızı</string>
+    <string name="miuihome_anim_ratio_recent">Geçiş animasyon hızı "Arka planda içeri ve dışarı"</string>
+    <string name="miuihome_anim_ratio_recent_summary">En son göreve girip çıkarken etkili olan geçiş animasyonunun hızı</string>
     <string name="miuihome_double_tap_to_sleep">Ekranı kapatmak için çift tıklayın</string>
     <string name="miuihome_double_tap_to_sleep_summary">Ekranı kapatmak için masaüstündeki boş alanı çift tıklatın.</string>
     <string name="miuihome_hide_allapps_category_all">Tüm sekmeleri kaldır</string>
@@ -75,6 +77,8 @@
     <string name="miuihome_blur_when_open_folder_summary">Klasörü Açarken Bulanıklaştırmayı Etkinleştir</string>
     <string name="miuihome_always_show_statusbar_clock">Her zaman durum çubuğu saatini göster</string>
     <string name="miuihome_always_show_statusbar_clock_summary">Başlatıcıda herhangi bir saat widget\'ı varken durum çubuğu saatini kaldırmayın</string>
+    <string name="miuihome_task_view_card_size_binding">Görev görünümü kartı boyutunu özelleştirin</string>
+    <string name="miuihome_task_view_card_size_binding_summary">Son görev kartlarının boyutunu farklı stillerde ayarlayın</string>
 
     <string name="thememanager">Tema duvar kağıdı</string>
     <string name="thememanager_fuck_validate_theme">Tema crack</string>

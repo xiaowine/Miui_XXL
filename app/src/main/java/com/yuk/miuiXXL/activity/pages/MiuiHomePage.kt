@@ -1,9 +1,13 @@
 package com.yuk.miuiXXL.activity.pages
 
+import android.view.View
+import cn.fkj233.ui.activity.MIUIActivity.Companion.safeSP
 import cn.fkj233.ui.activity.annotation.BMPage
 import cn.fkj233.ui.activity.data.BasePage
+import cn.fkj233.ui.activity.view.SeekBarWithTextV
 import cn.fkj233.ui.activity.view.SwitchV
 import cn.fkj233.ui.activity.view.TextSummaryV
+import cn.fkj233.ui.activity.view.TextV
 import com.yuk.miuiXXL.R
 
 @BMPage("MiuiHomePage", hideMenu = false)
@@ -68,10 +72,49 @@ class MiuiHomePage : BasePage() {
             TextSummaryV(textId = R.string.miuihome_scroll_icon_name, tipsId = R.string.miuihome_scroll_icon_name_summary),
             SwitchV("miuihome_scroll_icon_name", false)
         )
-        TextSummary(textId = R.string.miuihome_anim_ratio, tipsId = R.string.miuihome_anim_ratio_summary)
-        SeekBarWithText("miuihome_anim_ratio", 0, 300, 100)
-        TextSummary(textId = R.string.miuihome_anim_ratio_recent, tipsId = R.string.miuihome_anim_ratio_recent_summary)
-        SeekBarWithText("miuihome_anim_ratio_recent", 0, 300, 100)
+        val animRatioBinding = GetDataBinding({ safeSP.getBoolean("miuihome_anim_ratio_binding", false) }) { view, flags, data ->
+            if (flags == 1) {
+                view.visibility = if (data as Boolean) View.VISIBLE else View.GONE
+            }
+        }
+        TextSummaryWithSwitch(
+            TextSummaryV(textId = R.string.miuihome_anim_ratio_binding, tipsId = R.string.miuihome_anim_ratio_binding_summary),
+            SwitchV("miuihome_anim_ratio_binding", dataBindingSend = animRatioBinding.bindingSend)
+        )
+        TextSummaryWithSeekBar(
+            TextSummaryV(textId = R.string.miuihome_anim_ratio, tipsId = R.string.miuihome_anim_ratio_summary),
+            SeekBarWithTextV("miuihome_anim_ratio", 0, 300, 100),
+            dataBindingRecv = animRatioBinding.getRecv(1)
+        )
+        TextSummaryWithSeekBar(
+            TextSummaryV(textId = R.string.miuihome_anim_ratio_recent, tipsId = R.string.miuihome_anim_ratio_recent_summary),
+            SeekBarWithTextV("miuihome_anim_ratio_recent", 0, 300, 100),
+            dataBindingRecv = animRatioBinding.getRecv(1)
+        )
+        val cardSizeBinding = GetDataBinding({ safeSP.getBoolean("miuihome_task_view_card_size_binding", false) }) { view, flags, data ->
+            if (flags == 1) {
+                view.visibility = if (data as Boolean) View.VISIBLE else View.GONE
+            }
+        }
+        TextSummaryWithSwitch(
+            TextSummaryV(textId = R.string.miuihome_task_view_card_size_binding, tipsId = R.string.miuihome_task_view_card_size_binding_summary),
+            SwitchV("miuihome_task_view_card_size_binding", dataBindingSend = cardSizeBinding.bindingSend)
+        )
+        TextWithSeekBar(
+            TextV(textId = R.string.miuihome_task_view_card_size_vertical),
+            SeekBarWithTextV("miuihome_task_view_card_size_vertical", 80, 120, 100),
+            dataBindingRecv = cardSizeBinding.getRecv(1)
+        )
+        TextWithSeekBar(
+            TextV(textId = R.string.miuihome_task_view_card_size_horizontal1),
+            SeekBarWithTextV("miuihome_task_view_card_size_horizontal1", 80, 120, 100),
+            dataBindingRecv = cardSizeBinding.getRecv(1)
+        )
+        TextWithSeekBar(
+            TextV(textId = R.string.miuihome_task_view_card_size_horizontal2),
+            SeekBarWithTextV("miuihome_task_view_card_size_horizontal2", 80, 120, 100),
+            dataBindingRecv = cardSizeBinding.getRecv(1)
+        )
     }
 
 }

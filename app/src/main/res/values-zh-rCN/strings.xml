@@ -52,10 +52,12 @@
     <string name="miuihome_highend_device_summary">将被默认识别为高端，开启该选项并不会增加 GPU 性能开销同时去除部分日志</string>
     <string name="miuihome_scroll_icon_name">滚动显示应用名称</string>
     <string name="miuihome_scroll_icon_name_summary">过长的应用名称将滚动进行显示，不再进行换行</string>
+    <string name="miuihome_anim_ratio_binding">自定义动画速度</string>
+    <string name="miuihome_anim_ratio_binding_summary">设置不同场景下过渡动画的速度</string>
     <string name="miuihome_anim_ratio">过渡动画速度「开关应用」</string>
     <string name="miuihome_anim_ratio_summary">生效于打开关闭应用程序时的过渡动画速度</string>
     <string name="miuihome_anim_ratio_recent">过渡动画速度「进出后台」</string>
-    <string name="miuihome_anim_ratio_recent_summary">生效于进出最近任务时的过渡动画速度部分版本桌面修改此项将导致异常渐慢或渐快现象</string>
+    <string name="miuihome_anim_ratio_recent_summary">生效于进出最近任务时的过渡动画速度</string>
     <string name="miuihome_recentwiew_wallpaper_darkening">禁用壁纸压暗效果</string>
     <string name="miuihome_recentwiew_wallpaper_darkening_summary">这将禁用进出最近任务时壁纸从压暗逐渐变亮的效果</string>
     <string name="miuihome_recentview_remove_card_animation">修改划卡动画</string>
@@ -75,6 +77,11 @@
     <string name="miuihome_blur_when_open_folder_summary">打开文件夹时启用模糊</string>
     <string name="miuihome_always_show_statusbar_clock">时钟常显</string>
     <string name="miuihome_always_show_statusbar_clock_summary">桌面上有时钟小部件时，不隐藏状态栏时钟</string>
+    <string name="miuihome_task_view_card_size_binding">自定义最近任务卡片大小</string>
+    <string name="miuihome_task_view_card_size_binding_summary">设置不同样式下最近任务卡片的大小</string>
+    <string name="miuihome_task_view_card_size_vertical">瀑布卡片大小</string>
+    <string name="miuihome_task_view_card_size_horizontal1">平铺卡片大小「竖屏时」</string>
+    <string name="miuihome_task_view_card_size_horizontal2">平铺卡片大小「横屏时」</string>
 
     <string name="thememanager">主题壁纸</string>
     <string name="thememanager_remove_ads">去广告</string>

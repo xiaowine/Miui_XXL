@@ -26,7 +26,7 @@ class AndroidPage : BasePage() {
                 textId = R.string.android_remove_screenshot_restriction, tipsId = R.string.android_remove_screenshot_restriction_summary
             ), SwitchV("android_remove_screenshot_restriction")
         )
-        TextSummaryArrow(
+        TextSummaryWithArrow(
             TextSummaryV(textId = R.string.android_max_wallpaper_scale, tipsId = R.string.android_max_wallpaper_scale_summary, onClickListener = {
                 MIUIDialog(activity) {
                     setTitle(R.string.android_max_wallpaper_scale)

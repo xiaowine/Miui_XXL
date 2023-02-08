@@ -47,10 +47,12 @@
     <string name="mediaeditor_remove_crop_restriction_summary">Need to check the Gallery and Screenshot at the same time</string>
 
     <string name="miuihome">System launcher</string>
+    <string name="miuihome_anim_ratio_binding">Custom animation speed</string>
+    <string name="miuihome_anim_ratio_binding_summary">Set the animation speed in different scenarios separately</string>
     <string name="miuihome_anim_ratio">Transition animation speed「When the app is turned on or off」</string>
-    <string name="miuihome_anim_ratio_recent">Transition animation speed「In and out of the background」</string>
-    <string name="miuihome_anim_ratio_recent_summary">The speed of the transition animation that takes effect when entering and exiting the most recent task.Modifying this item on the desktop of some versions will cause abnormal deceleration or acceleration</string>
     <string name="miuihome_anim_ratio_summary">The speed of the transition animation that takes effect when the application is opened and closed</string>
+    <string name="miuihome_anim_ratio_recent">Transition animation speed「In and out of the background」</string>
+    <string name="miuihome_anim_ratio_recent_summary">The speed of the transition animation that takes effect when entering and exiting the most recent task</string>
     <string name="miuihome_double_tap_to_sleep">Double-click to turn off the screen</string>
     <string name="miuihome_double_tap_to_sleep_summary">Double-click the blank space on the desktop to turn off the screen.</string>
     <string name="miuihome_hide_allapps_category_all">Remove All tabs</string>
@@ -76,6 +78,11 @@
     <string name="miuihome_blur_when_open_folder_summary">Enable Blur When Open Folder</string>
     <string name="miuihome_always_show_statusbar_clock">Always show status bar clock</string>
     <string name="miuihome_always_show_statusbar_clock_summary">Do not remove the status bar clock when there is any clock widget on the launcher</string>
+    <string name="miuihome_task_view_card_size_binding">Customize task view card size</string>
+    <string name="miuihome_task_view_card_size_binding_summary">Set the size of task view cards in different styles</string>
+    <string name="miuihome_task_view_card_size_vertical">Thumbnail size for Vertically</string>
+    <string name="miuihome_task_view_card_size_horizontal1">Thumbnail size for Horizontally-Vertical</string>
+    <string name="miuihome_task_view_card_size_horizontal2">Thumbnail size for Horizontally-Horizontal</string>
 
     <string name="thememanager">Themes</string>
     <string name="thememanager_fuck_validate_theme">Theme cracking</string>

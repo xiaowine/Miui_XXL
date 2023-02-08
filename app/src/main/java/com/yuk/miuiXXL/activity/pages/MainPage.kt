@@ -17,16 +17,18 @@ import com.yuk.miuiXXL.utils.exec
 @BMMainPage("Miui XXL")
 class MainPage : BasePage() {
     override fun onCreate() {
-        TextSummaryArrow(TextSummaryV(textId = R.string.android, tipsId = R.string.android_reboot, onClickListener = { showFragment("AndroidPage") }))
+        TextSummaryWithArrow(
+            TextSummaryV(textId = R.string.android, tipsId = R.string.android_reboot, onClickListener = { showFragment("AndroidPage") })
+        )
         Line()
-        TextSummaryArrow(TextSummaryV(textId = R.string.systemui, onClickListener = { showFragment("SystemUIPage") }))
-        TextSummaryArrow(TextSummaryV(textId = R.string.settings, onClickListener = { showFragment("SettingsPage") }))
-        TextSummaryArrow(TextSummaryV(textId = R.string.miuihome, onClickListener = { showFragment("MiuiHomePage") }))
-        TextSummaryArrow(TextSummaryV(textId = R.string.updater, onClickListener = { showFragment("UpdaterPage") }))
-        TextSummaryArrow(TextSummaryV(textId = R.string.securitycenter, onClickListener = { showFragment("SecurityCenterPage") }))
-        TextSummaryArrow(TextSummaryV(textId = R.string.thememanager, onClickListener = { showFragment("ThemeManagerPage") }))
-        TextSummaryArrow(TextSummaryV(textId = R.string.mediaeditor, onClickListener = { showFragment("MediaEditorPage") }))
-        TextSummaryArrow(TextSummaryV(textId = R.string.powerkeeper, onClickListener = { showFragment("PowerKeeperPage") }))
+        TextSummaryWithArrow(TextSummaryV(textId = R.string.systemui, onClickListener = { showFragment("SystemUIPage") }))
+        TextSummaryWithArrow(TextSummaryV(textId = R.string.settings, onClickListener = { showFragment("SettingsPage") }))
+        TextSummaryWithArrow(TextSummaryV(textId = R.string.miuihome, onClickListener = { showFragment("MiuiHomePage") }))
+        TextSummaryWithArrow(TextSummaryV(textId = R.string.updater, onClickListener = { showFragment("UpdaterPage") }))
+        TextSummaryWithArrow(TextSummaryV(textId = R.string.securitycenter, onClickListener = { showFragment("SecurityCenterPage") }))
+        TextSummaryWithArrow(TextSummaryV(textId = R.string.thememanager, onClickListener = { showFragment("ThemeManagerPage") }))
+        TextSummaryWithArrow(TextSummaryV(textId = R.string.mediaeditor, onClickListener = { showFragment("MediaEditorPage") }))
+        TextSummaryWithArrow(TextSummaryV(textId = R.string.powerkeeper, onClickListener = { showFragment("PowerKeeperPage") }))
         Line()
         TextWithSwitch(TextV(textId = R.string.hide_desktop_icon), SwitchV("hide_desktop_icon", onClickListener = {
             val pm = MIUIActivity.activity.packageManager
@@ -39,7 +41,7 @@ class MainPage : BasePage() {
                 ComponentName(MIUIActivity.activity, MainActivity::class.java.name + "Alias"), mComponentEnabledState, PackageManager.DONT_KILL_APP
             )
         }))
-        TextSummaryArrow(TextSummaryV(textId = R.string.restart_scope) {
+        TextSummaryWithArrow(TextSummaryV(textId = R.string.restart_scope) {
             MIUIDialog(activity) {
                 setTitle(R.string.tips)
                 setMessage(R.string.restart_scope_summary)
@@ -66,7 +68,7 @@ class MainPage : BasePage() {
                 }
             }.show()
         })
-        TextSummaryArrow(TextSummaryV(textId = R.string.reboot_system) {
+        TextSummaryWithArrow(TextSummaryV(textId = R.string.reboot_system) {
             MIUIDialog(activity) {
                 setTitle(R.string.tips)
                 setMessage(R.string.reboot_system_summary)
