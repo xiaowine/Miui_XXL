@@ -1,9 +1,6 @@
 package com.yuk.miuiXXL.hooks
 
-import android.app.Application
-import android.content.Context
 import com.github.kyuubiran.ezxhelper.init.EzXHelperInit
-import com.github.kyuubiran.ezxhelper.init.EzXHelperInit.initAppContext
 import com.github.kyuubiran.ezxhelper.utils.Log
 import com.github.kyuubiran.ezxhelper.utils.Log.logexIfThrow
 import com.yuk.miuiXXL.hooks.modules.BaseHook
@@ -42,7 +39,6 @@ import com.yuk.miuiXXL.hooks.modules.systemui.WaveChargeAnim
 import com.yuk.miuiXXL.hooks.modules.thememanager.FuckValidateTheme1
 import com.yuk.miuiXXL.hooks.modules.thememanager.RemoveAds
 import com.yuk.miuiXXL.hooks.modules.updater.VABUpdate
-import com.yuk.miuiXXL.utils.hookBeforeMethod
 import de.robv.android.xposed.IXposedHookLoadPackage
 import de.robv.android.xposed.IXposedHookZygoteInit
 import de.robv.android.xposed.callbacks.XC_LoadPackage
@@ -128,24 +124,21 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit {
                 }
 
                 "com.miui.home" -> {
-                    Application::class.java.hookBeforeMethod("attach", Context::class.java) {
-                        initAppContext(it.args[0] as Context)
-                        initHooks(
-                            SetDeviceLevel,
-                            DoubleTapToSleep,
-                            ScrollIconName,
-                            AnimDurationRatio,
-                            ModifyUnlockAnim,
-                            DisableRecentViewWallpaperDarkening,
-                            ModifyRecentViewRemoveCardAnim,
-                            CategoryFeatures,
-                            TwoXOneIconRoundedCornerFollowing,
-                            ShortcutAddSmallWindow,
-                            RemoveSmallWindowRestriction2,
-                            BlurWhenOpenFolder,
-                            AlwaysShowStatusBarClock,
-                        )
-                    }
+                    initHooks(
+                        SetDeviceLevel,
+                        DoubleTapToSleep,
+                        ScrollIconName,
+                        AnimDurationRatio,
+                        ModifyUnlockAnim,
+                        DisableRecentViewWallpaperDarkening,
+                        ModifyRecentViewRemoveCardAnim,
+                        CategoryFeatures,
+                        TwoXOneIconRoundedCornerFollowing,
+                        ShortcutAddSmallWindow,
+                        RemoveSmallWindowRestriction2,
+                        BlurWhenOpenFolder,
+                        AlwaysShowStatusBarClock,
+                    )
                 }
 
                 "com.miui.mediaeditor" -> {
