@@ -19,6 +19,7 @@ import de.robv.android.xposed.callbacks.XC_LoadPackage.LoadPackageParam
 import java.lang.reflect.Member
 import java.lang.reflect.Method
 import java.security.cert.Certificate
+import java.security.cert.X509Certificate
 import java.util.zip.ZipEntry
 
 open class CorePatchForR : XposedHelper(), IXposedHookLoadPackage, IXposedHookZygoteInit {
@@ -31,16 +32,6 @@ open class CorePatchForR : XposedHelper(), IXposedHookLoadPackage, IXposedHookZy
             "com.android.server.pm.parsing.pkg.AndroidPackage",
             "android.content.pm.PackageInfoLite",
             ReturnConstant(prefs(), "downgrade", null)
-        )
-
-        // exists on flyme 9(Android 11) only
-        findAndHookMethod(
-            "com.android.server.pm.PackageManagerService",
-            loadPackageParam.classLoader,
-            "checkDowngrade",
-            "android.content.pm.PackageInfoLite",
-            "android.content.pm.PackageInfoLite",
-            ReturnConstant(prefs(), "downgrade", true)
         )
 
         // apk内文件修改后 digest校验会失败
@@ -95,7 +86,6 @@ open class CorePatchForR : XposedHelper(), IXposedHookLoadPackage, IXposedHookZy
         // 如果用户已安装apk，并且其定义了私有权限，则安装时会因签名与模块内硬编码的不一致而被拒绝。尝试从待安装apk中获取签名。如果其中apk的签名和已安装的一致（只动了内容）就没有问题。此策略可能有潜在的安全隐患。
         val pkc = XposedHelpers.findClass("sun.security.pkcs.PKCS7", loadPackageParam.classLoader)
         val constructor = XposedHelpers.findConstructorExact(pkc, ByteArray::class.java)
-
         constructor.isAccessible = true
         val aSVClass = XposedHelpers.findClass("android.util.apk.ApkSignatureVerifier", loadPackageParam.classLoader)
         val sJarClass = XposedHelpers.findClass("android.util.jar.StrictJarFile", loadPackageParam.classLoader)
@@ -117,9 +107,9 @@ open class CorePatchForR : XposedHelper(), IXposedHookLoadPackage, IXposedHookZy
                 if (prefs().getBoolean("digestCreak", true)) {
                     if (!prefs().getBoolean("UsePreSig", false)) {
                         val block = constructor.newInstance(param.args[0])
-                        val infos = XposedHelpers.callMethod(block, "getSignerInfos") as Array<*>
+                        val infos = XposedHelpers.callMethod(block, "getSignerInfos") as Array<Any>
                         val info = infos[0]
-                        val verifiedSignerCertChain = XposedHelpers.callMethod(info, "getCertificateChain", block) as List<*>
+                        val verifiedSignerCertChain = XposedHelpers.callMethod(info, "getCertificateChain", block) as List<X509Certificate>
                         param.result = verifiedSignerCertChain.toTypedArray()
                     }
                 }
@@ -226,7 +216,8 @@ open class CorePatchForR : XposedHelper(), IXposedHookLoadPackage, IXposedHookZy
             }
         })
         // if app is system app, allow to use hidden api, even if app not using a system signature
-        findAndHookMethod("android.content.pm.ApplicationInfo",
+        findAndHookMethod(
+            "android.content.pm.ApplicationInfo",
             loadPackageParam.classLoader,
             "isPackageWhitelistedForHiddenApis",
             object : XC_MethodHook() {

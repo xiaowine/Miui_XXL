@@ -59,8 +59,8 @@ class CorePatchForT : CorePatchForSv2() {
                     override fun afterHookedMethod(param: MethodHookParam) {
                         //If we decide to crack this then at least make sure they are same apks, avoid another one that tries to impersonate.
                         if (param.result == false) {
-                            val pPname = XposedHelpers.callMethod(param.args[1], "getPackageName") as String
-                            if (pPname.contentEquals(param.args[0] as String)) {
+                            val pPkgName = XposedHelpers.callMethod(param.args[1], "getPackageName") as String
+                            if (pPkgName.contentEquals(param.args[0] as String)) {
                                 param.result = true
                             }
                         }
