@@ -46,4 +46,5 @@ object LockScreenShowBatteryCV : BaseHook() {
         val voltage = if (usbVoltage >= wirelessVoltage) usbVoltage else wirelessVoltage
         return "$current mA · $voltage V"
     }
+
 }

@@ -73,6 +73,8 @@
     <string name="miuihome_unlock_animation_summary">Kilit açarken kilit ekranından masaüstüne geçiş efektini optimize edin</string>
     <string name="miuihome_blur_when_open_folder">Klasör Görünümü Bulanıklığı</string>
     <string name="miuihome_blur_when_open_folder_summary">Klasörü Açarken Bulanıklaştırmayı Etkinleştir</string>
+    <string name="miuihome_always_show_statusbar_clock">Her zaman durum çubuğu saatini göster</string>
+    <string name="miuihome_always_show_statusbar_clock_summary">Başlatıcıda herhangi bir saat widget\'ı varken durum çubuğu saatini kaldırmayın</string>
 
     <string name="thememanager">Tema duvar kağıdı</string>
     <string name="thememanager_fuck_validate_theme">Tema crack</string>
@@ -88,12 +90,16 @@
     <string name="systemui_lockscreen_remove_minus_summary">Kilit ekranının sol alt köşesindeki simgeyi ve negatif ekran işlevini kaldırın</string>
     <string name="systemui_lockscreen_show_current">Kilit ekranı şarj akımını gösterir</string>
     <string name="systemui_lockscreen_show_current_summary">Şarj sırasında kilit ekranının altında anlık akım görüntülenir</string>
-    <string name="systemui_statusbar_show_seconds">Saniye cinsinden süre</string>
+    <string name="systemui_statusbar_show_seconds">Durum çubuğunda saniye cinsinden süre</string>
     <string name="systemui_statusbar_show_seconds_summary">Durum çubuğunun konumunun saati, bildirim çubuğu ve kontrol merkezi hariç olmak üzere saniye cinsinden görüntülenir</string>
     <string name="systemui_disable_bluetooth_restrict">Bluetooth kısıtlamalarını devre dışı bırak</string>
     <string name="systemui_disable_bluetooth_restrict_summary">Apple\'dan klonlanan MIUI\'yi devre dışı bırakın, bluetooth\'u geçici olarak devre dışı bırakın</string>
     <string name="systemui_wave_charge_animation">Dalga yükü animasyonunu etkinleştir</string>
     <string name="systemui_wave_charge_animation_summary">Varsayılan şarj animasyonu yerine Mix Alpha şarj animasyonunu kullanın</string>
+    <string name="systemui_show_wifi_standard">WiFi Rozetini Göster</string>
+    <string name="systemui_show_wifi_standard_summary">WiFi simgesinin sağ alt köşesi mevcut Wi-Fi protokolünü gösterir.</string>
+    <string name="systemui_lockscreen_show_seconds">Kilit ekranında saniye cinsinden süre</string>
+    <string name="systemui_lockscreen_show_seconds_summary">Kilit ekranının konumunun süresi saniye cinsinden görüntülenir</string>
 
     <string name="powerkeeper">Güç ve performans</string>
     <string name="powerkeeper_disable_dynamic_refresh_rate">Yenileme hızını kilitle</string>

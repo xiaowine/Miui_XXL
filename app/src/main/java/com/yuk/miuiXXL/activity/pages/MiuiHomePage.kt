@@ -15,6 +15,10 @@ class MiuiHomePage : BasePage() {
 
     override fun onCreate() {
         TextSummaryWithSwitch(
+            TextSummaryV(textId = R.string.miuihome_always_show_statusbar_clock, tipsId = R.string.miuihome_always_show_statusbar_clock_summary),
+            SwitchV("miuihome_always_show_statusbar_clock", false)
+        )
+        TextSummaryWithSwitch(
             TextSummaryV(textId = R.string.miuihome_double_tap_to_sleep, tipsId = R.string.miuihome_double_tap_to_sleep_summary),
             SwitchV("miuihome_double_tap_to_sleep", false)
         )

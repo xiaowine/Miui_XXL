@@ -18,7 +18,7 @@ import java.util.Locale
 import java.util.Timer
 import java.util.TimerTask
 
-object StatusbarShowSeconds : BaseHook() {
+object StatusBarShowSeconds : BaseHook() {
     @SuppressLint("SimpleDateFormat", "SetTextI18n")
     override fun init() {
 

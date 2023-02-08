@@ -12,7 +12,6 @@ object DisableBluetoothRestrict : BaseHook() {
         "com.android.settingslib.bluetooth.LocalBluetoothAdapter".hookBeforeMethod("isSupportBluetoothRestrict", Context::class.java) {
             it.result = false
         }
-
     }
 
 }

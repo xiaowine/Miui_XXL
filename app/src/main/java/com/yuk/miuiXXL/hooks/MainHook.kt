@@ -13,6 +13,7 @@ import com.yuk.miuiXXL.hooks.modules.android.RemoveScreenshotRestriction
 import com.yuk.miuiXXL.hooks.modules.android.RemoveSmallWindowRestriction1
 import com.yuk.miuiXXL.hooks.modules.android.corepatch.CorePatchMainHook
 import com.yuk.miuiXXL.hooks.modules.mediaeditor.RemoveCropRestriction
+import com.yuk.miuiXXL.hooks.modules.miuihome.AlwaysShowStatusBarClock
 import com.yuk.miuiXXL.hooks.modules.miuihome.AnimDurationRatio
 import com.yuk.miuiXXL.hooks.modules.miuihome.BlurWhenOpenFolder
 import com.yuk.miuiXXL.hooks.modules.miuihome.CategoryFeatures
@@ -31,10 +32,12 @@ import com.yuk.miuiXXL.hooks.modules.securitycenter.SkipWarningWaitTime
 import com.yuk.miuiXXL.hooks.modules.settings.NotificationImportance
 import com.yuk.miuiXXL.hooks.modules.systemui.DisableBluetoothRestrict
 import com.yuk.miuiXXL.hooks.modules.systemui.LockScreenShowBatteryCV
+import com.yuk.miuiXXL.hooks.modules.systemui.LockScreenShowSeconds
 import com.yuk.miuiXXL.hooks.modules.systemui.RemoveLockScreenCamera
 import com.yuk.miuiXXL.hooks.modules.systemui.RemoveLockScreenMinus
 import com.yuk.miuiXXL.hooks.modules.systemui.RemoveSmallWindowRestriction3
-import com.yuk.miuiXXL.hooks.modules.systemui.StatusbarShowSeconds
+import com.yuk.miuiXXL.hooks.modules.systemui.ShowWifiStandard
+import com.yuk.miuiXXL.hooks.modules.systemui.StatusBarShowSeconds
 import com.yuk.miuiXXL.hooks.modules.systemui.WaveChargeAnim
 import com.yuk.miuiXXL.hooks.modules.thememanager.FuckValidateTheme1
 import com.yuk.miuiXXL.hooks.modules.thememanager.RemoveAds
@@ -93,13 +96,15 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit {
 
                 "com.android.systemui" -> {
                     initHooks(
-                        StatusbarShowSeconds,
+                        StatusBarShowSeconds,
                         LockScreenShowBatteryCV,
                         RemoveLockScreenMinus,
                         RemoveLockScreenCamera,
                         DisableBluetoothRestrict,
                         RemoveSmallWindowRestriction3,
                         WaveChargeAnim,
+                        ShowWifiStandard,
+                        LockScreenShowSeconds,
                     )
                 }
 
@@ -138,6 +143,7 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit {
                             ShortcutAddSmallWindow,
                             RemoveSmallWindowRestriction2,
                             BlurWhenOpenFolder,
+                            AlwaysShowStatusBarClock,
                         )
                     }
                 }
