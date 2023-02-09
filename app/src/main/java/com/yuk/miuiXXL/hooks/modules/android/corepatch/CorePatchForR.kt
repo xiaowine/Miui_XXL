@@ -89,8 +89,7 @@ open class CorePatchForR : XposedHelper(), IXposedHookLoadPackage, IXposedHookZy
         constructor.isAccessible = true
         val aSVClass = XposedHelpers.findClass("android.util.apk.ApkSignatureVerifier", loadPackageParam.classLoader)
         val sJarClass = XposedHelpers.findClass("android.util.jar.StrictJarFile", loadPackageParam.classLoader)
-        val constructorExact =
-            XposedHelpers.findConstructorExact(sJarClass, String::class.java, Boolean::class.javaPrimitiveType, Boolean::class.javaPrimitiveType)
+        val constructorExact = XposedHelpers.findConstructorExact(sJarClass, String::class.java, Boolean::class.javaPrimitiveType, Boolean::class.javaPrimitiveType)
         constructorExact.isAccessible = true
         val signingDetails = getSigningDetails(loadPackageParam.classLoader)
         val findConstructorExact = XposedHelpers.findConstructorExact(signingDetails, Array<Signature>::class.java, Integer.TYPE)

@@ -82,6 +82,8 @@
     <string name="miuihome_task_view_card_size_vertical">瀑布卡片大小</string>
     <string name="miuihome_task_view_card_size_horizontal1">平铺卡片大小「竖屏时」</string>
     <string name="miuihome_task_view_card_size_horizontal2">平铺卡片大小「横屏时」</string>
+    <string name="miuihome_shortcut_menu_blur">快捷菜单模糊</string>
+    <string name="miuihome_shortcut_menu_blur_summary">仍为半成品，目前优化了文件夹内触发的效果</string>
 
     <string name="thememanager">主题壁纸</string>
     <string name="thememanager_remove_ads">去广告</string>

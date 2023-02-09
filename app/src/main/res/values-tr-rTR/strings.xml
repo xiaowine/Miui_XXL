@@ -79,6 +79,11 @@
     <string name="miuihome_always_show_statusbar_clock_summary">Başlatıcıda herhangi bir saat widget\'ı varken durum çubuğu saatini kaldırmayın</string>
     <string name="miuihome_task_view_card_size_binding">Görev görünümü kartı boyutunu özelleştirin</string>
     <string name="miuihome_task_view_card_size_binding_summary">Son görev kartlarının boyutunu farklı stillerde ayarlayın</string>
+    <string name="miuihome_task_view_card_size_vertical">Dikey için küçük resim boyutu</string>
+    <string name="miuihome_task_view_card_size_horizontal1">Yatay-Dikey için küçük resim boyutu</string>
+    <string name="miuihome_task_view_card_size_horizontal2">Yatay-Yatay için küçük resim boyutu</string>
+    <string name="miuihome_shortcut_menu_blur">Kısayol menüsü bulanıklığı</string>
+    <string name="miuihome_shortcut_menu_blur_summary">Hala yarı mamul bir üründür ve klasörde tetiklenen efekt optimize edilmiştir</string>
 
     <string name="thememanager">Tema duvar kağıdı</string>
     <string name="thememanager_fuck_validate_theme">Tema crack</string>

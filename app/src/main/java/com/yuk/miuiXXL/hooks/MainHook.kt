@@ -22,6 +22,7 @@ import com.yuk.miuiXXL.hooks.modules.miuihome.RemoveSmallWindowRestriction2
 import com.yuk.miuiXXL.hooks.modules.miuihome.ScrollIconName
 import com.yuk.miuiXXL.hooks.modules.miuihome.SetDeviceLevel
 import com.yuk.miuiXXL.hooks.modules.miuihome.ShortcutAddSmallWindow
+import com.yuk.miuiXXL.hooks.modules.miuihome.ShortcutMenuBlur
 import com.yuk.miuiXXL.hooks.modules.miuihome.TaskViewCardSize
 import com.yuk.miuiXXL.hooks.modules.miuihome.TwoXOneIconRoundedCornerFollowing
 import com.yuk.miuiXXL.hooks.modules.powerkeeper.DisableDynamicRefreshRate
@@ -140,6 +141,7 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit {
                         BlurWhenOpenFolder,
                         AlwaysShowStatusBarClock,
                         TaskViewCardSize,
+                        ShortcutMenuBlur,
                     )
                 }
 

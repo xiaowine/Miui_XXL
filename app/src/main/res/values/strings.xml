@@ -83,6 +83,8 @@
     <string name="miuihome_task_view_card_size_vertical">Thumbnail size for Vertically</string>
     <string name="miuihome_task_view_card_size_horizontal1">Thumbnail size for Horizontally-Vertical</string>
     <string name="miuihome_task_view_card_size_horizontal2">Thumbnail size for Horizontally-Horizontal</string>
+    <string name="miuihome_shortcut_menu_blur">Shortcut menu blur</string>
+    <string name="miuihome_shortcut_menu_blur_summary">It is still a semi-finished product, and the effect triggered in the folder has been optimized</string>
 
     <string name="thememanager">Themes</string>
     <string name="thememanager_fuck_validate_theme">Theme cracking</string>

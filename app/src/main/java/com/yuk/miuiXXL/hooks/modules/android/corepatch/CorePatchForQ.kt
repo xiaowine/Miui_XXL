@@ -101,8 +101,7 @@ class CorePatchForQ : XposedHelper(), IXposedHookLoadPackage, IXposedHookZygoteI
         })
 
         // if app is system app, allow to use hidden api, even if app not using a system signature
-        findAndHookMethod(
-            "android.content.pm.ApplicationInfo",
+        findAndHookMethod("android.content.pm.ApplicationInfo",
             loadPackageParam.classLoader,
             "isPackageWhitelistedForHiddenApis",
             object : XC_MethodHook() {

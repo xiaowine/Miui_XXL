@@ -46,6 +46,11 @@ class MiuiHomePage : BasePage() {
         )
         TextSummaryWithSwitch(
             TextSummaryV(
+                textId = R.string.miuihome_shortcut_menu_blur, tipsId = R.string.miuihome_shortcut_menu_blur_summary
+            ), SwitchV("miuihome_shortcut_menu_blur", false)
+        )
+        TextSummaryWithSwitch(
+            TextSummaryV(
                 textId = R.string.miuihome_blur_when_open_folder, tipsId = R.string.miuihome_blur_when_open_folder_summary
             ), SwitchV("miuihome_blur_when_open_folder", false)
         )
