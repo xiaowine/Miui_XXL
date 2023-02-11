@@ -7,7 +7,7 @@ import de.robv.android.xposed.XposedBridge
 import de.robv.android.xposed.XposedHelpers
 import de.robv.android.xposed.callbacks.XC_LoadPackage.LoadPackageParam
 
-class CorePatchForT : CorePatchForSv2() {
+class CorePatchForT : CorePatchForS() {
     override fun handleLoadPackage(loadPackageParam: LoadPackageParam) {
         super.handleLoadPackage(loadPackageParam)
         // 允许降级
