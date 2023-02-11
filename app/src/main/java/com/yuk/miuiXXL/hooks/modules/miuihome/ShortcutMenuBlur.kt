@@ -18,6 +18,7 @@ import com.yuk.miuiXXL.utils.callMethod
 import com.yuk.miuiXXL.utils.callStaticMethod
 import com.yuk.miuiXXL.utils.findClass
 import com.yuk.miuiXXL.utils.getBoolean
+import com.yuk.miuiXXL.utils.getObjectField
 import com.yuk.miuiXXL.utils.hookAfterAllMethods
 import com.yuk.miuiXXL.utils.hookBeforeAllMethods
 
@@ -32,7 +33,6 @@ object ShortcutMenuBlur : BaseHook() {
         val applicationClass = "com.miui.home.launcher.Application".findClass()
         val utilitiesClass = "com.miui.home.launcher.common.Utilities".findClass()
         val launcherStateClass = "com.miui.home.launcher.LauncherState".findClass()
-
         val allBlurredDrawable: MutableList<Drawable> = ArrayList()
 
         fun showBlurDrawable() {
@@ -47,7 +47,7 @@ object ShortcutMenuBlur : BaseHook() {
             }
         }
 
-        var isShortcutMenuLayerBlurred = false
+        var isShouldBlur = false
         var dragLayer: ViewGroup? = null
         var targetView: View? = null
         var dragLayerBackground: Drawable? = null
@@ -56,11 +56,6 @@ object ShortcutMenuBlur : BaseHook() {
             hideBlurDrawable()
             val dragObject = it.args[0]
             val dragViewInfo = dragObject.callMethod("getDragInfo")
-            // 特殊图标不模糊
-            val iconIsApplication = dragViewInfo?.callMethod("isApplicatoin") as Boolean
-            val iconTitle = dragViewInfo.callMethod("getTitle") as String
-            val BLUR_ICON_APP_NAME = arrayOf("锁屏", "手电筒", "数据", "飞行模式", "蓝牙", "WLAN 热点")
-            if (!iconIsApplication && !BLUR_ICON_APP_NAME.contains(iconTitle)) return@hookBeforeAllMethods
             // 抽屉内图标不模糊
             val mLauncher = applicationClass.callStaticMethod("getLauncher") as Activity
             val launcherStatusField = launcherStateClass.getDeclaredField("ALL_APPS")
@@ -69,31 +64,37 @@ object ShortcutMenuBlur : BaseHook() {
             val stateManager = mLauncher.callMethod("getStateManager")
             val currentState = stateManager?.callMethod("getState")
             if (currentState == allAppsStatus) return@hookBeforeAllMethods
-
-            val targetBlurView = mLauncher.callMethod("getScreen") as View
-            val dragView = dragObject.callMethod("getDragView") as View
-            targetView = dragView.callMethod("getContent") as View
-            val isFolderShowing = mLauncher.callMethod("isFolderShowing") as Boolean
-            val renderEffectArray = arrayOfNulls<RenderEffect>(51)
-            for (index in 0..50) {
-                renderEffectArray[index] = RenderEffect.createBlurEffect((index + 1).toFloat(), (index + 1).toFloat(), Shader.TileMode.MIRROR)
-            }
-            val valueAnimator = ValueAnimator.ofInt(0, 50)
-            valueAnimator.addUpdateListener { animator ->
-                val value = animator.animatedValue as Int
-                if (!(getBoolean("miuihome_blur_when_open_folder", false) && isFolderShowing)) {
-                    blurUtilsClass.callStaticMethod("fastBlurDirectly", value / 50f, mLauncher.window)
+            // 特殊图标不模糊
+            val itemType = dragViewInfo?.getObjectField("itemType") as Int
+            val iconTitle = dragViewInfo.callMethod("getTitle") as String
+            val BLUR_ICON_APP_NAME = arrayOf("锁屏", "手电筒", "数据", "飞行模式", "蓝牙", "WLAN 热点")
+            if (itemType == 0 && !BLUR_ICON_APP_NAME.contains(iconTitle) || itemType == 2 || itemType == 21 || itemType == 22) {
+                val targetBlurView = mLauncher.callMethod("getScreen") as View
+                val dragView = dragObject.callMethod("getDragView") as View
+                targetView = dragView.callMethod("getContent") as View
+                val isFolderShowing = mLauncher.callMethod("isFolderShowing") as Boolean
+                val renderEffectArray = arrayOfNulls<RenderEffect>(51)
+                for (index in 0..50) {
+                    renderEffectArray[index] = RenderEffect.createBlurEffect((index + 1).toFloat(), (index + 1).toFloat(), Shader.TileMode.MIRROR)
                 }
-                targetBlurView.setRenderEffect(renderEffectArray[value])
+                val valueAnimator = ValueAnimator.ofInt(0, 50)
+                valueAnimator.addUpdateListener { animator ->
+                    val value = animator.animatedValue as Int
+                    if (!(getBoolean("miuihome_blur_when_open_folder", false) && isFolderShowing)) {
+                        blurUtilsClass.callStaticMethod("fastBlurDirectly", value / 50f, mLauncher.window)
+                    }
+                    targetBlurView.setRenderEffect(renderEffectArray[value])
+                }
+                dragLayer = targetBlurView.parent as ViewGroup
+                valueAnimator.duration = 200
+                valueAnimator.start()
+                isShouldBlur = true
             }
-            dragLayer = targetBlurView.parent as ViewGroup
-            valueAnimator.duration = 200
-            valueAnimator.start()
-            isShortcutMenuLayerBlurred = true
         }
 
         shortcutMenuLayerClass.hookBeforeAllMethods("onDragStart") {
-            if (isShortcutMenuLayerBlurred) {
+            if (isShouldBlur) {
+                targetView?.alpha = 0f
                 val dragObject = it.args[1]
                 val dragView = dragObject.callMethod("getDragView") as View
                 val dragViewParent = dragView.parent as View
@@ -106,12 +107,11 @@ object ShortcutMenuBlur : BaseHook() {
                 dragView.scaleX = originalScale
                 dragView.scaleY = originalScale
                 dragLayerBackground = BitmapDrawable(dragLayer!!.context.resources, bitmap)
-                targetView?.alpha = 0f
             }
         }
 
         shortcutMenuLayerClass.hookBeforeAllMethods("onDragEnd") {
-            if (isShortcutMenuLayerBlurred) {
+            if (isShouldBlur) {
                 targetView?.alpha = 0f
                 val isLocked = utilitiesClass.callStaticMethod("isScreenCellsLocked") as Boolean
                 if (isLocked) {
@@ -129,16 +129,16 @@ object ShortcutMenuBlur : BaseHook() {
             }
         }
         shortcutMenuClass.hookBeforeAllMethods("reset") {
-            if (isShortcutMenuLayerBlurred) {
-                isShortcutMenuLayerBlurred = false
-                targetView?.alpha = 1f
+            if (isShouldBlur) {
+                isShouldBlur = false
+                //targetView?.alpha = 1f
                 val mLauncher = applicationClass.callStaticMethod("getLauncher") as Activity
                 blurUtilsClass.callStaticMethod("fastBlurDirectly", 0f, mLauncher.window)
             }
         }
 
         shortcutMenuLayerClass.hookBeforeAllMethods("hideShortcutMenu") {
-            if (isShortcutMenuLayerBlurred) {
+            if (isShouldBlur) {
                 val shortcutMenuLayer = it.thisObject as FrameLayout
                 val mLauncher = applicationClass.callStaticMethod("getLauncher") as Activity
                 val targetBlurView = mLauncher.callMethod("getScreen") as View
@@ -168,12 +168,12 @@ object ShortcutMenuBlur : BaseHook() {
                 valueAnimator.duration = 200
                 valueAnimator.start()
             }
-            isShortcutMenuLayerBlurred = false
+            isShouldBlur = false
         }
 
         blurUtilsClass.hookBeforeAllMethods("fastBlurDirectly") {
             val blurRatio = it.args[0] as Float
-            if (isShortcutMenuLayerBlurred && blurRatio == 0.0f) {
+            if (isShouldBlur && blurRatio == 0.0f) {
                 it.result = null
             }
         }
@@ -186,7 +186,6 @@ object ShortcutMenuBlur : BaseHook() {
         blurUtilsClass.hookAfterAllMethods("fastBlurWhenExitRecents") {
             showBlurDrawable()
         }
-
     }
 
 }

@@ -40,7 +40,7 @@ object BlurWhenOpenFolder : BaseHook() {
                 val mLauncher = it.thisObject as Activity
                 val isInNormalEditing = mLauncher.callMethod("isInNormalEditing") as Boolean
                 if (isInNormalEditing) blurUtilsClass.callStaticMethod("fastBlur", 1.0f, mLauncher.window, true, 0L)
-                else blurUtilsClass.callStaticMethod("fastBlur", 0.0f, mLauncher.window, true, 300L)
+                else blurUtilsClass.callStaticMethod("fastBlur", 0.0f, mLauncher.window, true)
             }
             launcherClass.hookAfterMethod("cancelShortcutMenu", Int::class.java, cancelShortcutMenuReasonClass) {
                 val mLauncher = it.thisObject as Activity
@@ -51,7 +51,7 @@ object BlurWhenOpenFolder : BaseHook() {
                 val blurType = blurUtilsClass.callStaticMethod("getBlurType") as Int
                 if (isShouldBlur) {
                     if (blurType == 2) blurUtilsClass.callStaticMethod("fastBlur", 1.0f, mLauncher.window, true, 0L)
-                    else blurUtilsClass.callStaticMethod("fastBlur", 1.0f, mLauncher.window, true, 300L)
+                    else blurUtilsClass.callStaticMethod("fastBlur", 1.0f, mLauncher.window, true)
                 }
             }
             blurUtilsClass.hookAfterMethod("fastBlurWhenStartOpenOrCloseApp", Boolean::class.java, launcherClass) {

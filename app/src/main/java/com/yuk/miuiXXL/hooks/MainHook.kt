@@ -25,6 +25,7 @@ import com.yuk.miuiXXL.hooks.modules.miuihome.ShortcutAddSmallWindow
 import com.yuk.miuiXXL.hooks.modules.miuihome.ShortcutMenuBlur
 import com.yuk.miuiXXL.hooks.modules.miuihome.TaskViewCardSize
 import com.yuk.miuiXXL.hooks.modules.miuihome.TwoXOneIconRoundedCornerFollowing
+import com.yuk.miuiXXL.hooks.modules.miuihome.UseCompleteBlur
 import com.yuk.miuiXXL.hooks.modules.powerkeeper.DisableDynamicRefreshRate
 import com.yuk.miuiXXL.hooks.modules.securitycenter.ShowBatteryTemperature
 import com.yuk.miuiXXL.hooks.modules.securitycenter.SkipWarningWaitTime
@@ -142,6 +143,7 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit {
                         AlwaysShowStatusBarClock,
                         TaskViewCardSize,
                         ShortcutMenuBlur,
+                        UseCompleteBlur,
                     )
                 }
 

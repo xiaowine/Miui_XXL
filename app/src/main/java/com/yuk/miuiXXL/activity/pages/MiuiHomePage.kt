@@ -27,6 +27,10 @@ class MiuiHomePage : BasePage() {
             SwitchV("miuihome_double_tap_to_sleep", false)
         )
         TextSummaryWithSwitch(
+            TextSummaryV(textId = R.string.miuihome_use_complete_blur, tipsId = R.string.miuihome_use_complete_blur_summary),
+            SwitchV("miuihome_use_complete_blur", false)
+        )
+        TextSummaryWithSwitch(
             TextSummaryV(textId = R.string.miuihome_highend_device, tipsId = R.string.miuihome_highend_device_summary),
             SwitchV("miuihome_highend_device", false)
         )

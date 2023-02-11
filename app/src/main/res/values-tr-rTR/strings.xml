@@ -84,6 +84,8 @@
     <string name="miuihome_task_view_card_size_horizontal2">Yatay-Yatay için küçük resim boyutu</string>
     <string name="miuihome_shortcut_menu_blur">Kısayol menüsü bulanıklığı</string>
     <string name="miuihome_shortcut_menu_blur_summary">Hala yarı mamul bir üründür ve klasörde tetiklenen efekt optimize edilmiştir</string>
+    <string name="miuihome_use_complete_blur">Tamamen bulanıklık</string>
+    <string name="miuihome_use_complete_blur_summary">Resmi yarım kalmış tam bulanıklaştırma özelliğini kullanın</string>
 
     <string name="thememanager">Tema duvar kağıdı</string>
     <string name="thememanager_fuck_validate_theme">Tema crack</string>
