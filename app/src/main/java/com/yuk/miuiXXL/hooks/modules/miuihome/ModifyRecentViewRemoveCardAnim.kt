@@ -18,11 +18,11 @@ object ModifyRecentViewRemoveCardAnim : BaseHook() {
 
         if (!getBoolean("miuihome_recentview_remove_card_animation", false)) return
         "com.miui.home.recents.views.SwipeHelperForRecents".hookAfterMethod("onTouchEvent", MotionEvent::class.java) {
-            if (it.thisObject.getObjectField("mCurrView") != null) {
-                val taskView2 = it.thisObject.getObjectField("mCurrView") as View
-                taskView2.alpha = 1f
-                taskView2.scaleX = 1f
-                taskView2.scaleY = 1f
+            val mCurrView = it.thisObject.getObjectField("mCurrView") as View?
+            if (mCurrView != null) {
+                mCurrView.alpha = 1f
+                mCurrView.scaleX = 1f
+                mCurrView.scaleY = 1f
             }
         }
         "com.miui.home.recents.TaskStackViewLayoutStyleHorizontal".replaceMethod(

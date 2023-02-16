@@ -9,8 +9,8 @@ plugins {
 
 android {
     compileSdk = 33
+    buildToolsVersion = "33.0.2"
     namespace = "com.yuk.miuiXXL"
-
     defaultConfig {
         applicationId = namespace
         minSdk = 31
@@ -48,7 +48,8 @@ android {
         }
         applicationVariants.all {
             outputs.all {
-                (this as BaseVariantOutputImpl).outputFileName = "Miui_XXL-$versionName($versionCode)-$name-${SimpleDateFormat("yyMMddHHmm").format(System.currentTimeMillis())}.apk"
+                (this as BaseVariantOutputImpl).outputFileName =
+                    "Miui_XXL-$versionName($versionCode)-$name-${SimpleDateFormat("yyMMddHHmm").format(System.currentTimeMillis())}.apk"
             }
         }
     }

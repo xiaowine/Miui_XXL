@@ -29,19 +29,21 @@ object LockScreenShowSeconds : BaseHook() {
             parameterCount == 2
         }.hookAfter {
             try {
-                val viewGroup = it.thisObject as LinearLayout
-                val d: Method = viewGroup.javaClass.getDeclaredMethod("updateTime")
-                val r = Runnable {
-                    d.isAccessible = true
-                    d.invoke(viewGroup)
-                }
-
-                class T : TimerTask() {
-                    override fun run() {
-                        Handler(viewGroup.context.mainLooper).post(r)
+                val viewGroup = it.thisObject as LinearLayout?
+                if (viewGroup != null) {
+                    val d: Method = viewGroup.javaClass.getDeclaredMethod("updateTime")
+                    val r = Runnable {
+                        d.isAccessible = true
+                        d.invoke(viewGroup)
                     }
+
+                    class T : TimerTask() {
+                        override fun run() {
+                            Handler(viewGroup.context.mainLooper).post(r)
+                        }
+                    }
+                    Timer().scheduleAtFixedRate(T(), 1000 - System.currentTimeMillis() % 1000, 1000)
                 }
-                Timer().scheduleAtFixedRate(T(), 1000 - System.currentTimeMillis() % 1000, 1000)
             } catch (_: Exception) {
             }
         }
@@ -69,7 +71,6 @@ object LockScreenShowSeconds : BaseHook() {
         val is24 = Settings.System.getString(c.contentResolver, Settings.System.TIME_12_24) == "24"
         nowTime = Calendar.getInstance().time
         textV.text = getTime(is24, isVertical)
-
     }
 
 
