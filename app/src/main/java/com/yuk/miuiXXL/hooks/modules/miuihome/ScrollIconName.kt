@@ -21,6 +21,7 @@ object ScrollIconName : BaseHook() {
         if (!getBoolean("miuihome_scroll_icon_name", false)) return
         val launcherClass = "com.miui.home.launcher.Launcher".findClass()
         val shortcutInfoClass = "com.miui.home.launcher.ShortcutInfo".findClass()
+
         try {
             "com.miui.home.launcher.ItemIcon".hookAfterMethod(
                 "onFinishInflate"

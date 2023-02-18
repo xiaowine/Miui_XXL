@@ -13,6 +13,7 @@ import com.yuk.miuiXXL.hooks.modules.mediaeditor.RemoveCropRestriction
 import com.yuk.miuiXXL.hooks.modules.miuihome.AlwaysShowStatusBarClock
 import com.yuk.miuiXXL.hooks.modules.miuihome.AnimDurationRatio
 import com.yuk.miuiXXL.hooks.modules.miuihome.BlurWhenOpenFolder
+import com.yuk.miuiXXL.hooks.modules.miuihome.BlurWhenShowShortcutMenu
 import com.yuk.miuiXXL.hooks.modules.miuihome.CategoryFeatures
 import com.yuk.miuiXXL.hooks.modules.miuihome.DisableRecentViewWallpaperDarkening
 import com.yuk.miuiXXL.hooks.modules.miuihome.DoubleTapToSleep
@@ -22,7 +23,6 @@ import com.yuk.miuiXXL.hooks.modules.miuihome.RemoveSmallWindowRestriction2
 import com.yuk.miuiXXL.hooks.modules.miuihome.ScrollIconName
 import com.yuk.miuiXXL.hooks.modules.miuihome.SetDeviceLevel
 import com.yuk.miuiXXL.hooks.modules.miuihome.ShortcutAddSmallWindow
-import com.yuk.miuiXXL.hooks.modules.miuihome.ShortcutMenuBlur
 import com.yuk.miuiXXL.hooks.modules.miuihome.TaskViewCardSize
 import com.yuk.miuiXXL.hooks.modules.miuihome.TwoXOneIconRoundedCornerFollowing
 import com.yuk.miuiXXL.hooks.modules.miuihome.UseCompleteBlur
@@ -142,7 +142,7 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit {
                         BlurWhenOpenFolder,
                         AlwaysShowStatusBarClock,
                         TaskViewCardSize,
-                        ShortcutMenuBlur,
+                        BlurWhenShowShortcutMenu,
                         UseCompleteBlur,
                     )
                 }

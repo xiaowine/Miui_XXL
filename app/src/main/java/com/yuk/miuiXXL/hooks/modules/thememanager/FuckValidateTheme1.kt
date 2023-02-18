@@ -10,7 +10,7 @@ import com.github.kyuubiran.ezxhelper.utils.hookAfter
 import com.github.kyuubiran.ezxhelper.utils.putObject
 import com.yuk.miuiXXL.R
 import com.yuk.miuiXXL.hooks.modules.BaseHook
-import com.yuk.miuiXXL.utils.findClass
+import com.yuk.miuiXXL.utils.findClassOrNull
 import com.yuk.miuiXXL.utils.getBoolean
 import miui.drm.DrmManager
 
@@ -20,12 +20,14 @@ object FuckValidateTheme1 : BaseHook() {
         if (!getBoolean("thememanager_fuck_validate_theme", false)) return
         var letter = 'a'
         for (i in 0..25) {
-            val classIfExists = ("com.android.thememanager.controller.online.${letter}").findClass()
+            val classIfExists = ("com.android.thememanager.controller.online.${letter}").findClassOrNull()
             try {
-                findMethod(classIfExists) {
-                    parameterCount == 1 && returnType == DrmManager.DrmResult::class.java
-                }.hookAfter {
-                    it.result = DrmManager.DrmResult.DRM_SUCCESS
+                classIfExists?.let { clazz ->
+                    findMethod(clazz) {
+                        parameterCount == 1 && returnType == DrmManager.DrmResult::class.java
+                    }.hookAfter {
+                        it.result = DrmManager.DrmResult.DRM_SUCCESS
+                    }
                 }
             } catch (t: Throwable) {
                 letter++

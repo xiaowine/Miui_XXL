@@ -87,6 +87,8 @@
     <string name="miuihome_shortcut_menu_blur_summary">It is still a semi-finished product, and the effect triggered in the folder has been optimized</string>
     <string name="miuihome_use_complete_blur">Complete blur</string>
     <string name="miuihome_use_complete_blur_summary">Use the official half-finished complete blur feature</string>
+    <string name="miuihome_complete_blur_fix">Complete Blur Complement</string>
+    <string name="miuihome_complete_blur_fix_summary">Complements blur when swiping up from the App, which may cause visual flicker</string>
 
     <string name="thememanager">Themes</string>
     <string name="thememanager_fuck_validate_theme">Theme cracking</string>

@@ -86,6 +86,8 @@
     <string name="miuihome_shortcut_menu_blur_summary">Hala yarı mamul bir üründür ve klasörde tetiklenen efekt optimize edilmiştir</string>
     <string name="miuihome_use_complete_blur">Tamamen bulanıklık</string>
     <string name="miuihome_use_complete_blur_summary">Resmi yarım kalmış tam bulanıklaştırma özelliğini kullanın</string>
+    <string name="miuihome_complete_blur_fix">Bulanıklaştırma Tamamlayıcıyı Tamamla</string>
+    <string name="miuihome_complete_blur_fix_summary">Uygulamadan yukarı kaydırırken görsel titremeye neden olabilen tamamlamalar bulanıklaşıyor</string>
 
     <string name="thememanager">Tema duvar kağıdı</string>
     <string name="thememanager_fuck_validate_theme">Tema crack</string>

@@ -30,14 +30,17 @@ object ShortcutAddSmallWindow : BaseHook() {
         val mShortcutMenuItem = ("com.miui.home.launcher.shortcuts.ShortcutMenuItem").findClass()
         val mAppDetailsShortcutMenuItem = ("com.miui.home.launcher.shortcuts.SystemShortcutMenuItem\$AppDetailsShortcutMenuItem").findClass()
         val mActivityUtilsCompat = ("com.miui.launcher.utils.ActivityUtilsCompat").findClass()
+
         mViewDarkModeHelper.hookAfterAllMethods("onConfigurationChanged") {
             mSystemShortcutMenuItem.callStaticMethod("createAllSystemShortcutMenuItems")
         }
+
         mShortcutMenuItem.hookAfterAllMethods("getShortTitle") {
             if (it.result == "应用信息") {
                 it.result = "信息"
             }
         }
+
         mAppDetailsShortcutMenuItem.hookBeforeMethod("lambda\$getOnClickListener$0", mAppDetailsShortcutMenuItem, View::class.java) {
             val obj = it.args[0]
             val view: View = it.args[1] as View
@@ -56,12 +59,15 @@ object ShortcutAddSmallWindow : BaseHook() {
                 }
             }
         }
+
         mSystemShortcutMenu.hookAfterAllMethods("getMaxShortcutItemCount") {
             it.result = 5
         }
+
         mAppShortcutMenu.hookAfterAllMethods("getMaxShortcutItemCount") {
             it.result = 5
         }
+
         mSystemShortcutMenuItem.hookAfterAllMethods("createAllSystemShortcutMenuItems") {
             val isDarkMode =
                 AndroidAppHelper.currentApplication().applicationContext.resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK == Configuration.UI_MODE_NIGHT_YES

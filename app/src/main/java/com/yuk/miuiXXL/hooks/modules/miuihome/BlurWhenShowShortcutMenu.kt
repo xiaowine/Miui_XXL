@@ -23,7 +23,7 @@ import com.yuk.miuiXXL.utils.hookAfterAllMethods
 import com.yuk.miuiXXL.utils.hookBeforeAllMethods
 
 // Code from WINI, now only optimized for effects triggered in folders.
-object ShortcutMenuBlur : BaseHook() {
+object BlurWhenShowShortcutMenu : BaseHook() {
     override fun init() {
 
         if (!getBoolean("miuihome_shortcut_menu_blur", false)) return
@@ -68,7 +68,9 @@ object ShortcutMenuBlur : BaseHook() {
             val itemType = dragViewInfo?.getObjectField("itemType") as Int
             val iconTitle = dragViewInfo.callMethod("getTitle") as String
             val BLUR_ICON_APP_NAME = arrayOf("锁屏", "手电筒", "数据", "飞行模式", "蓝牙", "WLAN 热点")
-            if (itemType == 0 && !BLUR_ICON_APP_NAME.contains(iconTitle) || itemType == 2 || itemType == 21 || itemType == 22) {
+            if (itemType == 0 && !BLUR_ICON_APP_NAME.contains(iconTitle)
+            //|| itemType == 2 || itemType == 21 || itemType == 22
+            ) {
                 val targetBlurView = mLauncher.callMethod("getScreen") as View
                 val dragView = dragObject.callMethod("getDragView") as View
                 targetView = dragView.callMethod("getContent") as View
@@ -128,6 +130,7 @@ object ShortcutMenuBlur : BaseHook() {
                 }
             }
         }
+
         shortcutMenuClass.hookBeforeAllMethods("reset") {
             if (isShouldBlur) {
                 isShouldBlur = false

@@ -16,7 +16,7 @@
     <string name="reboot_system_summary">确定要重启系统么？</string>
     <string name="restart_scope">重启作用域</string>
     <string name="restart_scope_summary">确定要重启全部作用域么？</string>
-    <string name="restart_scope_finished">作用域应用重启完成</string>
+    <string name="restart_scope_finished">作用域重启完成</string>
 
     <string name="menu">菜单</string>
     <string name="other">其他</string>
@@ -86,6 +86,8 @@
     <string name="miuihome_shortcut_menu_blur_summary">仍为半成品，目前优化了文件夹内触发的效果</string>
     <string name="miuihome_use_complete_blur">完整模糊</string>
     <string name="miuihome_use_complete_blur_summary">使用米米官方搞的半成品完整模糊功能</string>
+    <string name="miuihome_complete_blur_fix">完整模糊补全</string>
+    <string name="miuihome_complete_blur_fix_summary">补全从应用向上滑动时的模糊效果，这可能导致视觉闪烁和瞬时丢帧</string>
 
     <string name="thememanager">主题壁纸</string>
     <string name="thememanager_remove_ads">去广告</string>

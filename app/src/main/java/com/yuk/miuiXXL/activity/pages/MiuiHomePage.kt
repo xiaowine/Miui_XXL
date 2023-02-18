@@ -26,9 +26,17 @@ class MiuiHomePage : BasePage() {
             TextSummaryV(textId = R.string.miuihome_double_tap_to_sleep, tipsId = R.string.miuihome_double_tap_to_sleep_summary),
             SwitchV("miuihome_double_tap_to_sleep", false)
         )
+        val blurBinding = GetDataBinding({ safeSP.getBoolean("miuihome_use_complete_blur", false) }) { view, flags, data ->
+            if (flags == 1) view.visibility = if (data as Boolean) View.VISIBLE else View.GONE
+        }
         TextSummaryWithSwitch(
             TextSummaryV(textId = R.string.miuihome_use_complete_blur, tipsId = R.string.miuihome_use_complete_blur_summary),
-            SwitchV("miuihome_use_complete_blur", false)
+            SwitchV("miuihome_use_complete_blur", false, dataBindingSend = blurBinding.bindingSend)
+        )
+        TextSummaryWithSwitch(
+            TextSummaryV(textId = R.string.miuihome_complete_blur_fix, tipsId = R.string.miuihome_complete_blur_fix_summary),
+            SwitchV("miuihome_complete_blur_fix", false),
+            dataBindingRecv = blurBinding.binding.getRecv(1)
         )
         TextSummaryWithSwitch(
             TextSummaryV(textId = R.string.miuihome_highend_device, tipsId = R.string.miuihome_highend_device_summary),
@@ -82,9 +90,7 @@ class MiuiHomePage : BasePage() {
             SwitchV("miuihome_scroll_icon_name", false)
         )
         val animRatioBinding = GetDataBinding({ safeSP.getBoolean("miuihome_anim_ratio_binding", false) }) { view, flags, data ->
-            if (flags == 1) {
-                view.visibility = if (data as Boolean) View.VISIBLE else View.GONE
-            }
+            if (flags == 1) view.visibility = if (data as Boolean) View.VISIBLE else View.GONE
         }
         TextSummaryWithSwitch(
             TextSummaryV(textId = R.string.miuihome_anim_ratio_binding, tipsId = R.string.miuihome_anim_ratio_binding_summary),
@@ -101,9 +107,7 @@ class MiuiHomePage : BasePage() {
             dataBindingRecv = animRatioBinding.getRecv(1)
         )
         val cardSizeBinding = GetDataBinding({ safeSP.getBoolean("miuihome_task_view_card_size_binding", false) }) { view, flags, data ->
-            if (flags == 1) {
-                view.visibility = if (data as Boolean) View.VISIBLE else View.GONE
-            }
+            if (flags == 1) view.visibility = if (data as Boolean) View.VISIBLE else View.GONE
         }
         TextSummaryWithSwitch(
             TextSummaryV(textId = R.string.miuihome_task_view_card_size_binding, tipsId = R.string.miuihome_task_view_card_size_binding_summary),

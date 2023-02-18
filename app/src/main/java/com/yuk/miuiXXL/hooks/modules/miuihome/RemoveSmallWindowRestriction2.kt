@@ -15,7 +15,6 @@ object RemoveSmallWindowRestriction2 : BaseHook() {
         findAllMethods("com.miui.home.launcher.RecentsAndFSGestureUtils") {
             name == "canTaskEnterMiniSmallWindow"
         }.hookReturnConstant(true)
-
     }
 
 }
