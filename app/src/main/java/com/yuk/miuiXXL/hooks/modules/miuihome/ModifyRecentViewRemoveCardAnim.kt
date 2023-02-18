@@ -11,9 +11,9 @@ import com.yuk.miuiXXL.utils.findClass
 import com.yuk.miuiXXL.utils.getBoolean
 import com.yuk.miuiXXL.utils.getObjectField
 import com.yuk.miuiXXL.utils.hookAfterMethod
+import com.yuk.miuiXXL.utils.new
 import com.yuk.miuiXXL.utils.replaceMethod
 import com.yuk.miuiXXL.utils.setObjectField
-import de.robv.android.xposed.XposedHelpers
 
 object ModifyRecentViewRemoveCardAnim : BaseHook() {
     override fun init() {
@@ -32,7 +32,7 @@ object ModifyRecentViewRemoveCardAnim : BaseHook() {
             val view = it.args[0] as View
             val getScreenHeight = "com.miui.home.launcher.DeviceConfig".findClass().callStaticMethod("getScreenHeight") as Int
             val ofFloat = ObjectAnimator.ofFloat(view, View.TRANSLATION_Y, view.translationY, -getScreenHeight * 1.1484375f)
-            val physicBasedInterpolator = XposedHelpers.newInstance("com.miui.home.launcher.anim.PhysicBasedInterpolator".findClass(), 0.9f, 0.78f)
+            val physicBasedInterpolator = "com.miui.home.launcher.anim.PhysicBasedInterpolator".findClass().new(0.9f, 0.78f)
             ofFloat.interpolator = physicBasedInterpolator as TimeInterpolator
             ofFloat.duration = 400
             return@replaceMethod ofFloat

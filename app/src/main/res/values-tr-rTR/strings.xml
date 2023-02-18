@@ -88,6 +88,8 @@
     <string name="miuihome_use_complete_blur_summary">Resmi yarım kalmış tam bulanıklaştırma özelliğini kullanın</string>
     <string name="miuihome_complete_blur_fix">Bulanıklaştırma Tamamlayıcıyı Tamamla</string>
     <string name="miuihome_complete_blur_fix_summary">Uygulamadan yukarı kaydırırken görsel titremeye neden olabilen tamamlamalar bulanıklaşıyor</string>
+    <string name="miuihome_minus_one_overlap_mode">Örtüşme Modu Uygulama Kasası</string>
+    <string name="miuihome_minus_one_overlap_mode_summary">Eksi bir ekran bulanıklığı ile birlikte kullanılır ve sistem başlatıcının kontrol edilmesi gerekir</string>
 
     <string name="thememanager">Tema duvar kağıdı</string>
     <string name="thememanager_fuck_validate_theme">Tema crack</string>
@@ -131,5 +133,8 @@
     <string name="settings">Ayarlar</string>
     <string name="settings_notification_importance">Bildirim önemi</string>
     <string name="settings_notification_importance_summary">MIUI tarafından gizlenen bildirim önem ayarlarını göster</string>
+
+    <string name="personalassistant">Uygulama Kasası</string>
+    <string name="personalassistant_minus_one_blur">Eksi Bir Ekran Bulanıklığı</string>
 
 </resources>

@@ -16,8 +16,8 @@ import com.yuk.miuiXXL.utils.getBoolean
 import com.yuk.miuiXXL.utils.getStaticObjectField
 import com.yuk.miuiXXL.utils.hookAfterAllMethods
 import com.yuk.miuiXXL.utils.hookBeforeMethod
+import com.yuk.miuiXXL.utils.new
 import com.yuk.miuiXXL.utils.setStaticObjectField
-import de.robv.android.xposed.XposedHelpers
 
 object ShortcutAddSmallWindow : BaseHook() {
     override fun init() {
@@ -72,7 +72,7 @@ object ShortcutAddSmallWindow : BaseHook() {
             val isDarkMode =
                 AndroidAppHelper.currentApplication().applicationContext.resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK == Configuration.UI_MODE_NIGHT_YES
             val mAllSystemShortcutMenuItems = mSystemShortcutMenuItem.getStaticObjectField("sAllSystemShortcutMenuItems") as Collection<Any>
-            val mSmallWindowInstance = XposedHelpers.newInstance(mAppDetailsShortcutMenuItem)
+            val mSmallWindowInstance = mAppDetailsShortcutMenuItem.new()
             mSmallWindowInstance.callMethod("setShortTitle", moduleRes.getString(R.string.miuihome_shortcut_add_small_window_title))
             mSmallWindowInstance.callMethod(
                 "setIconDrawable",

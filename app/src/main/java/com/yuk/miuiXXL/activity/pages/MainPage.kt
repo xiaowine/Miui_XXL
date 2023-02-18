@@ -25,6 +25,7 @@ class MainPage : BasePage() {
         TextSummaryWithArrow(TextSummaryV(textId = R.string.settings, onClickListener = { showFragment("SettingsPage") }))
         TextSummaryWithArrow(TextSummaryV(textId = R.string.miuihome, onClickListener = { showFragment("MiuiHomePage") }))
         TextSummaryWithArrow(TextSummaryV(textId = R.string.updater, onClickListener = { showFragment("UpdaterPage") }))
+        TextSummaryWithArrow(TextSummaryV(textId = R.string.personalassistant, onClickListener = { showFragment("PersonalAssistantPage") }))
         TextSummaryWithArrow(TextSummaryV(textId = R.string.securitycenter, onClickListener = { showFragment("SecurityCenterPage") }))
         TextSummaryWithArrow(TextSummaryV(textId = R.string.thememanager, onClickListener = { showFragment("ThemeManagerPage") }))
         TextSummaryWithArrow(TextSummaryV(textId = R.string.mediaeditor, onClickListener = { showFragment("MediaEditorPage") }))
@@ -56,6 +57,7 @@ class MainPage : BasePage() {
                         "am force-stop com.miui.gallery",
                         "am force-stop com.miui.home",
                         "am force-stop com.miui.mediaeditor",
+                        "am force-stop com.miui.personalassistant",
                         "am force-stop com.miui.powerkeeper",
                         "am force-stop com.miui.screenshot",
                         "am force-stop com.miui.securitycenter",

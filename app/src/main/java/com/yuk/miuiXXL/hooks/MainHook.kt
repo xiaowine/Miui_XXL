@@ -17,6 +17,7 @@ import com.yuk.miuiXXL.hooks.modules.miuihome.BlurWhenShowShortcutMenu
 import com.yuk.miuiXXL.hooks.modules.miuihome.CategoryFeatures
 import com.yuk.miuiXXL.hooks.modules.miuihome.DisableRecentViewWallpaperDarkening
 import com.yuk.miuiXXL.hooks.modules.miuihome.DoubleTapToSleep
+import com.yuk.miuiXXL.hooks.modules.miuihome.MinusOneOverlapMode
 import com.yuk.miuiXXL.hooks.modules.miuihome.ModifyRecentViewRemoveCardAnim
 import com.yuk.miuiXXL.hooks.modules.miuihome.ModifyUnlockAnim
 import com.yuk.miuiXXL.hooks.modules.miuihome.RemoveSmallWindowRestriction2
@@ -26,6 +27,7 @@ import com.yuk.miuiXXL.hooks.modules.miuihome.ShortcutAddSmallWindow
 import com.yuk.miuiXXL.hooks.modules.miuihome.TaskViewCardSize
 import com.yuk.miuiXXL.hooks.modules.miuihome.TwoXOneIconRoundedCornerFollowing
 import com.yuk.miuiXXL.hooks.modules.miuihome.UseCompleteBlur
+import com.yuk.miuiXXL.hooks.modules.personalassistant.BlurWhenGotoMinusOne
 import com.yuk.miuiXXL.hooks.modules.powerkeeper.DisableDynamicRefreshRate
 import com.yuk.miuiXXL.hooks.modules.securitycenter.ShowBatteryTemperature
 import com.yuk.miuiXXL.hooks.modules.securitycenter.SkipWarningWaitTime
@@ -56,6 +58,7 @@ private val PACKAGE_NAME_HOOKED = setOf(
     "com.miui.gallery",
     "com.miui.home",
     "com.miui.mediaeditor",
+    "com.miui.personalassistant",
     "com.miui.powerkeeper",
     "com.miui.screenshot",
     "com.miui.securitycenter"
@@ -144,12 +147,19 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit {
                         TaskViewCardSize,
                         BlurWhenShowShortcutMenu,
                         UseCompleteBlur,
+                        MinusOneOverlapMode,
                     )
                 }
 
                 "com.miui.mediaeditor" -> {
                     initHooks(
                         RemoveCropRestriction,
+                    )
+                }
+
+                "com.miui.personalassistant" -> {
+                    initHooks(
+                        BlurWhenGotoMinusOne,
                     )
                 }
 
