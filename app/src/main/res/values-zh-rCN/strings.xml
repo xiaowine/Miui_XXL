@@ -59,9 +59,9 @@
     <string name="miuihome_anim_ratio_recent">过渡动画速度「进出后台」</string>
     <string name="miuihome_anim_ratio_recent_summary">生效于进出最近任务时的过渡动画速度</string>
     <string name="miuihome_recentwiew_wallpaper_darkening">禁用壁纸压暗效果</string>
-    <string name="miuihome_recentwiew_wallpaper_darkening_summary">这将禁用进出最近任务时壁纸从压暗逐渐变亮的效果</string>
+    <string name="miuihome_recentwiew_wallpaper_darkening_summary">这将禁用上滑至最近任务时壁纸从压暗逐渐变亮的效果</string>
     <string name="miuihome_recentview_remove_card_animation">修改划卡动画</string>
-    <string name="miuihome_recentview_remove_card_animation_summary">修改最近任务移除卡片的动画效果</string>
+    <string name="miuihome_recentview_remove_card_animation_summary">修改最近任务横向排布时移除卡片的动画效果</string>
     <string name="miuihome_unlock_animation">优化解锁动画</string>
     <string name="miuihome_unlock_animation_summary">优化解锁时从锁屏过渡到桌面的过渡效果</string>
     <string name="miuihome_hide_allapps_category_all">移除「全部」分页</string>

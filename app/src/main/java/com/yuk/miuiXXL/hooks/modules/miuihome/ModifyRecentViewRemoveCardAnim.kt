@@ -1,6 +1,7 @@
 package com.yuk.miuiXXL.hooks.modules.miuihome
 
 import android.animation.ObjectAnimator
+import android.animation.TimeInterpolator
 import android.view.MotionEvent
 import android.view.View
 import com.yuk.miuiXXL.hooks.modules.BaseHook
@@ -12,6 +13,7 @@ import com.yuk.miuiXXL.utils.getObjectField
 import com.yuk.miuiXXL.utils.hookAfterMethod
 import com.yuk.miuiXXL.utils.replaceMethod
 import com.yuk.miuiXXL.utils.setObjectField
+import de.robv.android.xposed.XposedHelpers
 
 object ModifyRecentViewRemoveCardAnim : BaseHook() {
     override fun init() {
@@ -25,19 +27,20 @@ object ModifyRecentViewRemoveCardAnim : BaseHook() {
                 mCurrView.scaleY = 1f
             }
         }
-        "com.miui.home.recents.TaskStackViewLayoutStyleHorizontal".replaceMethod(
-            "createScaleDismissAnimation", View::class.java, Float::class.java
-        ) {
+
+        "com.miui.home.recents.TaskStackViewLayoutStyleHorizontal".replaceMethod("createScaleDismissAnimation", View::class.java, Float::class.java) {
             val view = it.args[0] as View
             val getScreenHeight = "com.miui.home.launcher.DeviceConfig".findClass().callStaticMethod("getScreenHeight") as Int
             val ofFloat = ObjectAnimator.ofFloat(view, View.TRANSLATION_Y, view.translationY, -getScreenHeight * 1.1484375f)
-            ofFloat.duration = 200
+            val physicBasedInterpolator = XposedHelpers.newInstance("com.miui.home.launcher.anim.PhysicBasedInterpolator".findClass(), 0.9f, 0.78f)
+            ofFloat.interpolator = physicBasedInterpolator as TimeInterpolator
+            ofFloat.duration = 400
             return@replaceMethod ofFloat
         }
+
         "com.miui.home.recents.views.VerticalSwipe".hookAfterMethod("calculate", Float::class.java) {
             val f = it.args[0] as Float
-            val asScreenHeightWhenDismiss =
-                "com.miui.home.recents.views.VerticalSwipe".findClass().callStaticMethod("getAsScreenHeightWhenDismiss") as Int
+            val asScreenHeightWhenDismiss = "com.miui.home.recents.views.VerticalSwipe".findClass().callStaticMethod("getAsScreenHeightWhenDismiss") as Int
             val f2 = f / asScreenHeightWhenDismiss
             val mTaskViewHeight = it.thisObject.getObjectField("mTaskViewHeight") as Float
             val mCurScale = it.thisObject.getObjectField("mCurScale") as Float

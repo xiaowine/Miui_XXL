@@ -61,7 +61,7 @@
     <string name="miuihome_highend_device">Cihaz kısıtlamalarını kaldırın</string>
     <string name="miuihome_highend_device_summary">Varsayılan olarak üst düzey olarak tanınacaktır. Bu seçeneği açmak GPU performans yükünü artırmaz. Bazı günlükleri aynı anda kaldırın.</string>
     <string name="miuihome_recentview_remove_card_animation">Kart işaretleme animasyonunu değiştirme</string>
-    <string name="miuihome_recentview_remove_card_animation_summary">Son görev kaldırma kartının animasyon efektini değiştirme</string>
+    <string name="miuihome_recentview_remove_card_animation_summary">Yatay son görev kaldırma kartının animasyon efektini değiştirin</string>
     <string name="miuihome_recentwiew_wallpaper_darkening">Duvar kağıdı karartmayı devre dışı bırak</string>
     <string name="miuihome_recentwiew_wallpaper_darkening_summary">Bu, son göreve girip çıkarken duvar kağıdının yavaş kararmasını önleyecek efekti devre dışı bırakacaktır</string>
     <string name="miuihome_scroll_icon_name">Uygulama adını kaydır</string>
