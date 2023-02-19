@@ -48,6 +48,10 @@ class MiuiHomePage : BasePage() {
             ), SwitchV("miuihome_recentwiew_wallpaper_darkening", false)
         )
         TextSummaryWithSwitch(
+            TextSummaryV(textId = R.string.miuihome_unlock_cell_count, tipsId = R.string.miuihome_unlock_cell_count_summary),
+            SwitchV("miuihome_unlock_cell_count", false)
+        )
+        TextSummaryWithSwitch(
             TextSummaryV(textId = R.string.miuihome_unlock_animation, tipsId = R.string.miuihome_unlock_animation_summary),
             SwitchV("miuihome_unlock_animation", false)
         )

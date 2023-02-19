@@ -90,6 +90,8 @@
     <string name="miuihome_complete_blur_fix_summary">补全从应用向上滑动时的模糊效果，这可能导致视觉闪烁和瞬时丢帧</string>
     <string name="miuihome_minus_one_overlap_mode">覆盖模式</string>
     <string name="miuihome_minus_one_overlap_mode_summary">配合「背景模糊」使用，该功能作用域为系统桌面</string>
+    <string name="miuihome_unlock_cell_count">解锁图标网格布局</string>
+    <string name="miuihome_unlock_cell_count_summary">无字模式解锁仍有问题</string>
 
     <string name="thememanager">主题壁纸</string>
     <string name="thememanager_remove_ads">去广告</string>

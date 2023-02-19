@@ -5,7 +5,7 @@ import com.github.kyuubiran.ezxhelper.utils.hookBefore
 import com.yuk.miuiXXL.hooks.modules.BaseHook
 import com.yuk.miuiXXL.utils.getBoolean
 
-object ModifyUnlockAnim : BaseHook() {
+object UnlockAnim : BaseHook() {
     override fun init() {
 
         if (!getBoolean("miuihome_unlock_animation", false)) return

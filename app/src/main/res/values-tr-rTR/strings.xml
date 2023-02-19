@@ -90,6 +90,8 @@
     <string name="miuihome_complete_blur_fix_summary">Uygulamadan yukarı kaydırırken görsel titremeye neden olabilen tamamlamalar bulanıklaşıyor</string>
     <string name="miuihome_minus_one_overlap_mode">Örtüşme Modu Uygulama Kasası</string>
     <string name="miuihome_minus_one_overlap_mode_summary">Eksi bir ekran bulanıklığı ile birlikte kullanılır ve sistem başlatıcının kontrol edilmesi gerekir</string>
+    <string name="miuihome_unlock_cell_count">Başlatıcı simge ızgaralarının kilidini açın</string>
+    <string name="miuihome_unlock_cell_count_summary">Kelimesiz modda kilit açmada hala sorunlar var</string>
 
     <string name="thememanager">Tema duvar kağıdı</string>
     <string name="thememanager_fuck_validate_theme">Tema crack</string>

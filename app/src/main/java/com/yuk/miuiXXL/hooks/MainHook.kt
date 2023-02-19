@@ -17,15 +17,16 @@ import com.yuk.miuiXXL.hooks.modules.miuihome.BlurWhenShowShortcutMenu
 import com.yuk.miuiXXL.hooks.modules.miuihome.CategoryFeatures
 import com.yuk.miuiXXL.hooks.modules.miuihome.DisableRecentViewWallpaperDarkening
 import com.yuk.miuiXXL.hooks.modules.miuihome.DoubleTapToSleep
+import com.yuk.miuiXXL.hooks.modules.miuihome.IconCellCount
 import com.yuk.miuiXXL.hooks.modules.miuihome.MinusOneOverlapMode
-import com.yuk.miuiXXL.hooks.modules.miuihome.ModifyRecentViewRemoveCardAnim
-import com.yuk.miuiXXL.hooks.modules.miuihome.ModifyUnlockAnim
+import com.yuk.miuiXXL.hooks.modules.miuihome.RecentViewRemoveCardAnim
 import com.yuk.miuiXXL.hooks.modules.miuihome.RemoveSmallWindowRestriction2
 import com.yuk.miuiXXL.hooks.modules.miuihome.ScrollIconName
 import com.yuk.miuiXXL.hooks.modules.miuihome.SetDeviceLevel
 import com.yuk.miuiXXL.hooks.modules.miuihome.ShortcutAddSmallWindow
 import com.yuk.miuiXXL.hooks.modules.miuihome.TaskViewCardSize
 import com.yuk.miuiXXL.hooks.modules.miuihome.TwoXOneIconRoundedCornerFollowing
+import com.yuk.miuiXXL.hooks.modules.miuihome.UnlockAnim
 import com.yuk.miuiXXL.hooks.modules.miuihome.UseCompleteBlur
 import com.yuk.miuiXXL.hooks.modules.personalassistant.BlurWhenGotoMinusOne
 import com.yuk.miuiXXL.hooks.modules.powerkeeper.DisableDynamicRefreshRate
@@ -135,9 +136,9 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit {
                         DoubleTapToSleep,
                         ScrollIconName,
                         AnimDurationRatio,
-                        ModifyUnlockAnim,
+                        UnlockAnim,
                         DisableRecentViewWallpaperDarkening,
-                        ModifyRecentViewRemoveCardAnim,
+                        RecentViewRemoveCardAnim,
                         CategoryFeatures,
                         TwoXOneIconRoundedCornerFollowing,
                         ShortcutAddSmallWindow,
@@ -148,6 +149,7 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit {
                         BlurWhenShowShortcutMenu,
                         UseCompleteBlur,
                         MinusOneOverlapMode,
+                        IconCellCount,
                     )
                 }
 

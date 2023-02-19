@@ -15,7 +15,7 @@ import com.yuk.miuiXXL.utils.new
 import com.yuk.miuiXXL.utils.replaceMethod
 import com.yuk.miuiXXL.utils.setObjectField
 
-object ModifyRecentViewRemoveCardAnim : BaseHook() {
+object RecentViewRemoveCardAnim : BaseHook() {
     override fun init() {
 
         if (!getBoolean("miuihome_recentview_remove_card_animation", false)) return
