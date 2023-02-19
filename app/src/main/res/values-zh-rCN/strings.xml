@@ -138,4 +138,6 @@
 
     <string name="personalassistant">智能助理</string>
     <string name="personalassistant_minus_one_blur">背景模糊</string>
+    <string name="personalassistant_minus_one_blur_summary">联发科设备仅建议在 Android 13 上启用，非 Android 13 的联发科设备动态调整模糊半径时经常黑屏</string>
+
 </resources>

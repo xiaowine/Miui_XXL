@@ -6,7 +6,6 @@ import cn.fkj233.ui.activity.annotation.BMPage
 import cn.fkj233.ui.activity.data.BasePage
 import cn.fkj233.ui.activity.view.SwitchV
 import cn.fkj233.ui.activity.view.TextSummaryV
-import cn.fkj233.ui.activity.view.TextV
 import com.yuk.miuiXXL.R
 
 @BMPage("PersonalAssistantPage", hideMenu = false)
@@ -20,8 +19,8 @@ class PersonalAssistantPage : BasePage() {
         val blurBinding = GetDataBinding({ MIUIActivity.safeSP.getBoolean("personalassistant_minus_one_blur", false) }) { view, flags, data ->
             if (flags == 1) view.visibility = if (data as Boolean) View.VISIBLE else View.GONE
         }
-        TextWithSwitch(
-            TextV(textId = R.string.personalassistant_minus_one_blur),
+        TextSummaryWithSwitch(
+            TextSummaryV(textId = R.string.personalassistant_minus_one_blur, tipsId = R.string.personalassistant_minus_one_blur_summary),
             SwitchV("personalassistant_minus_one_blur", false, dataBindingSend = blurBinding.bindingSend)
         )
         TextSummaryWithSwitch(

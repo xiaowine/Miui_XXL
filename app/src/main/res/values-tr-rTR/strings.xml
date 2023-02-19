@@ -138,5 +138,6 @@
 
     <string name="personalassistant">Uygulama Kasası</string>
     <string name="personalassistant_minus_one_blur">Eksi Bir Ekran Bulanıklığı</string>
+    <string name="personalassistant_minus_one_blur_summary">MediaTek cihazlarının yalnızca Android 13\'te etkinleştirilmesi önerilir, Android 13 olmayan MediaTek cihazları, bulanıklık yarıçapını dinamik olarak ayarlarken genellikle siyah bir ekrana sahiptir</string>
 
 </resources>

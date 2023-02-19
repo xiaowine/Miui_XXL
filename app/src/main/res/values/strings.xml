@@ -139,5 +139,6 @@
 
     <string name="personalassistant">App Vault</string>
     <string name="personalassistant_minus_one_blur">Minus One Screen Blur</string>
+    <string name="personalassistant_minus_one_blur_summary">MediaTek devices are only recommended to be enabled on Android 13, non-Android 13 MediaTek devices often have a black screen when dynamically adjusting the blur radius</string>
 
 </resources>
