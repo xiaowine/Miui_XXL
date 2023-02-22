@@ -3,7 +3,7 @@ package com.yuk.miuiXXL.hooks.modules.packageinstaller
 import android.annotation.SuppressLint
 import android.content.pm.ApplicationInfo
 import android.content.pm.PackageInfo
-import android.graphics.Color
+import android.content.res.Configuration
 import android.text.TextUtils
 import android.view.Gravity
 import android.view.ViewGroup
@@ -54,6 +54,7 @@ object ShowMoreApkInfo : BaseHook() {
                     val viewHolder: Any = hookParam.args[0] ?: return@hookAfterMethod
                     val mAppSizeTv = XposedHelpers.callMethod(viewHolder, "getAppSize") as TextView? ?: return@hookAfterMethod
                     val mContext = mAppSizeTv.context
+                    val isDarkMode = mAppSizeTv.context.resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK == Configuration.UI_MODE_NIGHT_YES
                     val apkInfo: Any = XposedHelpers.getObjectField(hookParam.thisObject, finalApkInfoFieldName)
                     val mAppInfo = apkInfo.callMethodOrNull("getInstalledPackageInfo") as ApplicationInfo?
                     val mPkgInfo = apkInfo.callMethod("getPackageInfo") as PackageInfo
@@ -79,7 +80,8 @@ object ShowMoreApkInfo : BaseHook() {
                     linearLayout2.layoutParams = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT).also {
                         it.setMargins(0, dp2px(mContext, 13f), 0, 0)
                     }
-                    linearLayout2.background = moduleRes.getDrawable(R.drawable.ic_packageinstaller_background)
+                    linearLayout2.background =
+                        moduleRes.getDrawable(if (isDarkMode) R.drawable.ic_packageinstaller_background_dark else R.drawable.ic_packageinstaller_background_light)
                     val mAppVersionNameView = TextView(mContext)
                     val mAppVersionCodeView = TextView(mContext)
                     val mAppSdkView = TextView(mContext)
