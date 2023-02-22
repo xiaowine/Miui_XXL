@@ -82,6 +82,7 @@ object ShowMoreApkInfo : BaseHook() {
                     }
                     linearLayout2.background =
                         moduleRes.getDrawable(if (isDarkMode) R.drawable.ic_packageinstaller_background_dark else R.drawable.ic_packageinstaller_background_light)
+                    val mAppPackageNameView = TextView(mContext)
                     val mAppVersionNameView = TextView(mContext)
                     val mAppVersionCodeView = TextView(mContext)
                     val mAppSdkView = TextView(mContext)
@@ -90,10 +91,12 @@ object ShowMoreApkInfo : BaseHook() {
                     setTextAppearance(mAppVersionCodeView, mAppSizeTv)
                     setTextAppearance(mAppSdkView, mAppSizeTv)
                     setTextAppearance(mAppSizeView, mAppSizeTv)
+                    mAppPackageNameView.gravity = Gravity.CENTER
                     mAppVersionNameView.gravity = Gravity.START
                     mAppVersionCodeView.gravity = Gravity.START
                     mAppSdkView.gravity = Gravity.START
                     mAppSizeView.gravity = Gravity.START
+                    val mPackageName: String = mPkgInfo.applicationInfo.packageName
                     val mAppVersionName: String
                     val mAppVersionCode: String
                     val mAppSdk: String
@@ -114,6 +117,7 @@ object ShowMoreApkInfo : BaseHook() {
                         mAppVersionCode = mPkgInfo.longVersionCode.toString()
                         mAppSdk = mPkgInfo.applicationInfo.minSdkVersion.toString() + "-" + mPkgInfo.applicationInfo.targetSdkVersion
                     }
+                    mAppPackageNameView.text = mPackageName
                     mAppVersionNameView.text = moduleRes.getString(R.string.packageinstaller_app_versionname_title) + ": " + mAppVersionName
                     mAppVersionCodeView.text = moduleRes.getString(R.string.packageinstaller_app_versioncode_title) + ": " + mAppVersionCode
                     mAppSdkView.text = moduleRes.getString(R.string.packageinstaller_app_sdk_title) + ": " + mAppSdk
@@ -124,7 +128,8 @@ object ShowMoreApkInfo : BaseHook() {
                     linearLayout2.addView(mAppSizeView, 3)
                     linearLayout.addView(mRoundImageView, 0)
                     linearLayout.addView(mAppNameView, 1)
-                    linearLayout.addView(linearLayout2, 2)
+                    linearLayout.addView(mAppPackageNameView, 2)
+                    linearLayout.addView(linearLayout2, 3)
                     mContainerView.addView(linearLayout)
                 }
             }
