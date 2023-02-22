@@ -22,7 +22,7 @@
     <string name="menu">Menu</string>
     <string name="other">Other</string>
 
-    <string name="android">System Framework</string>
+    <string name="android">Framework</string>
     <string name="android_reboot">Requires reboot system to take effect</string>
     <string name="android_corepacth">Core cracking</string>
     <string name="android_corepacth_UsePreSig">Always use the signature of the installed app when installing</string>
@@ -46,7 +46,7 @@
     <string name="mediaeditor_remove_crop_restriction">Remove crop restriction</string>
     <string name="mediaeditor_remove_crop_restriction_summary">Need to check the Gallery and Screenshot at the same time</string>
 
-    <string name="miuihome">System launcher</string>
+    <string name="miuihome">Launcher</string>
     <string name="miuihome_anim_ratio_binding">Custom animation speed</string>
     <string name="miuihome_anim_ratio_binding_summary">Set the animation speed in different scenarios separately</string>
     <string name="miuihome_anim_ratio">Transition animation speed「When the app is turned on or off」</string>
@@ -94,14 +94,14 @@
     <string name="miuihome_unlock_cell_count">Unlock launcher icon grids</string>
     <string name="miuihome_unlock_cell_count_summary">Unlock in no word mode still has issues</string>
 
-    <string name="thememanager">Themes</string>
+    <string name="thememanager">Theme Manager</string>
     <string name="thememanager_fuck_validate_theme">Theme cracking</string>
     <string name="thememanager_fuck_validate_theme_summary">Third-party themes and fonts are allowed to be applied, and the system framework need to be checked and restarted at the same time.</string>
     <string name="thememanager_fuck_validate_theme_fonts_title">Free</string>
     <string name="thememanager_remove_ads">Remove Ads</string>
     <string name="thememanager_remove_ads_summary">Guess the ads in your favorite will be displayed as blank cards, and the ads in the rest will be completely removed</string>
 
-    <string name="systemui">System UI</string>
+    <string name="systemui">SystemUI</string>
     <string name="systemui_lockscreen_remove_camera">Remove lock screen camera</string>
     <string name="systemui_lockscreen_remove_camera_summary">Remove the icon and camera function in the lower right corner of the lock screen interface</string>
     <string name="systemui_lockscreen_remove_minus">Remove the lock screen minus one screen</string>
@@ -119,7 +119,7 @@
     <string name="systemui_lockscreen_show_seconds">Time in seconds on Lock screen</string>
     <string name="systemui_lockscreen_show_seconds_summary">The time of the position of the lock screen is displayed in seconds</string>
 
-    <string name="powerkeeper">Power and performance</string>
+    <string name="powerkeeper">Power and Performance</string>
     <string name="powerkeeper_disable_dynamic_refresh_rate">Lock refresh rate</string>
     <string name="powerkeeper_disable_dynamic_refresh_rate_summary">Disable dynamic refresh rate to achieve global high frame rate except for camera</string>
 
