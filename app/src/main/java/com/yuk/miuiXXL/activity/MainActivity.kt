@@ -9,6 +9,7 @@ import com.yuk.miuiXXL.activity.pages.AndroidPage
 import com.yuk.miuiXXL.activity.pages.MainPage
 import com.yuk.miuiXXL.activity.pages.MediaEditorPage
 import com.yuk.miuiXXL.activity.pages.MiuiHomePage
+import com.yuk.miuiXXL.activity.pages.PackageInstallerPage
 import com.yuk.miuiXXL.activity.pages.PersonalAssistantPage
 import com.yuk.miuiXXL.activity.pages.PowerKeeperPage
 import com.yuk.miuiXXL.activity.pages.SecurityCenterPage
@@ -54,6 +55,6 @@ class MainActivity : MIUIActivity() {
         registerPage(SettingsPage::class.java)
         registerPage(MediaEditorPage::class.java)
         registerPage(PersonalAssistantPage::class.java)
-
+        registerPage(PackageInstallerPage::class.java)
     }
 }

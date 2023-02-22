@@ -30,6 +30,7 @@ class MainPage : BasePage() {
         TextSummaryWithArrow(TextSummaryV(textId = R.string.thememanager, onClickListener = { showFragment("ThemeManagerPage") }))
         TextSummaryWithArrow(TextSummaryV(textId = R.string.mediaeditor, onClickListener = { showFragment("MediaEditorPage") }))
         TextSummaryWithArrow(TextSummaryV(textId = R.string.powerkeeper, onClickListener = { showFragment("PowerKeeperPage") }))
+        TextSummaryWithArrow(TextSummaryV(textId = R.string.packageinstaller, onClickListener = { showFragment("PackageInstallerPage") }))
         Line()
         TextWithSwitch(TextV(textId = R.string.hide_desktop_icon), SwitchV("hide_desktop_icon", onClickListener = {
             val pm = MIUIActivity.activity.packageManager
@@ -57,6 +58,7 @@ class MainPage : BasePage() {
                         "am force-stop com.miui.gallery",
                         "am force-stop com.miui.home",
                         "am force-stop com.miui.mediaeditor",
+                        "am force-stop com.miui.packageinstaller",
                         "am force-stop com.miui.personalassistant",
                         "am force-stop com.miui.powerkeeper",
                         "am force-stop com.miui.screenshot",

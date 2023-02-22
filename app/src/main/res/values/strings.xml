@@ -98,7 +98,7 @@
     <string name="thememanager_fuck_validate_theme">Theme cracking</string>
     <string name="thememanager_fuck_validate_theme_summary">Third-party themes and fonts are allowed to be applied, and the system framework need to be checked and restarted at the same time.</string>
     <string name="thememanager_fuck_validate_theme_fonts_title">Free</string>
-    <string name="thememanager_remove_ads">To advertise</string>
+    <string name="thememanager_remove_ads">Remove Ads</string>
     <string name="thememanager_remove_ads_summary">Guess the ads in your favorite will be displayed as blank cards, and the ads in the rest will be completely removed</string>
 
     <string name="systemui">System UI</string>
@@ -140,5 +140,15 @@
     <string name="personalassistant">App Vault</string>
     <string name="personalassistant_minus_one_blur">Minus One Screen Blur</string>
     <string name="personalassistant_minus_one_blur_summary">MediaTek devices are only recommended to be enabled on Android 13, non-Android 13 MediaTek devices often have a black screen when dynamically adjusting the blur radius</string>
+
+    <string name="packageinstaller">Package Installer</string>
+    <string name="packageinstaller_allow_update_system_app">Allow update system apps</string>
+    <string name="packageinstaller_remove_ads">Remove ads</string>
+    <string name="packageinstaller_show_more_apk_info">Show more apk info</string>
+    <string name="packageinstaller_app_versionname_title">Version Name</string>
+    <string name="packageinstaller_app_versioncode_title">Version Code</string>
+    <string name="packageinstaller_app_sdk_title">Supported SDK</string>
+    <string name="packageinstaller_app_size_title">App Size</string>
+    <string name="packageinstaller_disable_count_check">Disable the app installation\'s count checking</string>
 
 </resources>

@@ -20,7 +20,7 @@ object FuckValidateTheme1 : BaseHook() {
         if (!getBoolean("thememanager_fuck_validate_theme", false)) return
         var letter = 'a'
         for (i in 0..25) {
-            val classIfExists = ("com.android.thememanager.controller.online.${letter}").findClassOrNull()
+            val classIfExists = "com.android.thememanager.controller.online.${letter}".findClassOrNull()
             try {
                 classIfExists?.let { clazz ->
                     findMethod(clazz) {

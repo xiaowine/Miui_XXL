@@ -7,40 +7,34 @@ import com.github.kyuubiran.ezxhelper.utils.findAllMethods
 import com.github.kyuubiran.ezxhelper.utils.findConstructor
 import com.github.kyuubiran.ezxhelper.utils.findMethod
 import com.github.kyuubiran.ezxhelper.utils.hookAfter
-import com.github.kyuubiran.ezxhelper.utils.hookBefore
+import com.github.kyuubiran.ezxhelper.utils.hookReturnConstant
 import com.github.kyuubiran.ezxhelper.utils.loadClass
 import com.yuk.miuiXXL.hooks.modules.BaseHook
 import com.yuk.miuiXXL.utils.getBoolean
 import miui.drm.DrmManager
 
-object RemoveAds : BaseHook() {
+object RemoveThemeManagerAds : BaseHook() {
     override fun init() {
 
         if (!getBoolean("thememanager_remove_ads", false)) return
         try {
             findAllMethods(DrmManager::class.java) {
                 name == "isSupportAd"
-            }.hookBefore {
-                it.result = false
-            }
+            }.hookReturnConstant(false)
         } catch (t: Throwable) {
             Log.ex(t)
         }
         try {
             findAllMethods(DrmManager::class.java) {
                 name == "setSupportAd"
-            }.hookBefore {
-                it.result = false
-            }
+            }.hookReturnConstant(false)
         } catch (t: Throwable) {
             Log.ex(t)
         }
         try {
             findMethod("com.android.thememanager.basemodule.ad.model.AdInfoResponse") {
                 name == "isAdValid" && parameterCount == 1
-            }.hookAfter {
-                it.result = false
-            }
+            }.hookReturnConstant(false)
         } catch (t: Throwable) {
             Log.ex(t)
         }

@@ -140,4 +140,14 @@
     <string name="personalassistant_minus_one_blur">Eksi Bir Ekran Bulanıklığı</string>
     <string name="personalassistant_minus_one_blur_summary">MediaTek cihazlarının yalnızca Android 13\'te etkinleştirilmesi önerilir, Android 13 olmayan MediaTek cihazları, bulanıklık yarıçapını dinamik olarak ayarlarken genellikle siyah bir ekrana sahiptir</string>
 
+    <string name="packageinstaller">Paket Yükleyici</string>
+    <string name="packageinstaller_allow_update_system_app">Sistem uygulamalarının güncellenmesine izin ver</string>
+    <string name="packageinstaller_remove_ads">Reklamları kaldır</string>
+    <string name="packageinstaller_show_more_apk_info">Daha fazla apk bilgisi göster</string>
+    <string name="packageinstaller_app_versionname_title">Sürüm Adı</string>
+    <string name="packageinstaller_app_versioncode_title">Sürüm Kodu</string>
+    <string name="packageinstaller_app_sdk_title">Desteklenen SDK</string>
+    <string name="packageinstaller_app_size_title">Uygulama Boyutu</string>
+    <string name="packageinstaller_disable_count_check">Uygulama yüklemesinin sayım denetimini devre dışı bırakın</string>
+
 </resources>

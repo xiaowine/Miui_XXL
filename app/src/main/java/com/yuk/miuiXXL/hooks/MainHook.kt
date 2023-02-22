@@ -28,6 +28,10 @@ import com.yuk.miuiXXL.hooks.modules.miuihome.TaskViewCardSize
 import com.yuk.miuiXXL.hooks.modules.miuihome.TwoXOneIconRoundedCornerFollowing
 import com.yuk.miuiXXL.hooks.modules.miuihome.UnlockAnim
 import com.yuk.miuiXXL.hooks.modules.miuihome.UseCompleteBlur
+import com.yuk.miuiXXL.hooks.modules.packageinstaller.AllowUpdateSystemApp
+import com.yuk.miuiXXL.hooks.modules.packageinstaller.DisableCountCheck
+import com.yuk.miuiXXL.hooks.modules.packageinstaller.RemovePackageInstallerAds
+import com.yuk.miuiXXL.hooks.modules.packageinstaller.ShowMoreApkInfo
 import com.yuk.miuiXXL.hooks.modules.personalassistant.BlurWhenGotoMinusOne
 import com.yuk.miuiXXL.hooks.modules.powerkeeper.DisableDynamicRefreshRate
 import com.yuk.miuiXXL.hooks.modules.securitycenter.ShowBatteryTemperature
@@ -43,7 +47,7 @@ import com.yuk.miuiXXL.hooks.modules.systemui.ShowWifiStandard
 import com.yuk.miuiXXL.hooks.modules.systemui.StatusBarShowSeconds
 import com.yuk.miuiXXL.hooks.modules.systemui.WaveChargeAnim
 import com.yuk.miuiXXL.hooks.modules.thememanager.FuckValidateTheme1
-import com.yuk.miuiXXL.hooks.modules.thememanager.RemoveAds
+import com.yuk.miuiXXL.hooks.modules.thememanager.RemoveThemeManagerAds
 import com.yuk.miuiXXL.hooks.modules.updater.VABUpdate
 import de.robv.android.xposed.IXposedHookLoadPackage
 import de.robv.android.xposed.IXposedHookZygoteInit
@@ -59,6 +63,7 @@ private val PACKAGE_NAME_HOOKED = setOf(
     "com.miui.gallery",
     "com.miui.home",
     "com.miui.mediaeditor",
+    "com.miui.packageinstaller",
     "com.miui.personalassistant",
     "com.miui.powerkeeper",
     "com.miui.screenshot",
@@ -113,7 +118,7 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit {
 
                 "com.android.thememanager" -> {
                     initHooks(
-                        RemoveAds,
+                        RemoveThemeManagerAds,
                         FuckValidateTheme1,
                     )
                 }
@@ -156,6 +161,15 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit {
                 "com.miui.mediaeditor" -> {
                     initHooks(
                         RemoveCropRestriction,
+                    )
+                }
+
+                "com.miui.packageinstaller" -> {
+                    initHooks(
+                        RemovePackageInstallerAds,
+                        AllowUpdateSystemApp,
+                        ShowMoreApkInfo,
+                        DisableCountCheck,
                     )
                 }
 
