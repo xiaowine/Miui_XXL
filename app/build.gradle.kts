@@ -1,5 +1,5 @@
 import com.android.build.gradle.internal.api.BaseVariantOutputImpl
-import java.text.SimpleDateFormat
+import java.io.ByteArrayOutputStream
 import java.util.Properties
 
 plugins {
@@ -15,8 +15,8 @@ android {
         applicationId = namespace
         minSdk = 31
         targetSdk = 33
-        versionCode = 5
-        versionName = "0.5" + (getGitHeadRefsSuffix(rootProject))
+        versionCode = getVersionCode()
+        versionName = "0.6." + getVersionName()
     }
     val properties = Properties()
     runCatching { properties.load(project.rootProject.file("local.properties").inputStream()) }
@@ -82,28 +82,32 @@ android {
     }
 }
 
-fun getGitHeadRefsSuffix(project: Project): String {
-    // .git/HEAD描述当前目录所指向的分支信息，内容示例："ref: refs/heads/master\n"
-    val headFile = File(project.rootProject.projectDir, ".git" + File.separator + "HEAD")
-    if (headFile.exists()) {
-        val string: String = headFile.readText(Charsets.UTF_8)
-        val string1 = string.replace(Regex("""ref:|\s"""), "")
-        val result = if (string1.isNotBlank() && string1.contains('/')) {
-            val refFilePath = ".git" + File.separator + string1
-            // 根据HEAD读取当前指向的hash值，路径示例为：".git/refs/heads/master"
-            val refFile = File(project.rootProject.projectDir, refFilePath)
-            // 索引文件内容为hash值+"\n"，
-            // 示例："90312cd9157587d11779ed7be776e3220050b308\n"
-            refFile.readText(Charsets.UTF_8).replace(Regex("""\s"""), "").subSequence(0, 7)
-        } else {
-            string.substring(0, 7)
-        }
-        println("commit_id: $result")
-        return ".$result"
-    } else {
-        println("WARN: .git/HEAD does NOT exist")
-        return ""
+fun getGitCommitCount(): Int {
+    val out = ByteArrayOutputStream()
+    exec {
+        commandLine("git", "rev-list", "--count", "HEAD")
+        standardOutput = out
     }
+    return out.toString().trim().toInt()
+}
+
+fun getGitDescribe(): String {
+    val out = ByteArrayOutputStream()
+    exec {
+        commandLine("git", "describe", "--tags", "--always")
+        standardOutput = out
+    }
+    return out.toString().trim()
+}
+
+fun getVersionCode(): Int {
+    val commitCount = getGitCommitCount()
+    val major = 5
+    return major + commitCount
+}
+
+fun getVersionName(): String {
+    return getGitDescribe()
 }
 
 dependencies {

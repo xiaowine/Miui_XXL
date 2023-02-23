@@ -8,7 +8,6 @@ import com.yuk.miuiXXL.hooks.modules.BaseHook
 import com.yuk.miuiXXL.utils.findClassOrNull
 import com.yuk.miuiXXL.utils.getBoolean
 import com.yuk.miuiXXL.utils.hookBeforeMethod
-import de.robv.android.xposed.XposedBridge
 
 object AllowUpdateSystemApp : BaseHook() {
     override fun init() {
@@ -20,9 +19,8 @@ object AllowUpdateSystemApp : BaseHook() {
                 val classIfExists = "j2.${letter}".findClassOrNull()
                 classIfExists?.let {
                     findMethod(it) {
-                        parameterCount == 1 && parameterTypes[0] == ApplicationInfo::class.java
+                        parameterCount == 1 && parameterTypes[0] == ApplicationInfo::class.java && returnType == Boolean::class.java
                     }.hookBefore { hookParam ->
-                        XposedBridge.log("hook succeed")
                         hookParam.result = false
                     }
                 }
