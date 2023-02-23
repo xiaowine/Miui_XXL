@@ -20,13 +20,13 @@ object FuckValidateTheme1 : BaseHook() {
         if (!getBoolean("thememanager_fuck_validate_theme", false)) return
         var letter = 'a'
         for (i in 0..25) {
-            val classIfExists = "com.android.thememanager.controller.online.${letter}".findClassOrNull()
             try {
-                classIfExists?.let { clazz ->
-                    findMethod(clazz) {
+                val classIfExists = "com.android.thememanager.controller.online.${letter}".findClassOrNull()
+                classIfExists?.let {
+                    findMethod(it) {
                         parameterCount == 1 && returnType == DrmManager.DrmResult::class.java
-                    }.hookAfter {
-                        it.result = DrmManager.DrmResult.DRM_SUCCESS
+                    }.hookAfter { hookParam ->
+                        hookParam.result = DrmManager.DrmResult.DRM_SUCCESS
                     }
                 }
             } catch (t: Throwable) {

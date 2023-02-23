@@ -1,37 +1,30 @@
 package com.yuk.miuiXXL.hooks.modules.packageinstaller
 
-import android.app.Application
+import android.content.pm.ApplicationInfo
 import com.github.kyuubiran.ezxhelper.utils.Log
-import com.github.kyuubiran.ezxhelper.utils.findAllMethods
-import com.github.kyuubiran.ezxhelper.utils.hookReturnConstant
+import com.github.kyuubiran.ezxhelper.utils.findMethod
+import com.github.kyuubiran.ezxhelper.utils.hookBefore
 import com.yuk.miuiXXL.hooks.modules.BaseHook
-import com.yuk.miuiXXL.utils.findClass
 import com.yuk.miuiXXL.utils.findClassOrNull
 import com.yuk.miuiXXL.utils.getBoolean
 import com.yuk.miuiXXL.utils.hookBeforeMethod
+import de.robv.android.xposed.XposedBridge
 
 object AllowUpdateSystemApp : BaseHook() {
     override fun init() {
 
         if (!getBoolean("packageinstaller_allow_update_system_app", false)) return
-        val miuiSettingsCompatClass = "com.android.packageinstaller.compat.MiuiSettingsCompat".findClass()
-
-        try {
-            findAllMethods(miuiSettingsCompatClass) {
-                name == "isPersonalizedAdEnabled"
-            }.hookReturnConstant(false)
-        } catch (t: Throwable) {
-            Log.ex(t)
-        }
-
         var letter = 'a'
         for (i in 0..25) {
-            val classIfExists = ("j2.${letter}").findClassOrNull()
             try {
+                val classIfExists = "j2.${letter}".findClassOrNull()
                 classIfExists?.let {
-                    findAllMethods(it) {
-                        parameterCount == 1 && returnType == Boolean::class.java && parameterTypes[0] == Application::class.java
-                    }.hookReturnConstant(false)
+                    findMethod(it) {
+                        parameterCount == 1 && parameterTypes[0] == ApplicationInfo::class.java
+                    }.hookBefore { hookParam ->
+                        XposedBridge.log("hook succeed")
+                        hookParam.result = false
+                    }
                 }
             } catch (t: Throwable) {
                 letter++

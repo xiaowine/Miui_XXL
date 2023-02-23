@@ -27,13 +27,13 @@ object RemovePackageInstallerAds : BaseHook() {
 
         var letter = 'a'
         for (i in 0..25) {
-            val classIfExists = "com.miui.packageInstaller.ui.listcomponets.${letter}0".findClassOrNull()
             try {
-                classIfExists?.let { clazz ->
-                    findMethod(clazz) {
+                val classIfExists = "com.miui.packageInstaller.ui.listcomponets.${letter}0".findClassOrNull()
+                classIfExists?.let {
+                    findMethod(it) {
                         name == "a"
-                    }.hookAfter {
-                        it.thisObject.setBooleanField("l", false)
+                    }.hookAfter { hookParam ->
+                        hookParam.thisObject.setBooleanField("l", false)
                     }
                 }
             } catch (t: Throwable) {

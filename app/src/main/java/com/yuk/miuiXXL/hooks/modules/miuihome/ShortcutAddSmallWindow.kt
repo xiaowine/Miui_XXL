@@ -76,7 +76,7 @@ object ShortcutAddSmallWindow : BaseHook() {
             mSmallWindowInstance.callMethod("setShortTitle", moduleRes.getString(R.string.miuihome_shortcut_add_small_window_title))
             mSmallWindowInstance.callMethod(
                 "setIconDrawable",
-                if (isDarkMode) moduleRes.getDrawable(R.drawable.ic_small_window_dark) else moduleRes.getDrawable(R.drawable.ic_small_window_light)
+                if (isDarkMode) moduleRes.getDrawable(R.drawable.ic_miuihome_small_window_dark) else moduleRes.getDrawable(R.drawable.ic_miuihome_small_window_light)
             )
             val sAllSystemShortcutMenuItems = ArrayList<Any>()
             sAllSystemShortcutMenuItems.add(mSmallWindowInstance)
