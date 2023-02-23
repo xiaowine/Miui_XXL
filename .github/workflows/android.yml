@@ -11,10 +11,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3.2.0
+      - uses: actions/checkout@v3.3.0
+        with:
+          fetch-depth: 0
 
       - name: Setup JDK 17
-        uses: actions/setup-java@v3.9.0
+        uses: actions/setup-java@v3.10.0
         with:
           java-version: '17'
           distribution: 'adopt'
@@ -26,7 +28,7 @@ jobs:
           git submodule update
 
       - name: Cache Gradle Dependencies
-        uses: actions/cache@v3.2.2
+        uses: actions/cache@v3.2.6
         with:
           path: |
             ~/.gradle/caches
@@ -55,13 +57,13 @@ jobs:
           KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
 
       - name: Upload Release APK
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v3.1.2
         with:
           name: Miui_XXL-Release
           path: "app/build/outputs/apk/release/*.apk"
 
       - name: Upload Debug APK
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v3.1.2
         with:
           name: Miui_XXL-Debug
           path: "app/build/outputs/apk/debug/*.apk"
