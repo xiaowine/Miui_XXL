@@ -12,55 +12,61 @@ import android.util.TypedValue
 import android.view.Gravity
 import android.view.View
 import android.widget.LinearLayout
+import android.widget.RelativeLayout
 import android.widget.TextView
 import cn.fkj233.ui.activity.dp2px
 import com.github.kyuubiran.ezxhelper.utils.findMethod
 import com.github.kyuubiran.ezxhelper.utils.getObjectAs
 import com.github.kyuubiran.ezxhelper.utils.hookAfter
-import com.github.kyuubiran.ezxhelper.utils.hookBefore
+import com.github.kyuubiran.ezxhelper.utils.isStatic
+import com.github.kyuubiran.ezxhelper.utils.paramCount
 import com.yuk.miuiXXL.hooks.modules.BaseHook
+import com.yuk.miuiXXL.utils.findClassOrNull
 import com.yuk.miuiXXL.utils.getBoolean
-
 
 object ShowBatteryTemperature : BaseHook() {
     @SuppressLint("DiscouragedApi")
     override fun init() {
 
-        fun getBatteryTemperature(context: Context): Int {
-            return context.registerReceiver(null as BroadcastReceiver?, IntentFilter("android.intent.action.BATTERY_CHANGED"))!!
-                .getIntExtra("temperature", 0) / 10
-        }
-
         if (!getBoolean("securitycenter_show_battery_temperature", false)) return
-        try {
-            findMethod("com.miui.powercenter.a") {
-                name == "b" && parameterTypes[0] == Context::class.java
-            }
-        } catch (e: Exception) {
+        val batteryFragmentClass = "com.miui.powercenter.BatteryFragment".findClassOrNull()
+        if (batteryFragmentClass != null) {
             findMethod("com.miui.powercenter.BatteryFragment") {
-                name == "b" && parameterTypes[0] == Context::class.java
+                paramCount == 1 && returnType == String::class.java && isStatic
             }
-        }.hookBefore {
+        } else {
+            findMethod("com.miui.powercenter.a") {
+                paramCount == 1 && returnType == String::class.java && isStatic
+            }
+        }.hookAfter {
             it.result = getBatteryTemperature(it.args[0] as Context).toString()
         }
 
-        try {
-            findMethod("com.miui.powercenter.a\$a") {
-                name == "run"
-            }
-        } catch (e: Exception) {
+        if (batteryFragmentClass != null) {
             findMethod("com.miui.powercenter.BatteryFragment\$a") {
                 name == "run"
             }
-        }.hookAfter {
+        } else {
+            findMethod("com.miui.powercenter.a\$a") {
+                name == "run"
+            }
+        }.hookAfter { hookParam ->
             val context = AndroidAppHelper.currentApplication().applicationContext
             val isDarkMode = context.resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK == Configuration.UI_MODE_NIGHT_YES
             val currentTemperatureState = context.resources.getIdentifier("current_temperature_state", "id", "com.miui.securitycenter")
-            val view = it.thisObject.getObjectAs<View>("a")
+            val view = hookParam.thisObject.getObjectAs<View>("a")
 
             val textView = view.findViewById<TextView>(currentTemperatureState)
             textView.apply {
-                (layoutParams as LinearLayout.LayoutParams).topMargin = 0
+                when (layoutParams) {
+                    is LinearLayout.LayoutParams -> {
+                        (layoutParams as LinearLayout.LayoutParams).topMargin = 0
+                    }
+
+                    is RelativeLayout.LayoutParams -> {
+                        (layoutParams as RelativeLayout.LayoutParams).topMargin = dp2px(context, 15f)
+                    }
+                }
                 setTextSize(TypedValue.COMPLEX_UNIT_DIP, 36.4f)
                 setPadding(0, dp2px(context, 4f), 0, 0)
                 gravity = Gravity.NO_GRAVITY
@@ -70,31 +76,64 @@ object ShowBatteryTemperature : BaseHook() {
             }
 
             val temperatureContainer = context.resources.getIdentifier("temperature_container", "id", "com.miui.securitycenter")
-            val linearL = view.findViewById<LinearLayout>(temperatureContainer).getChildAt(1) as LinearLayout
-            linearL.orientation = LinearLayout.VERTICAL
-            val l1 = linearL.getChildAt(0)
-            val l2 = linearL.getChildAt(1)
-            val linearLayout = LinearLayout(context)
-            val linearLayout1 = LinearLayout(context).apply { orientation = LinearLayout.HORIZONTAL }
-            val tempView = TextView(context).apply {
-                layoutParams = LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT)
-                (layoutParams as LinearLayout.LayoutParams).marginStart = dp2px(context, 3.599976f)
-                setTextSize(TypedValue.COMPLEX_UNIT_DIP, 13.1f)
-                setTextColor(Color.parseColor(if (isDarkMode) "#e6e6e6" else "#333333"))
-                setPadding(0, dp2px(context, 26f), 0, 0)
-                text = "℃"
-                gravity = Gravity.NO_GRAVITY
-                typeface = Typeface.create(null, 700, false)
-                textAlignment = View.TEXT_ALIGNMENT_VIEW_START
+            val childView = view.findViewById<LinearLayout>(temperatureContainer).getChildAt(1)
+            when (childView) {
+                is LinearLayout -> {
+                    childView.orientation = LinearLayout.VERTICAL
+                    val l1 = childView.getChildAt(0)
+                    val l2 = childView.getChildAt(1)
+                    val linearLayout = LinearLayout(context)
+                    val linearLayout1 = LinearLayout(context).apply { orientation = LinearLayout.HORIZONTAL }
+                    val tempView = TextView(context).apply {
+                        layoutParams = LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT)
+                        (layoutParams as LinearLayout.LayoutParams).marginStart = dp2px(context, 3.599976f)
+                        setTextSize(TypedValue.COMPLEX_UNIT_DIP, 13.1f)
+                        setTextColor(Color.parseColor(if (isDarkMode) "#e6e6e6" else "#333333"))
+                        setPadding(0, dp2px(context, 26f), 0, 0)
+                        text = "℃"
+                        gravity = Gravity.NO_GRAVITY
+                        typeface = Typeface.create(null, 700, false)
+                        textAlignment = View.TEXT_ALIGNMENT_VIEW_START
+                    }
+                    childView.removeAllViews()
+                    linearLayout.addView(l1)
+                    linearLayout1.addView(l2)
+                    linearLayout1.addView(tempView)
+                    childView.addView(linearLayout)
+                    childView.addView(linearLayout1)
+                }
+
+                is RelativeLayout -> {
+                    val l1 = childView.getChildAt(0)
+                    val l2 = childView.getChildAt(1)
+                    val linearLayout = LinearLayout(context)
+                    val linearLayout1 = LinearLayout(context).apply { orientation = LinearLayout.HORIZONTAL }
+                    val tempView = TextView(context).apply {
+                        layoutParams = LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT)
+                        (layoutParams as LinearLayout.LayoutParams).also {
+                            it.marginStart = dp2px(context, 3.599976f)
+                            it.topMargin = dp2px(context, 15f)
+                        }
+                        setTextSize(TypedValue.COMPLEX_UNIT_DIP, 13.1f)
+                        setTextColor(Color.parseColor(if (isDarkMode) "#e6e6e6" else "#333333"))
+                        text = "℃"
+                        gravity = Gravity.NO_GRAVITY
+                        typeface = Typeface.create(null, 700, false)
+                        textAlignment = View.TEXT_ALIGNMENT_VIEW_START
+                    }
+                    childView.removeAllViews()
+                    linearLayout.addView(l1)
+                    linearLayout1.addView(l2)
+                    linearLayout1.addView(tempView)
+                    childView.addView(linearLayout)
+                    childView.addView(linearLayout1)
+                }
             }
-            linearL.removeAllViews()
-
-            linearLayout.addView(l1)
-            linearLayout1.addView(l2)
-            linearLayout1.addView(tempView)
-
-            linearL.addView(linearLayout)
-            linearL.addView(linearLayout1)
         }
+    }
+
+    private fun getBatteryTemperature(context: Context): Int {
+        return context.registerReceiver(null as BroadcastReceiver?, IntentFilter("android.intent.action.BATTERY_CHANGED"))!!
+            .getIntExtra("temperature", 0) / 10
     }
 }
