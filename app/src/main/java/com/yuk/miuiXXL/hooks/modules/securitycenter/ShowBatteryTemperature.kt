@@ -61,23 +61,18 @@ object ShowBatteryTemperature : BaseHook() {
                 when (layoutParams) {
                     is LinearLayout.LayoutParams -> {
                         (layoutParams as LinearLayout.LayoutParams).topMargin = 0
-                    }
-
-                    is RelativeLayout.LayoutParams -> {
-                        (layoutParams as RelativeLayout.LayoutParams).topMargin = dp2px(context, 15f)
+                        setPadding(0, dp2px(context, 4f), 0, 0)
+                        height = dp2px(context, 49f)
                     }
                 }
                 setTextSize(TypedValue.COMPLEX_UNIT_DIP, 36.4f)
-                setPadding(0, dp2px(context, 4f), 0, 0)
                 gravity = Gravity.NO_GRAVITY
                 typeface = Typeface.create(null, 700, false)
-                height = dp2px(context, 49f)
                 textAlignment = View.TEXT_ALIGNMENT_VIEW_START
             }
 
             val temperatureContainer = context.resources.getIdentifier("temperature_container", "id", "com.miui.securitycenter")
-            val childView = view.findViewById<LinearLayout>(temperatureContainer).getChildAt(1)
-            when (childView) {
+            when (val childView = view.findViewById<LinearLayout>(temperatureContainer).getChildAt(1)) {
                 is LinearLayout -> {
                     childView.orientation = LinearLayout.VERTICAL
                     val l1 = childView.getChildAt(0)
@@ -86,7 +81,7 @@ object ShowBatteryTemperature : BaseHook() {
                     val linearLayout1 = LinearLayout(context).apply { orientation = LinearLayout.HORIZONTAL }
                     val tempView = TextView(context).apply {
                         layoutParams = LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT)
-                        (layoutParams as LinearLayout.LayoutParams).marginStart = dp2px(context, 3.599976f)
+                        (layoutParams as LinearLayout.LayoutParams).marginStart = dp2px(context, 3.6f)
                         setTextSize(TypedValue.COMPLEX_UNIT_DIP, 13.1f)
                         setTextColor(Color.parseColor(if (isDarkMode) "#e6e6e6" else "#333333"))
                         setPadding(0, dp2px(context, 26f), 0, 0)
@@ -104,16 +99,21 @@ object ShowBatteryTemperature : BaseHook() {
                 }
 
                 is RelativeLayout -> {
+                    val relativeLayout = RelativeLayout(context)
                     val l1 = childView.getChildAt(0)
-                    val l2 = childView.getChildAt(1)
-                    val linearLayout = LinearLayout(context)
-                    val linearLayout1 = LinearLayout(context).apply { orientation = LinearLayout.HORIZONTAL }
-                    val tempView = TextView(context).apply {
-                        layoutParams = LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT)
-                        (layoutParams as LinearLayout.LayoutParams).also {
-                            it.marginStart = dp2px(context, 3.599976f)
-                            it.topMargin = dp2px(context, 15f)
+                    val l2 = childView.getChildAt(1).apply {
+                        layoutParams = RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT).also {
+                            it.addRule(RelativeLayout.BELOW, l1.id)
+                            it.addRule(RelativeLayout.ALIGN_START, l1.id)
                         }
+                        (layoutParams as RelativeLayout.LayoutParams).topMargin = -dp2px(context, 0.78f)
+                    }
+                    val tempView = TextView(context).apply {
+                        layoutParams = RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT).also {
+                            it.addRule(RelativeLayout.END_OF, l2.id)
+                            it.addRule(RelativeLayout.ALIGN_BOTTOM, l2.id)
+                        }
+                        setPadding(dp2px(context, 3.6f), 0, 0, dp2px(context, 5.9f))
                         setTextSize(TypedValue.COMPLEX_UNIT_DIP, 13.1f)
                         setTextColor(Color.parseColor(if (isDarkMode) "#e6e6e6" else "#333333"))
                         text = "℃"
@@ -122,11 +122,10 @@ object ShowBatteryTemperature : BaseHook() {
                         textAlignment = View.TEXT_ALIGNMENT_VIEW_START
                     }
                     childView.removeAllViews()
-                    linearLayout.addView(l1)
-                    linearLayout1.addView(l2)
-                    linearLayout1.addView(tempView)
-                    childView.addView(linearLayout)
-                    childView.addView(linearLayout1)
+                    relativeLayout.addView(l1)
+                    relativeLayout.addView(l2)
+                    relativeLayout.addView(tempView)
+                    childView.addView(relativeLayout)
                 }
             }
         }
