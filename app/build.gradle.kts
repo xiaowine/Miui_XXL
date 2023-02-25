@@ -17,6 +17,7 @@ android {
         targetSdk = 33
         versionCode = getVersionCode()
         versionName = "0.6." + getVersionName()
+        ndk.abiFilters += "arm64-v8a"
     }
     val properties = Properties()
     runCatching { properties.load(project.rootProject.file("local.properties").inputStream()) }
