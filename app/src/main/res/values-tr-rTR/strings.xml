@@ -7,6 +7,9 @@
     <string name="done">Tamamlandı</string>
     <string name="cancel">İptal et</string>
 
+    <string name="backup">Yedek Modül Ayarları</string>
+    <string name="recovery">Kurtarma Modülü Ayarları</string>
+
     <string name="def">Varsayılan：</string>
     <string name="current">Mevcut durum：</string>
     <string name="scope">kapsam：</string>

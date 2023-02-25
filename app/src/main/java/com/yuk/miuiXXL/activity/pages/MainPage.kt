@@ -1,6 +1,8 @@
 package com.yuk.miuiXXL.activity.pages
 
+import android.annotation.SuppressLint
 import android.content.ComponentName
+import android.content.Context
 import android.content.pm.PackageManager
 import android.widget.Toast
 import cn.fkj233.ui.activity.MIUIActivity
@@ -12,10 +14,12 @@ import cn.fkj233.ui.activity.view.TextV
 import cn.fkj233.ui.dialog.MIUIDialog
 import com.yuk.miuiXXL.R
 import com.yuk.miuiXXL.activity.MainActivity
+import com.yuk.miuiXXL.utils.BackupUtils
 import com.yuk.miuiXXL.utils.exec
 
 @BMMainPage("Miui XXL")
 class MainPage : BasePage() {
+    @SuppressLint("WorldReadableFiles")
     override fun onCreate() {
         TextSummaryWithArrow(
             TextSummaryV(textId = R.string.android, tipsId = R.string.android_reboot, onClickListener = { showFragment("AndroidPage") })
@@ -42,6 +46,12 @@ class MainPage : BasePage() {
             pm.setComponentEnabledSetting(
                 ComponentName(MIUIActivity.activity, MainActivity::class.java.name + "Alias"), mComponentEnabledState, PackageManager.DONT_KILL_APP
             )
+        }))
+        TextSummaryWithArrow(TextSummaryV(textId = R.string.backup, onClickListener = {
+            BackupUtils.backup(activity, activity.createDeviceProtectedStorageContext().getSharedPreferences("MiuiXXL_Config", Context.MODE_WORLD_READABLE))
+        }))
+        TextSummaryWithArrow(TextSummaryV(textId = R.string.recovery, onClickListener = {
+            BackupUtils.recovery(activity, activity.createDeviceProtectedStorageContext().getSharedPreferences("MiuiXXL_Config", Context.MODE_WORLD_READABLE))
         }))
         TextSummaryWithArrow(TextSummaryV(textId = R.string.restart_scope) {
             MIUIDialog(activity) {

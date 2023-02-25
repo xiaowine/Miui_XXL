@@ -7,6 +7,9 @@
     <string name="done">确定</string>
     <string name="cancel">取消</string>
 
+    <string name="backup">备份模块设置</string>
+    <string name="recovery">恢复模块设置</string>
+
     <string name="def">默认：</string>
     <string name="current">当前：</string>
     <string name="scope">范围：</string>

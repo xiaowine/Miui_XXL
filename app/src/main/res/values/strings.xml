@@ -8,6 +8,9 @@
     <string name="done">Done</string>
     <string name="cancel">Cancel</string>
 
+    <string name="backup">Backup Module Settings</string>
+    <string name="recovery">Recovery Module Settings</string>
+
     <string name="def">Default: </string>
     <string name="current">Current: </string>
     <string name="scope">Scope: </string>

@@ -6,7 +6,7 @@
         android:label="@string/app_name"
         android:roundIcon="@drawable/ic_launcher"
         android:supportsRtl="true"
-        android:theme="@style/Theme.FuckMiui">
+        android:theme="@style/Theme.Miui_XXL">
         <meta-data
             android:name="xposeddescription"
             android:value="@string/xposed_description" />

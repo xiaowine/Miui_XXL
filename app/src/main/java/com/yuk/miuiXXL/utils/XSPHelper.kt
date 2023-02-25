@@ -3,7 +3,7 @@ package com.yuk.miuiXXL.utils
 import com.yuk.miuiXXL.BuildConfig
 import de.robv.android.xposed.XSharedPreferences
 
-fun prefs() = XSharedPreferences(BuildConfig.APPLICATION_ID, "FuckMiuiConfig")
+fun prefs() = XSharedPreferences(BuildConfig.APPLICATION_ID, "MiuiXXL_Config")
 
 fun getBoolean(key: String, defValue: Boolean): Boolean {
     if (prefs().hasFileChanged()) prefs().reload()
