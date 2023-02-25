@@ -4,7 +4,7 @@ import com.github.kyuubiran.ezxhelper.init.EzXHelperInit
 import com.github.kyuubiran.ezxhelper.utils.Log
 import com.github.kyuubiran.ezxhelper.utils.Log.logexIfThrow
 import com.yuk.miuiXXL.hooks.modules.BaseHook
-import com.yuk.miuiXXL.hooks.modules.android.FuckValidateTheme2
+import com.yuk.miuiXXL.hooks.modules.android.FuckValidateTheme3
 import com.yuk.miuiXXL.hooks.modules.android.MaxWallpaperScale
 import com.yuk.miuiXXL.hooks.modules.android.RemoveScreenshotRestriction
 import com.yuk.miuiXXL.hooks.modules.android.RemoveSmallWindowRestriction1
@@ -47,6 +47,7 @@ import com.yuk.miuiXXL.hooks.modules.systemui.ShowWifiStandard
 import com.yuk.miuiXXL.hooks.modules.systemui.StatusBarShowSeconds
 import com.yuk.miuiXXL.hooks.modules.systemui.WaveChargeAnim
 import com.yuk.miuiXXL.hooks.modules.thememanager.FuckValidateTheme1
+import com.yuk.miuiXXL.hooks.modules.thememanager.FuckValidateTheme2
 import com.yuk.miuiXXL.hooks.modules.thememanager.RemoveThemeManagerAds
 import com.yuk.miuiXXL.hooks.modules.updater.VABUpdate
 import de.robv.android.xposed.IXposedHookLoadPackage
@@ -75,7 +76,7 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit {
     override fun initZygote(startupParam: IXposedHookZygoteInit.StartupParam) {
         EzXHelperInit.initZygote(startupParam)
         CorePatchMainHook().initZygote(startupParam)
-        initHooks(FuckValidateTheme2)
+        initHooks(FuckValidateTheme3)
     }
 
     override fun handleLoadPackage(lpparam: XC_LoadPackage.LoadPackageParam) {
@@ -89,7 +90,7 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit {
                 "android" -> {
                     CorePatchMainHook().handleLoadPackage(lpparam)
                     initHooks(
-                        FuckValidateTheme2,
+                        FuckValidateTheme3,
                         MaxWallpaperScale,
                         RemoveSmallWindowRestriction1,
                         RemoveScreenshotRestriction,
@@ -117,6 +118,7 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit {
                 }
 
                 "com.android.thememanager" -> {
+                    FuckValidateTheme2().handleLoadPackage(lpparam)
                     initHooks(
                         RemoveThemeManagerAds,
                         FuckValidateTheme1,

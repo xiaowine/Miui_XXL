@@ -12,7 +12,7 @@ import de.robv.android.xposed.XC_MethodHook
 import miui.drm.DrmManager
 import miui.drm.ThemeReceiver
 
-object FuckValidateTheme2 : BaseHook() {
+object FuckValidateTheme3 : BaseHook() {
     override fun init() {
 
         if (!getBoolean("thememanager_fuck_validate_theme", false)) return
