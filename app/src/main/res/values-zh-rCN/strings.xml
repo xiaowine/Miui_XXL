@@ -11,15 +11,11 @@
     <string name="current">当前：</string>
     <string name="scope">范围：</string>
 
-    <string name="reboot">重启</string>
     <string name="reboot_system">重启系统</string>
     <string name="reboot_system_summary">确定要重启系统么？</string>
     <string name="restart_scope">重启作用域</string>
     <string name="restart_scope_summary">确定要重启全部作用域么？</string>
     <string name="restart_scope_finished">作用域重启完成</string>
-
-    <string name="menu">菜单</string>
-    <string name="other">其他</string>
 
     <string name="android">系统框架</string>
     <string name="android_reboot">修改需要重启系统后生效</string>
@@ -98,7 +94,6 @@
     <string name="thememanager_remove_ads_summary">猜你喜欢内的广告将显示为空白卡片，其余位置的广告将完全移除</string>
     <string name="thememanager_fuck_validate_theme">主题破解</string>
     <string name="thememanager_fuck_validate_theme_summary">允许应用第三方主题并防止恢复\n需同时作用于系统框架并在重启后生效</string>
-    <string name="thememanager_fuck_validate_theme_fonts_title">免费</string>
 
     <string name="systemui">系统界面</string>
     <string name="systemui_statusbar_show_seconds">状态栏时间显秒</string>

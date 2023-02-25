@@ -12,15 +12,11 @@
     <string name="current">Current: </string>
     <string name="scope">Scope: </string>
 
-    <string name="reboot">Restart</string>
-    <string name="reboot_system">Restart the system</string>
-    <string name="reboot_system_summary">Are you sure to restart the system?</string>
+    <string name="reboot_system">Reboot System</string>
+    <string name="reboot_system_summary">Are you sure to reboot the system?</string>
     <string name="restart_scope">Restart Scope</string>
     <string name="restart_scope_finished">Scope application restart completed</string>
     <string name="restart_scope_summary">Are you sure to restart the scope application?</string>
-
-    <string name="menu">Menu</string>
-    <string name="other">Other</string>
 
     <string name="android">Framework</string>
     <string name="android_reboot">Requires reboot system to take effect</string>
@@ -97,7 +93,6 @@
     <string name="thememanager">Theme Manager</string>
     <string name="thememanager_fuck_validate_theme">Theme cracking</string>
     <string name="thememanager_fuck_validate_theme_summary">Third-party themes and fonts are allowed to be applied, and the system framework need to be checked and restarted at the same time.</string>
-    <string name="thememanager_fuck_validate_theme_fonts_title">Free</string>
     <string name="thememanager_remove_ads">Remove Ads</string>
     <string name="thememanager_remove_ads_summary">Guess the ads in your favorite will be displayed as blank cards, and the ads in the rest will be completely removed</string>
 

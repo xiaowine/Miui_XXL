@@ -18,7 +18,7 @@ object AnimDurationRatio : BaseHook() {
         }.hookBefore {
             it.result = it.args[0] as Float * value1
         }
-        
+
         findMethod("com.miui.home.launcher.common.DeviceLevelUtils") {
             name == "getDeviceLevelTransitionAnimRatio"
         }.hookBefore {

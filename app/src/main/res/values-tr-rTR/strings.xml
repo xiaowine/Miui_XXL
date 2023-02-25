@@ -11,15 +11,11 @@
     <string name="current">Mevcut durum：</string>
     <string name="scope">kapsam：</string>
 
-    <string name="reboot">Tekrar başlat</string>
     <string name="reboot_system">Sistemi yeniden başlatın</string>
     <string name="reboot_system_summary">Sistem yeniden başlatılsın mı?</string>
     <string name="restart_scope">Kapsamı Yeniden Başlat</string>
     <string name="restart_scope_finished">Kapsam uygulama yeniden başlatma tamamlandı</string>
     <string name="restart_scope_summary">Kapsam uygulamasını yeniden başlattığınızdan emin misiniz?</string>
-
-    <string name="menu">Menü</string>
-    <string name="other">Diğer</string>
 
     <string name="android">Sistem çerçevesi</string>
     <string name="android_reboot">Etkili olması için yeniden başlatma gerektirir</string>
@@ -96,7 +92,6 @@
     <string name="thememanager">Tema duvar kağıdı</string>
     <string name="thememanager_fuck_validate_theme">Tema crack</string>
     <string name="thememanager_fuck_validate_theme_summary">Üçüncü taraf temalarının ve yazı tiplerinin uygulanmasına izin verir ve kontrol edilmesi ve sistem çerçevesinin yeniden başlatılması gerekir.</string>
-    <string name="thememanager_fuck_validate_theme_fonts_title">özgür</string>
     <string name="thememanager_remove_ads">Reklâm yapmak</string>
     <string name="thememanager_remove_ads_summary">En sevdiğiniz reklamların boş kartlar olarak gösterileceğini ve geri kalan reklamların tamamen kaldırılacağını tahmin edin</string>
 
