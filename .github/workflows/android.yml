@@ -14,18 +14,13 @@ jobs:
       - uses: actions/checkout@v3.3.0
         with:
           fetch-depth: 0
+          submodule: true
 
       - name: Setup JDK 17
         uses: actions/setup-java@v3.10.0
         with:
           java-version: '17'
           distribution: 'adopt'
-
-      - name: Clone submodule
-        run: |
-          cd blockmiui
-          git submodule init
-          git submodule update
 
       - name: Cache Gradle Dependencies
         uses: actions/cache@v3.2.6
