@@ -9,7 +9,6 @@ import cn.fkj233.ui.activity.MIUIActivity
 import cn.fkj233.ui.activity.annotation.BMMainPage
 import cn.fkj233.ui.activity.data.BasePage
 import cn.fkj233.ui.activity.view.SwitchV
-import cn.fkj233.ui.activity.view.TextSummaryV
 import cn.fkj233.ui.activity.view.TextV
 import cn.fkj233.ui.dialog.MIUIDialog
 import com.yuk.miuiXXL.R
@@ -61,13 +60,13 @@ class MainPage : BasePage() {
                 ComponentName(MIUIActivity.activity, MainActivity::class.java.name + "Alias"), mComponentEnabledState, PackageManager.DONT_KILL_APP
             )
         }))
-        TextSummaryWithArrow(TextSummaryV(textId = R.string.backup, onClickListener = {
+        TextWithArrow(TextV(textId = R.string.backup, onClickListener = {
             BackupUtils.backup(activity, activity.createDeviceProtectedStorageContext().getSharedPreferences("MiuiXXL_Config", Context.MODE_WORLD_READABLE))
         }))
-        TextSummaryWithArrow(TextSummaryV(textId = R.string.recovery, onClickListener = {
+        TextWithArrow(TextV(textId = R.string.recovery, onClickListener = {
             BackupUtils.recovery(activity, activity.createDeviceProtectedStorageContext().getSharedPreferences("MiuiXXL_Config", Context.MODE_WORLD_READABLE))
         }))
-        TextSummaryWithArrow(TextSummaryV(textId = R.string.restart_scope) {
+        TextWithArrow(TextV(textId = R.string.restart_scope) {
             MIUIDialog(activity) {
                 setTitle(R.string.tips)
                 setMessage(R.string.restart_scope_summary)
@@ -96,7 +95,7 @@ class MainPage : BasePage() {
                 }
             }.show()
         })
-        TextSummaryWithArrow(TextSummaryV(textId = R.string.reboot_system) {
+        TextWithArrow(TextV(textId = R.string.reboot_system) {
             MIUIDialog(activity) {
                 setTitle(R.string.tips)
                 setMessage(R.string.reboot_system_summary)
