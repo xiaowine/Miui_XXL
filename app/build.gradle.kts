@@ -1,3 +1,5 @@
+@file:Suppress("UnstableApiUsage")
+
 import com.android.build.gradle.internal.api.BaseVariantOutputImpl
 import java.io.ByteArrayOutputStream
 import java.util.Properties

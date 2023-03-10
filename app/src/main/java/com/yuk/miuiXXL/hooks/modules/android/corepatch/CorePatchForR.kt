@@ -33,6 +33,10 @@ open class CorePatchForR : XposedHelper(), IXposedHookLoadPackage, IXposedHookZy
             "android.content.pm.PackageInfoLite",
             ReturnConstant(prefs(), "downgrade", null)
         )
+        hookAllMethods(
+            "com.android.server.pm.PackageManagerServiceUtils", loadPackageParam.classLoader, "isDowngradePermitted",
+            ReturnConstant(prefs(), "downgrade", true)
+        )
 
         // apk内文件修改后 digest校验会失败
         hookAllMethods(
