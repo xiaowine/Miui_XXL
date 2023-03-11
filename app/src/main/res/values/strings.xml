@@ -110,6 +110,8 @@
     <string name="systemui_statusbar_show_seconds_summary">The time of the position of the status bar is displayed in seconds, excluding the notification bar and the control center</string>
     <string name="systemui_disable_bluetooth_restrict">Disable Bluetooth Restrict</string>
     <string name="systemui_disable_bluetooth_restrict_summary">Disable MIUI copying Apple\'s temporarily disable Bluetooth</string>
+    <string name="systemui_use_new_hd">Force to use new HD icon</string>
+    <string name="systemui_use_new_summary">A recent system version is required, some models may not have been updated</string>
     <string name="systemui_wave_charge_animation">Enable wave charge animation</string>
     <string name="systemui_wave_charge_animation_summary">Use Mix Alpha charge animation instead of default charge animation</string>
     <string name="systemui_show_wifi_standard">Show Wifi Standard</string>

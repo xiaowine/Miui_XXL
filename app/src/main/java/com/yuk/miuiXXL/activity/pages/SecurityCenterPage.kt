@@ -20,15 +20,12 @@ class SecurityCenterPage : BasePage() {
             SwitchV("securitycenter_skip_warning_wait_time", false)
         )
         TextSummaryWithSwitch(
-            TextSummaryV(
-                textId = R.string.securitycenter_show_battery_temperature,
-                tipsId = R.string.securitycenter_show_battery_temperature_summary
-            ), SwitchV("securitycenter_show_battery_temperature", false)
+            TextSummaryV(textId = R.string.securitycenter_show_battery_temperature, tipsId = R.string.securitycenter_show_battery_temperature_summary),
+            SwitchV("securitycenter_show_battery_temperature", false)
         )
         TextWithSwitch(
-            TextV(
-                textId = R.string.securitycenter_remove_macro_blacklist,
-            ), SwitchV("securitycenter_remove_macro_blacklist", false)
+            TextV(textId = R.string.securitycenter_remove_macro_blacklist,),
+            SwitchV("securitycenter_remove_macro_blacklist", false)
         )
     }
 

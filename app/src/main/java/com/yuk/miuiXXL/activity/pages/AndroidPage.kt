@@ -17,14 +17,12 @@ class AndroidPage : BasePage() {
 
     override fun onCreate() {
         TextSummaryWithSwitch(
-            TextSummaryV(
-                textId = R.string.android_remove_small_window_restriction, tipsId = R.string.android_remove_small_window_restriction_summary
-            ), SwitchV("android_remove_small_window_restriction")
+            TextSummaryV(textId = R.string.android_remove_small_window_restriction, tipsId = R.string.android_remove_small_window_restriction_summary),
+            SwitchV("android_remove_small_window_restriction")
         )
         TextSummaryWithSwitch(
-            TextSummaryV(
-                textId = R.string.android_remove_screenshot_restriction, tipsId = R.string.android_remove_screenshot_restriction_summary
-            ), SwitchV("android_remove_screenshot_restriction")
+            TextSummaryV(textId = R.string.android_remove_screenshot_restriction, tipsId = R.string.android_remove_screenshot_restriction_summary),
+            SwitchV("android_remove_screenshot_restriction")
         )
         TextSummaryWithArrow(
             TextSummaryV(textId = R.string.android_max_wallpaper_scale, tipsId = R.string.android_max_wallpaper_scale_summary, onClickListener = {
@@ -51,17 +49,20 @@ class AndroidPage : BasePage() {
         Line()
         TitleText(textId = R.string.android_corepacth)
         TextSummaryWithSwitch(
-            TextSummaryV(textId = R.string.android_corepacth_downgr, tipsId = R.string.android_corepacth_downgr_summary), SwitchV("downgrade")
+            TextSummaryV(textId = R.string.android_corepacth_downgr, tipsId = R.string.android_corepacth_downgr_summary),
+            SwitchV("downgrade")
         )
         TextSummaryWithSwitch(
-            TextSummaryV(textId = R.string.android_corepacth_authcreak, tipsId = R.string.android_corepacth_authcreak_summary), SwitchV("authcreak")
+            TextSummaryV(textId = R.string.android_corepacth_authcreak, tipsId = R.string.android_corepacth_authcreak_summary),
+            SwitchV("authcreak")
         )
         TextSummaryWithSwitch(
             TextSummaryV(textId = R.string.android_corepacth_digestCreak, tipsId = R.string.android_corepacth_digestCreak_summary),
             SwitchV("digestCreak")
         )
         TextSummaryWithSwitch(
-            TextSummaryV(textId = R.string.android_corepacth_UsePreSig, tipsId = R.string.android_corepacth_UsePreSig_summary), SwitchV("UsePreSig")
+            TextSummaryV(textId = R.string.android_corepacth_UsePreSig, tipsId = R.string.android_corepacth_UsePreSig_summary),
+            SwitchV("UsePreSig")
         )
         TextSummaryWithSwitch(
             TextSummaryV(textId = R.string.android_corepacth_enhancedMode, tipsId = R.string.android_corepacth_enhancedMode_summary),

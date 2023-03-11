@@ -43,9 +43,8 @@ class MiuiHomePage : BasePage() {
             SwitchV("miuihome_highend_device", false)
         )
         TextSummaryWithSwitch(
-            TextSummaryV(
-                textId = R.string.miuihome_recentwiew_wallpaper_darkening, tipsId = R.string.miuihome_recentwiew_wallpaper_darkening_summary
-            ), SwitchV("miuihome_recentwiew_wallpaper_darkening", false)
+            TextSummaryV(textId = R.string.miuihome_recentwiew_wallpaper_darkening, tipsId = R.string.miuihome_recentwiew_wallpaper_darkening_summary),
+            SwitchV("miuihome_recentwiew_wallpaper_darkening", false)
         )
         TextSummaryWithSwitch(
             TextSummaryV(textId = R.string.miuihome_unlock_cell_count, tipsId = R.string.miuihome_unlock_cell_count_summary),
@@ -56,34 +55,28 @@ class MiuiHomePage : BasePage() {
             SwitchV("miuihome_unlock_animation", false)
         )
         TextSummaryWithSwitch(
-            TextSummaryV(
-                textId = R.string.miuihome_recentview_remove_card_animation, tipsId = R.string.miuihome_recentview_remove_card_animation_summary
-            ), SwitchV("miuihome_recentview_remove_card_animation", false)
+            TextSummaryV(textId = R.string.miuihome_recentview_remove_card_animation, tipsId = R.string.miuihome_recentview_remove_card_animation_summary),
+            SwitchV("miuihome_recentview_remove_card_animation", false)
         )
         TextSummaryWithSwitch(
-            TextSummaryV(
-                textId = R.string.miuihome_shortcut_menu_blur, tipsId = R.string.miuihome_shortcut_menu_blur_summary
-            ), SwitchV("miuihome_shortcut_menu_blur", false)
+            TextSummaryV(textId = R.string.miuihome_shortcut_menu_blur, tipsId = R.string.miuihome_shortcut_menu_blur_summary),
+            SwitchV("miuihome_shortcut_menu_blur", false)
         )
         TextSummaryWithSwitch(
-            TextSummaryV(
-                textId = R.string.miuihome_blur_when_open_folder, tipsId = R.string.miuihome_blur_when_open_folder_summary
-            ), SwitchV("miuihome_blur_when_open_folder", false)
+            TextSummaryV(textId = R.string.miuihome_blur_when_open_folder, tipsId = R.string.miuihome_blur_when_open_folder_summary),
+            SwitchV("miuihome_blur_when_open_folder", false)
         )
         TextSummaryWithSwitch(
             TextSummaryV(textId = R.string.miuihome_hide_allapps_category_all, tipsId = R.string.miuihome_hide_allapps_category_all_summary),
             SwitchV("miuihome_hide_allapps_category_all", false)
         )
         TextSummaryWithSwitch(
-            TextSummaryV(
-                textId = R.string.miuihome_hide_allapps_category_paging_edit, tipsId = R.string.miuihome_hide_allapps_category_paging_edit_summary
-            ), SwitchV("miuihome_hide_allapps_category_paging_edit", false)
+            TextSummaryV(textId = R.string.miuihome_hide_allapps_category_paging_edit, tipsId = R.string.miuihome_hide_allapps_category_paging_edit_summary),
+            SwitchV("miuihome_hide_allapps_category_paging_edit", false)
         )
         TextSummaryWithSwitch(
-            TextSummaryV(
-                textId = R.string.miuihome_two_x_one_icon_rounded_corner_following,
-                tipsId = R.string.miuihome_two_x_one_icon_rounded_corner_following_summary
-            ), SwitchV("miuihome_two_x_one_icon_rounded_corner_following", false)
+            TextSummaryV(textId = R.string.miuihome_two_x_one_icon_rounded_corner_following, tipsId = R.string.miuihome_two_x_one_icon_rounded_corner_following_summary),
+            SwitchV("miuihome_two_x_one_icon_rounded_corner_following", false)
         )
         TextSummaryWithSwitch(
             TextSummaryV(textId = R.string.miuihome_shortcut_add_small_window, tipsId = R.string.miuihome_shortcut_add_small_window_summary),

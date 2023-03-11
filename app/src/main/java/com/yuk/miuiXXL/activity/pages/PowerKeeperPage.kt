@@ -15,9 +15,8 @@ class PowerKeeperPage : BasePage() {
 
     override fun onCreate() {
         TextSummaryWithSwitch(
-            TextSummaryV(
-                textId = R.string.powerkeeper_disable_dynamic_refresh_rate, tipsId = R.string.powerkeeper_disable_dynamic_refresh_rate_summary
-            ), SwitchV("powerkeeper_disable_dynamic_refresh_rate", false)
+            TextSummaryV(textId = R.string.powerkeeper_disable_dynamic_refresh_rate, tipsId = R.string.powerkeeper_disable_dynamic_refresh_rate_summary),
+            SwitchV("powerkeeper_disable_dynamic_refresh_rate", false)
         )
     }
 

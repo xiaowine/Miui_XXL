@@ -109,6 +109,8 @@
     <string name="systemui_statusbar_show_seconds_summary">Durum çubuğunun konumunun saati, bildirim çubuğu ve kontrol merkezi hariç olmak üzere saniye cinsinden görüntülenir</string>
     <string name="systemui_disable_bluetooth_restrict">Bluetooth kısıtlamalarını devre dışı bırak</string>
     <string name="systemui_disable_bluetooth_restrict_summary">Apple\'dan klonlanan MIUI\'yi devre dışı bırakın, bluetooth\'u geçici olarak devre dışı bırakın</string>
+    <string name="systemui_use_new_hd">Yeni HD simgesini kullanmaya zorla</string>
+    <string name="systemui_use_new_summary">Yeni bir sistem sürümü gerekli, bazı modeller güncellenmemiş olabilir</string>
     <string name="systemui_wave_charge_animation">Dalga yükü animasyonunu etkinleştir</string>
     <string name="systemui_wave_charge_animation_summary">Varsayılan şarj animasyonu yerine Mix Alpha şarj animasyonunu kullanın</string>
     <string name="systemui_show_wifi_standard">WiFi Rozetini Göster</string>

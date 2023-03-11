@@ -15,9 +15,8 @@ class SettingsPage : BasePage() {
 
     override fun onCreate() {
         TextSummaryWithSwitch(
-            TextSummaryV(
-                textId = R.string.settings_notification_importance, tipsId = R.string.settings_notification_importance_summary
-            ), SwitchV("settings_notification_importance", false)
+            TextSummaryV(textId = R.string.settings_notification_importance, tipsId = R.string.settings_notification_importance_summary),
+            SwitchV("settings_notification_importance", false)
         )
     }
 
