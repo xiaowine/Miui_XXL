@@ -34,6 +34,7 @@ import com.yuk.miuiXXL.hooks.modules.packageinstaller.RemovePackageInstallerAds
 import com.yuk.miuiXXL.hooks.modules.packageinstaller.ShowMoreApkInfo
 import com.yuk.miuiXXL.hooks.modules.personalassistant.BlurWhenGotoMinusOne
 import com.yuk.miuiXXL.hooks.modules.powerkeeper.DisableDynamicRefreshRate
+import com.yuk.miuiXXL.hooks.modules.securitycenter.RemoveMacroBlacklist
 import com.yuk.miuiXXL.hooks.modules.securitycenter.ShowBatteryTemperature
 import com.yuk.miuiXXL.hooks.modules.securitycenter.SkipWarningWaitTime
 import com.yuk.miuiXXL.hooks.modules.settings.NotificationImportance
@@ -194,6 +195,7 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit {
                 }
 
                 "com.miui.securitycenter" -> {
+                    RemoveMacroBlacklist().handleLoadPackage(lpparam)
                     initHooks(
                         SkipWarningWaitTime,
                         ShowBatteryTemperature,

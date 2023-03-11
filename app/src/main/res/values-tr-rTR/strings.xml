@@ -124,7 +124,8 @@
     <string name="securitycenter_show_battery_temperature">Ekran özgül sıcaklık</string>
     <string name="securitycenter_show_battery_temperature_summary">Belirli sıcaklık, güç tasarrufu ve pilin pil sayfasının geçerli sıcaklığında görüntülenir</string>
     <string name="securitycenter_skip_warning_wait_time">Uyarıyı atla bekle</string>
-    <string name="securitycenter_skip_warning_wait_time_summary">En tehlikeli seçeneklerin bekleme onay geri sayım süresini atlayın.</string>
+    <string name="securitycenter_skip_warning_wait_time_summary">En tehlikeli seçeneklerin bekleme onay geri sayım süresini atlayın</string>
+    <string name="securitycenter_remove_macro_blacklist">Oyun makrosu kara listesini kaldır</string>
 
     <string name="updater">Sistem güncellemesi</string>
     <string name="updater_fuck_vab_update">Güncelleme doğrulamasını kaldır</string>

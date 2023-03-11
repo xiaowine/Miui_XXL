@@ -125,6 +125,7 @@
     <string name="securitycenter_skip_warning_wait_time_summary">跳过大部分危险选项的等待确认倒计时时间</string>
     <string name="securitycenter_show_battery_temperature">显示具体温度</string>
     <string name="securitycenter_show_battery_temperature_summary">省电与电池内电池页当前温度显示具体温度</string>
+    <string name="securitycenter_remove_macro_blacklist">移除自动连招黑名单</string>
 
     <string name="updater">系统更新</string>
     <string name="updater_fuck_vab_update">移除更新验证</string>

@@ -4,6 +4,7 @@ import cn.fkj233.ui.activity.annotation.BMPage
 import cn.fkj233.ui.activity.data.BasePage
 import cn.fkj233.ui.activity.view.SwitchV
 import cn.fkj233.ui.activity.view.TextSummaryV
+import cn.fkj233.ui.activity.view.TextV
 import com.yuk.miuiXXL.R
 
 @BMPage("SecurityCenterPage", hideMenu = false)
@@ -23,6 +24,11 @@ class SecurityCenterPage : BasePage() {
                 textId = R.string.securitycenter_show_battery_temperature,
                 tipsId = R.string.securitycenter_show_battery_temperature_summary
             ), SwitchV("securitycenter_show_battery_temperature", false)
+        )
+        TextWithSwitch(
+            TextV(
+                textId = R.string.securitycenter_remove_macro_blacklist,
+            ), SwitchV("securitycenter_remove_macro_blacklist", false)
         )
     }
 

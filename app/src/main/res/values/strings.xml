@@ -125,7 +125,8 @@
     <string name="securitycenter_show_battery_temperature">Display specific temperature</string>
     <string name="securitycenter_show_battery_temperature_summary">The specific temperature is displayed on the current temperature of the battery page of power saving and battery</string>
     <string name="securitycenter_skip_warning_wait_time">Skip warning wait</string>
-    <string name="securitycenter_skip_warning_wait_time_summary">Skip the waiting confirmation countdown time of most dangerous options.</string>
+    <string name="securitycenter_skip_warning_wait_time_summary">Skip the waiting confirmation countdown time of most dangerous options</string>
+    <string name="securitycenter_remove_macro_blacklist">Remove game macro blacklist</string>
 
     <string name="updater">Updater</string>
     <string name="updater_fuck_vab_update">Remove update validation</string>
