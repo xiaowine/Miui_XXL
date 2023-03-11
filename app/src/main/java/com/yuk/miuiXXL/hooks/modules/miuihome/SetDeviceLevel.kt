@@ -2,12 +2,15 @@ package com.yuk.miuiXXL.hooks.modules.miuihome
 
 import com.github.kyuubiran.ezxhelper.utils.Log
 import com.github.kyuubiran.ezxhelper.utils.findMethod
+import com.github.kyuubiran.ezxhelper.utils.hookAfter
 import com.github.kyuubiran.ezxhelper.utils.hookReturnConstant
 import com.yuk.miuiXXL.hooks.modules.BaseHook
+import com.yuk.miuiXXL.utils.atLeastAndroidT
 import com.yuk.miuiXXL.utils.findClass
 import com.yuk.miuiXXL.utils.getBoolean
 import com.yuk.miuiXXL.utils.hookBeforeMethod
 import com.yuk.miuiXXL.utils.replaceMethod
+import de.robv.android.xposed.XposedBridge
 
 object SetDeviceLevel : BaseHook() {
     override fun init() {
@@ -102,6 +105,13 @@ object SetDeviceLevel : BaseHook() {
             "com.xiaomi.onetrack.OneTrack".hookBeforeMethod("isDisable") {
                 it.result = true
             }
+        } catch (e: Throwable) {
+            Log.ex(e)
+        }
+        try {
+            if (atLeastAndroidT()) findMethod("com.miui.home.launcher.graphics.MonochromeUtils") {
+                name == "isSupportMonochrome"
+            }.hookReturnConstant(true)
         } catch (e: Throwable) {
             Log.ex(e)
         }

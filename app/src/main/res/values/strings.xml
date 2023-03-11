@@ -59,7 +59,7 @@
     <string name="miuihome_hide_allapps_category_paging_edit">Remove the Edit button</string>
     <string name="miuihome_hide_allapps_category_paging_edit_summary">Remove the "Edit" button in the drawer to apply paging</string>
     <string name="miuihome_highend_device">Remove device restrictions</string>
-    <string name="miuihome_highend_device_summary">It will be recognized as high-end by default. Turning this option on will not increase GPU performance overhead. Remove some logs at the same time.</string>
+    <string name="miuihome_highend_device_summary">It will be recognized as high-end by default. Remove some logs at the same time.</string>
     <string name="miuihome_recentview_remove_card_animation">Modify the card marking animation</string>
     <string name="miuihome_recentview_remove_card_animation_summary">Modify the animation effect of the horizontal recent task removal card</string>
     <string name="miuihome_recentwiew_wallpaper_darkening">Disable wallpaper dimming</string>

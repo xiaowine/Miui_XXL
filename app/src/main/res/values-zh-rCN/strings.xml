@@ -48,7 +48,7 @@
     <string name="miuihome_double_tap_to_sleep">双击熄屏</string>
     <string name="miuihome_double_tap_to_sleep_summary">双击桌面空白处熄灭屏幕</string>
     <string name="miuihome_highend_device">解除设备限制</string>
-    <string name="miuihome_highend_device_summary">将被默认识别为高端，开启该选项并不会增加 GPU 性能开销同时去除部分日志</string>
+    <string name="miuihome_highend_device_summary">将被默认识别为高端，同时去除部分日志</string>
     <string name="miuihome_scroll_icon_name">滚动显示应用名称</string>
     <string name="miuihome_scroll_icon_name_summary">过长的应用名称将滚动进行显示，不再进行换行</string>
     <string name="miuihome_anim_ratio_binding">自定义动画速度</string>
