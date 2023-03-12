@@ -79,6 +79,7 @@ class MainPage : BasePage() {
                         "am force-stop com.android.settings",
                         "am force-stop com.android.updater",
                         "am force-stop com.miui.gallery",
+                        "am force-stop com.miui.guardprovider",
                         "am force-stop com.miui.home",
                         "am force-stop com.miui.mediaeditor",
                         "am force-stop com.miui.packageinstaller",

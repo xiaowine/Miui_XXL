@@ -9,6 +9,7 @@ import com.yuk.miuiXXL.hooks.modules.android.MaxWallpaperScale
 import com.yuk.miuiXXL.hooks.modules.android.RemoveScreenshotRestriction
 import com.yuk.miuiXXL.hooks.modules.android.RemoveSmallWindowRestriction1
 import com.yuk.miuiXXL.hooks.modules.android.corepatch.CorePatchMainHook
+import com.yuk.miuiXXL.hooks.modules.guardprovider.AntiDefraudAppManager
 import com.yuk.miuiXXL.hooks.modules.mediaeditor.RemoveCropRestriction
 import com.yuk.miuiXXL.hooks.modules.miuihome.AlwaysShowStatusBarClock
 import com.yuk.miuiXXL.hooks.modules.miuihome.AnimDurationRatio
@@ -64,6 +65,7 @@ private val PACKAGE_NAME_HOOKED = setOf(
     "com.android.thememanager",
     "com.android.updater",
     "com.miui.gallery",
+    "com.miui.guardprovider",
     "com.miui.home",
     "com.miui.mediaeditor",
     "com.miui.packageinstaller",
@@ -138,6 +140,10 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit {
                     initHooks(
                         RemoveCropRestriction,
                     )
+                }
+
+                "com.miui.guardprovider" -> {
+                    AntiDefraudAppManager().handleLoadPackage(lpparam)
                 }
 
                 "com.miui.home" -> {
