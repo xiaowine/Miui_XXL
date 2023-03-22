@@ -1,7 +1,6 @@
 @file:Suppress("UnstableApiUsage")
 
 import com.android.build.gradle.internal.api.BaseVariantOutputImpl
-import java.io.ByteArrayOutputStream
 import java.util.Properties
 
 plugins {
@@ -17,8 +16,8 @@ android {
         applicationId = namespace
         minSdk = 31
         targetSdk = 33
-        versionCode = getVersionCode()
-        versionName = "0.6." + getVersionName()
+        versionCode = 1
+        versionName = "0.0.1"
         ndk.abiFilters += "arm64-v8a"
     }
     val properties = Properties()
@@ -42,7 +41,11 @@ android {
         release {
             isShrinkResources = true
             isMinifyEnabled = true
-            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro", "proguard-log.pro")
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro",
+                "proguard-log.pro"
+            )
             if (keystorePath != null) {
                 signingConfig = signingConfigs.getByName("release")
             }
@@ -79,39 +82,13 @@ android {
         }
         applicationVariants.all {
             outputs.all {
-                (this as BaseVariantOutputImpl).outputFileName = "Miui_XXL-$versionName($versionCode)-$name.apk"
+                (this as BaseVariantOutputImpl).outputFileName =
+                    "Miui_XXL-$versionName($versionCode)-$name.apk"
             }
         }
     }
 }
 
-fun getGitCommitCount(): Int {
-    val out = ByteArrayOutputStream()
-    exec {
-        commandLine("git", "rev-list", "--count", "HEAD")
-        standardOutput = out
-    }
-    return out.toString().trim().toInt()
-}
-
-fun getGitDescribe(): String {
-    val out = ByteArrayOutputStream()
-    exec {
-        commandLine("git", "describe", "--tags", "--always")
-        standardOutput = out
-    }
-    return out.toString().trim()
-}
-
-fun getVersionCode(): Int {
-    val commitCount = getGitCommitCount()
-    val major = 5
-    return major + commitCount
-}
-
-fun getVersionName(): String {
-    return getGitDescribe()
-}
 
 dependencies {
     compileOnly("de.robv.android.xposed:api:82")

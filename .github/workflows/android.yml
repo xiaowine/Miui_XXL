@@ -41,6 +41,12 @@ jobs:
           key: gradle-builds-core-${{ github.sha }}
           restore-keys: gradle-builds
 
+#      - name: Clone UI
+#        run: |
+#          cd blockmiui
+#          git submodule init
+#          git submodule update
+
       - name: Build with Gradle
         run: |
           echo ${{ secrets.SIGNING_KEY }} | base64 -d > keystore.jks
