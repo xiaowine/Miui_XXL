@@ -1,7 +1,10 @@
 <div align="center">
 
-<h1>Miui XXL</h1>
-
-换 iPhone 14 Pro 了，本项目停更。
-
+# Miui XXL
 </div>
+
+
+这个项目我接手了，~~空空摸鱼了~~
+ 
+ 
+ # 修改，添加MIUI的功能
