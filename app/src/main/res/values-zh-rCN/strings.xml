@@ -20,7 +20,7 @@
     <string name="android_reboot">修改需要重启系统后生效</string>
     <string name="android_corepacth">核心破解</string>
     <string name="android_corepacth_UsePreSig">安装时始终使用已安装应用的签名</string>
-    <string name="android_corepacth_UsePreSig_summary">不是一般的<font color="#FF0000"><b>危险</b></font>，仅在绝对需要时启用</string>
+    <string name="android_corepacth_UsePreSig_summary"><font color="#FF0000"><b>危险</b></font>，仅在绝对需要时启用</string>
     <string name="android_corepacth_authcreak">禁用软件包管理器签名验证</string>
     <string name="android_corepacth_authcreak_summary">关闭安装应用时的签名验证，可以安装被篡改的应用</string>
     <string name="android_corepacth_digestCreak">禁用应用签名验证</string>
