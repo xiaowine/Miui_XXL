@@ -1,8 +1,7 @@
 <div align="center">
 
 # Miui XXL
- 
- 
+
 ![Release Download](https://img.shields.io/github/downloads/xiaowine/Miui_XXL/total?style=flat-square)
 [![Release Version](https://img.shields.io/github/v/release/xiaowine/Miui_XXLc?style=flat-square)](https://github.com/xiaowine/Miui_XXL/releases/latest)  
 [![GitHub license](https://img.shields.io/github/license/xiaowine/Miui_XXL?style=flat-square)](LICENSE)
@@ -18,17 +17,15 @@
 |------------------|------------------------|
 | [点此](/README.md) | [Click](/README_EN.md) |
 
+
 </div>
 
+# Modify an Xposed module that adds MIUI functionality
 
-# 修改，添加MIUI的功能的一个Xposed模块
-## 仅支持[LSPosed](https://github.com/Lsposed/Lsposed)
+## Supported Only[LSPosed](https://github.com/Lsposed/Lsposed)
 
-# 帮助翻译
+# Help with translation
 
-[![Crowdin](https://badges.crowdin.net/miuixxl/localized.svg)](https://zh.crowdin.com/project/miuixxl)
+[![Crowdin](https://badges.crowdin.net/miuixxl/localized.svg)](https://crowdin.com/project/miuixxl)
 
-[点击进入Crowdin](https://zh.crowdin.com/project/miuixxl)
-
-
-这个项目我接手了，~~空空摸鱼了~~
+[Click to enter Crowdin](https://crowdin.com/project/miuixxl)
