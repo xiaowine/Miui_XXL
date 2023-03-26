@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="xposed_description"></string>
+    <string name="xposed_description">Chowder</string>
     <string name="tips">İpuçları</string>
     <string name="not_support">Modül aktif değil. Lütfen modülü etkinleştirin ve tekrar deneyin</string>
-    <string name="hide_desktop_icon">masaüstü simgelerini gizle</string>
+    <string name="hide_desktop_icon">Masaüstü simgelerini gizle</string>
     <string name="done">Tamamlandı</string>
     <string name="cancel">İptal et</string>
     <string name="backup">Yedek Modül Ayarları</string>
