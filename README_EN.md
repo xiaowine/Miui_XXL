@@ -10,7 +10,6 @@
 ![GitHub Repo size](https://img.shields.io/github/repo-size/xiaowine/Miui_XXL?style=flat-square&color=3cb371)  
 [![GitHub Repo Languages](https://img.shields.io/github/languages/top/xiaowine/Miui_XXL?style=flat-square)](https://github.com/xiaowine/Miui_XXL/search?l=java)
 [![Build Status](https://img.shields.io/endpoint.svg?url=https://actions-badge.atrox.dev/xiaowine/Miui_XXL/badge?ref=main&style=flat)](https://actions-badge.atrox.dev/xiaowine/Miui_XXL/goto?ref=main)  
-[![GitHub Star](https://img.shields.io/github/stars/xiaowine/Miui_XXL.svg?style=social)](https://github.com/xiaowine/Miui_XXL)
 
 
 | 中文               | English                |

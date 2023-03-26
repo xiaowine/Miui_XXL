@@ -1,5 +1,5 @@
 <resources>
-    <string name="xposed_description">自用大杂烩</string>
+    <string name="xposed_description">大杂烩</string>
     <string name="tips">提示</string>
     <string name="not_support">模块未激活，请激活模块后重试</string>
     <string name="hide_desktop_icon">隐藏桌面图标</string>
