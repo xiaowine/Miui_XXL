@@ -74,6 +74,8 @@
     <string name="miuihome_unlock_animation_summary">Kilit açarken kilit ekranından masaüstüne geçiş efektini optimize edin</string>
     <string name="miuihome_blur_when_open_folder">Klasör Görünümü Bulanıklığı</string>
     <string name="miuihome_blur_when_open_folder_summary">Klasörü Açarken Bulanıklaştırmayı Etkinleştir</string>
+    <string name="miuihome_real_memory">Фон показывает фактическое использование и общий объем памяти</string>
+    <string name="miuihome_real_memory_summary">Взлом поддельной памяти MIUI</string>
     <string name="miuihome_always_show_statusbar_clock">Her zaman durum çubuğu saatini göster</string>
     <string name="miuihome_always_show_statusbar_clock_summary">Başlatıcıda herhangi bir saat widget\'ı varken durum çubuğu saatini kaldırmayın</string>
     <string name="miuihome_task_view_card_size_binding">Görev görünümü kartı boyutunu özelleştirin</string>

@@ -20,6 +20,7 @@ import com.yuk.miuiXXL.hooks.modules.miuihome.DisableRecentViewWallpaperDarkenin
 import com.yuk.miuiXXL.hooks.modules.miuihome.DoubleTapToSleep
 import com.yuk.miuiXXL.hooks.modules.miuihome.IconCellCount
 import com.yuk.miuiXXL.hooks.modules.miuihome.MinusOneOverlapMode
+import com.yuk.miuiXXL.hooks.modules.miuihome.RealMemory
 import com.yuk.miuiXXL.hooks.modules.miuihome.RecentViewRemoveCardAnim
 import com.yuk.miuiXXL.hooks.modules.miuihome.RemoveSmallWindowRestriction2
 import com.yuk.miuiXXL.hooks.modules.miuihome.ScrollIconName
@@ -166,6 +167,7 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit {
                         UseCompleteBlur,
                         MinusOneOverlapMode,
                         IconCellCount,
+                        RealMemory,
                     )
                 }
 
