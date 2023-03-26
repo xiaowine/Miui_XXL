@@ -1,25 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="xposed_description"></string>
     <string name="tips">İpuçları</string>
     <string name="not_support">Modül aktif değil. Lütfen modülü etkinleştirin ve tekrar deneyin</string>
     <string name="hide_desktop_icon">masaüstü simgelerini gizle</string>
-
     <string name="done">Tamamlandı</string>
     <string name="cancel">İptal et</string>
-
     <string name="backup">Yedek Modül Ayarları</string>
     <string name="recovery">Kurtarma Modülü Ayarları</string>
-
     <string name="def">Varsayılan：</string>
     <string name="current">Mevcut durum：</string>
     <string name="scope">kapsam：</string>
-
     <string name="reboot_system">Sistemi yeniden başlatın</string>
     <string name="reboot_system_summary">Sistem yeniden başlatılsın mı?</string>
     <string name="restart_scope">Kapsamı Yeniden Başlat</string>
     <string name="restart_scope_finished">Kapsam uygulama yeniden başlatma tamamlandı</string>
     <string name="restart_scope_summary">Kapsam uygulamasını yeniden başlattığınızdan emin misiniz?</string>
-
     <string name="android">Sistem çerçevesi</string>
     <string name="android_reboot">Etkili olması için yeniden başlatma gerektirir</string>
     <string name="android_corepacth">Çekirdek çatlaması</string>
@@ -39,24 +35,22 @@
     <string name="android_remove_small_window_restriction_summary">Küçük pencerelerin açılmasını desteklemek için çoğu uygulamayı kullanın, sistem başlatıcıyı ve SystemUI\'yi kontrol etmeniz gerekir</string>
     <string name="android_remove_screenshot_restriction">Ekran görüntüsü kısıtlamalarını kaldır</string>
     <string name="android_remove_screenshot_restriction_summary">Tüm arayüzlerin ekran görüntüsüne izin ver</string>
-
     <string name="mediaeditor">Medya düzenleyici</string>
     <string name="mediaeditor_remove_crop_restriction">Kırpma kısıtlamasını kaldır</string>
     <string name="mediaeditor_remove_crop_restriction_summary">Galeri ve Ekran Görüntüsünü aynı anda kontrol etmeniz gerekiyor</string>
-
     <string name="miuihome">MIUI Ana Sayfa</string>
     <string name="miuihome_anim_ratio_binding">özel animasyon hızı</string>
     <string name="miuihome_anim_ratio_binding_summary">Animasyon hızını farklı senaryolarda ayrı ayarlayın</string>
-    <string name="miuihome_anim_ratio">Geçiş animasyon hızı "Uygulama açıldığında veya kapatıldığında"</string>
+    <string name="miuihome_anim_ratio">Geçiş animasyon hızı \"Uygulama açıldığında veya kapatıldığında\"</string>
     <string name="miuihome_anim_ratio_summary">Uygulama açılıp kapatıldığında etkili olan geçiş animasyonunun hızı</string>
-    <string name="miuihome_anim_ratio_recent">Geçiş animasyon hızı "Arka planda içeri ve dışarı"</string>
+    <string name="miuihome_anim_ratio_recent">Geçiş animasyon hızı \"Arka planda içeri ve dışarı\"</string>
     <string name="miuihome_anim_ratio_recent_summary">En son göreve girip çıkarken etkili olan geçiş animasyonunun hızı</string>
     <string name="miuihome_double_tap_to_sleep">Ekranı kapatmak için çift tıklayın</string>
     <string name="miuihome_double_tap_to_sleep_summary">Ekranı kapatmak için masaüstündeki boş alanı çift tıklatın.</string>
     <string name="miuihome_hide_allapps_category_all">Tüm sekmeleri kaldır</string>
-    <string name="miuihome_hide_allapps_category_all_summary">Çekmecedeki uygulama grubunun "Tümü" sekmesini kaldırın</string>
+    <string name="miuihome_hide_allapps_category_all_summary">Çekmecedeki uygulama grubunun \"Tümü\" sekmesini kaldırın</string>
     <string name="miuihome_hide_allapps_category_paging_edit">Düzenle düğmesini kaldırın</string>
-    <string name="miuihome_hide_allapps_category_paging_edit_summary">Disk belleği uygulamak için çekmecedeki "Düzenle" düğmesini kaldırın</string>
+    <string name="miuihome_hide_allapps_category_paging_edit_summary">Disk belleği uygulamak için çekmecedeki \"Düzenle\" düğmesini kaldırın</string>
     <string name="miuihome_highend_device">Cihaz kısıtlamalarını kaldırın</string>
     <string name="miuihome_highend_device_summary">Varsayılan olarak üst düzey olarak tanınacaktır. Bu seçeneği açmak GPU performans yükünü artırmaz. Bazı günlükleri aynı anda kaldırın.</string>
     <string name="miuihome_recentview_remove_card_animation">Kart işaretleme animasyonunu değiştirme</string>
@@ -68,7 +62,7 @@
     <string name="miuihome_shortcut_add_small_window">Kısayol Menüsü Pencere Ekle</string>
     <string name="miuihome_shortcut_add_small_window_summary">Hızlı açılan bir pencere eklemek için masaüstü simgesini basılı tutun</string>
     <string name="miuihome_shortcut_add_small_window_title">Küçük pencere</string>
-    <string name="miuihome_two_x_one_icon_rounded_corner_following">Simge filetosu "1x2 &amp; 2x1" i takip eder</string>
+    <string name="miuihome_two_x_one_icon_rounded_corner_following">Simge filetosu \"1x2 &amp; 2x1\" i takip eder</string>
     <string name="miuihome_two_x_one_icon_rounded_corner_following_summary">MIUI beyin pompalama tarafından tasarlanan büyük yuvarlak köşe 2x1 ve 1x2 simgesini normal küçük yuvarlak köşeye değiştirin</string>
     <string name="miuihome_unlock_animation">Kilit açma animasyonunu optimize edin</string>
     <string name="miuihome_unlock_animation_summary">Kilit açarken kilit ekranından masaüstüne geçiş efektini optimize edin</string>
@@ -93,13 +87,11 @@
     <string name="miuihome_minus_one_overlap_mode_summary">Eksi bir ekran bulanıklığı ile birlikte kullanılır ve sistem başlatıcının kontrol edilmesi gerekir</string>
     <string name="miuihome_unlock_cell_count">Başlatıcı simge ızgaralarının kilidini açın</string>
     <string name="miuihome_unlock_cell_count_summary">Kelimesiz modda kilit açmada hala sorunlar var</string>
-
     <string name="thememanager">Tema duvar kağıdı</string>
     <string name="thememanager_fuck_validate_theme">Tema crack</string>
     <string name="thememanager_fuck_validate_theme_summary">Üçüncü taraf temalarının ve yazı tiplerinin uygulanmasına izin verir ve kontrol edilmesi ve sistem çerçevesinin yeniden başlatılması gerekir.</string>
     <string name="thememanager_remove_ads">Reklâm yapmak</string>
     <string name="thememanager_remove_ads_summary">En sevdiğiniz reklamların boş kartlar olarak gösterileceğini ve geri kalan reklamların tamamen kaldırılacağını tahmin edin</string>
-
     <string name="systemui">Sistem arayüzü</string>
     <string name="systemui_lockscreen_remove_camera">Kilit ekranı kamerasını kaldır</string>
     <string name="systemui_lockscreen_remove_camera_summary">Kilit ekranı arayüzünün sağ alt köşesindeki simgeyi ve kamera işlevini kaldırın</string>
@@ -119,30 +111,24 @@
     <string name="systemui_show_wifi_standard_summary">WiFi simgesinin sağ alt köşesi mevcut Wi-Fi protokolünü gösterir.</string>
     <string name="systemui_lockscreen_show_seconds">Kilit ekranında saniye cinsinden süre</string>
     <string name="systemui_lockscreen_show_seconds_summary">Kilit ekranı konumundaki süre saniye cinsinden görüntülenir</string>
-
     <string name="powerkeeper">Güç ve performans</string>
     <string name="powerkeeper_disable_dynamic_refresh_rate">Yenileme hızını kilitle</string>
     <string name="powerkeeper_disable_dynamic_refresh_rate_summary">Kamera dışında küresel yüksek kare hızına ulaşmak için dinamik yenileme hızını devre dışı bırakın</string>
-
     <string name="securitycenter">Mobil uşak</string>
     <string name="securitycenter_show_battery_temperature">Ekran özgül sıcaklık</string>
     <string name="securitycenter_show_battery_temperature_summary">Belirli sıcaklık, güç tasarrufu ve pilin pil sayfasının geçerli sıcaklığında görüntülenir</string>
     <string name="securitycenter_skip_warning_wait_time">Uyarıyı atla bekle</string>
     <string name="securitycenter_skip_warning_wait_time_summary">En tehlikeli seçeneklerin bekleme onay geri sayım süresini atlayın</string>
     <string name="securitycenter_remove_macro_blacklist">Oyun makrosu kara listesini kaldır</string>
-
     <string name="updater">Sistem güncellemesi</string>
     <string name="updater_fuck_vab_update">Güncelleme doğrulamasını kaldır</string>
-    <string name="updater_fuck_vab_update_summary">-Sadece  <font color='#FF0000'><b>VAB</b></font>  modelleri desteklenir. Lütfen diğer modelleri açmayın \n-Dahili test paketinin tamamını fırçalamak için dahili test yeterliliği gerekmez \n-İzinleri olan kullanıcılar güncellemeleri alamayacak ve güncellemeleri maskelemek için de kullanılabilir \n-Sadece resmi sistem tarafından kullanılır</string>
-
+    <string name="updater_fuck_vab_update_summary">-Sadece  <font color="#FF0000"><b>VAB</b></font>  modelleri desteklenir. Lütfen diğer modelleri açmayın \n-Dahili test paketinin tamamını fırçalamak için dahili test yeterliliği gerekmez \n-İzinleri olan kullanıcılar güncellemeleri alamayacak ve güncellemeleri maskelemek için de kullanılabilir \n-Sadece resmi sistem tarafından kullanılır</string>
     <string name="settings">Ayarlar</string>
     <string name="settings_notification_importance">Bildirim önemi</string>
     <string name="settings_notification_importance_summary">MIUI tarafından gizlenen bildirim önem ayarlarını göster</string>
-
     <string name="personalassistant">Uygulama Kasası</string>
     <string name="personalassistant_minus_one_blur">Eksi Bir Ekran Bulanıklığı</string>
     <string name="personalassistant_minus_one_blur_summary">MediaTek cihazlarının yalnızca Android 13\'te etkinleştirilmesi önerilir, Android 13 olmayan MediaTek cihazları, bulanıklık yarıçapını dinamik olarak ayarlarken genellikle siyah bir ekrana sahiptir</string>
-
     <string name="packageinstaller">Paket Yükleyici</string>
     <string name="packageinstaller_allow_update_system_app">Sistem uygulamalarının güncellenmesine izin ver</string>
     <string name="packageinstaller_remove_ads">Reklamları kaldır</string>
@@ -152,5 +138,4 @@
     <string name="packageinstaller_app_sdk_title">Desteklenen SDK</string>
     <string name="packageinstaller_app_size_title">Uygulama Boyutu</string>
     <string name="packageinstaller_disable_count_check">Uygulama yüklemesinin sayım denetimini devre dışı bırakın</string>
-
 </resources>
