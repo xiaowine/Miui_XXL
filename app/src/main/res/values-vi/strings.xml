@@ -5,22 +5,22 @@
     <string name="not_support">Mô-đun chưa được kích hoạt, vui lòng kích hoạt mô-đun và thử lại</string>
     <string name="hide_desktop_icon">Ẩn biểu tượng ứng dụng trên màn hình chính</string>
     <string name="done">Xong</string>
-    <string name="cancel">Cancel</string>
-    <string name="backup">Backup Module Settings</string>
-    <string name="recovery">Recovery Module Settings</string>
-    <string name="def">Default: </string>
-    <string name="current">Current: </string>
-    <string name="scope">Scope: </string>
-    <string name="reboot_system">Reboot System</string>
-    <string name="reboot_system_summary">Are you sure to reboot the system?</string>
-    <string name="restart_scope">Restart Scope</string>
-    <string name="restart_scope_finished">Scope application restart completed</string>
-    <string name="restart_scope_summary">Are you sure to restart the scope application?</string>
+    <string name="cancel">Hủy bỏ</string>
+    <string name="backup">Sao lưu cài đặt module</string>
+    <string name="recovery">Khôi phục cài đặt mô-đun</string>
+    <string name="def">Mặc định: </string>
+    <string name="current">Hiện tại: </string>
+    <string name="scope">Phạm vi: </string>
+    <string name="reboot_system">Khởi động lại hệ thống</string>
+    <string name="reboot_system_summary">Bạn có chắc chắn muốn khởi động lại hệ thống?</string>
+    <string name="restart_scope">Khởi động lại phạm vi</string>
+    <string name="restart_scope_finished">Hoàn thành khởi động lại phạm vi</string>
+    <string name="restart_scope_summary">Bạn có chắc chắn muốn khởi động lại tất cả các phạm vi không?</string>
     <string name="android">Framework</string>
-    <string name="android_reboot">Requires reboot system to take effect</string>
-    <string name="android_corepacth">Core cracking</string>
-    <string name="android_corepacth_UsePreSig">Always use the signature of the installed app when installing</string>
-    <string name="android_corepacth_UsePreSig_summary">Not ordinary <font color="#FF0000"><b>dangerous</b></font>, Enable only when absolutely needed</string>
+    <string name="android_reboot">Việc sửa đổi cần khởi động lại hệ thống để có hiệu lực</string>
+    <string name="android_corepacth">Bẻ khóa Core</string>
+    <string name="android_corepacth_UsePreSig">Luôn sử dụng chữ ký của ứng dụng đã cài đặt khi cài đặt</string>
+    <string name="android_corepacth_UsePreSig_summary"><font color="#FF0000"><b>Nguy hiểm</b></font>, chỉ bật khi thực sự cần thiết</string>
     <string name="android_corepacth_authcreak">Disable package manager signature verification</string>
     <string name="android_corepacth_authcreak_summary">Turn off the signature verification when installing the application, you can install the tampered application</string>
     <string name="android_corepacth_digestCreak">Disable app signature verification</string>
