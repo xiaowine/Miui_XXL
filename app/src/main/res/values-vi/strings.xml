@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="xposed_description">Chowder</string>
-    <string name="tips">Tips</string>
-    <string name="not_support">The module is not activated. Please activate the module and try again</string>
-    <string name="hide_desktop_icon">Hide desktop icon</string>
-    <string name="done">Done</string>
+    <string name="tips">Mẹo</string>
+    <string name="not_support">Mô-đun chưa được kích hoạt, vui lòng kích hoạt mô-đun và thử lại</string>
+    <string name="hide_desktop_icon">Ẩn biểu tượng ứng dụng trên màn hình chính</string>
+    <string name="done">Xong</string>
     <string name="cancel">Cancel</string>
     <string name="backup">Backup Module Settings</string>
     <string name="recovery">Recovery Module Settings</string>
