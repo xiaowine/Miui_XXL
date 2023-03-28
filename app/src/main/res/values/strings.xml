@@ -118,6 +118,8 @@
     <string name="systemui_wave_charge_animation_summary">Use Mix Alpha charge animation instead of default charge animation</string>
     <string name="systemui_show_wifi_standard">Show Wifi Standard</string>
     <string name="systemui_show_wifi_standard_summary">WIFI icon shows the Wi-Fi protocol</string>
+    <string name="systemui_show_statusbar_battery">StatusBar Show about Battery</string>
+    <string name="systemui_show_statusbar_battery_summary">Charging display only, refresh rate is determined by the system</string>
     <string name="systemui_lockscreen_show_seconds">Time in seconds on Lock screen</string>
     <string name="systemui_lockscreen_show_seconds_summary">The time of the position of the lock screen is displayed in seconds</string>
 

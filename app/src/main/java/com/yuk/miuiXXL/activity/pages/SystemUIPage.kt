@@ -15,6 +15,10 @@ class SystemUIPage : BasePage() {
 
     override fun onCreate() {
         TextSummaryWithSwitch(
+            TextSummaryV(textId = R.string.systemui_show_statusbar_battery, tipsId = R.string.systemui_show_wifi_standard_summary),
+            SwitchV("systemui_show_statusbar_battery", false)
+        )
+        TextSummaryWithSwitch(
             TextSummaryV(textId = R.string.systemui_show_wifi_standard, tipsId = R.string.systemui_show_wifi_standard_summary),
             SwitchV("systemui_show_wifi_standard", false)
         )
