@@ -109,6 +109,8 @@
     <string name="systemui_wave_charge_animation_summary">使用 Mix Apha 充电动画代替默认充电动画</string>
     <string name="systemui_show_wifi_standard">显示 WiFi 角标</string>
     <string name="systemui_show_wifi_standard_summary">WiFi 图标右下角显示当前 Wi-Fi 协议</string>
+    <string name="systemui_show_statusbar_battery">状态栏显示关于电池</string>
+    <string name="systemui_show_statusbar_battery_summary">仅充电显示，刷新率由系统决定</string>
     <string name="systemui_lockscreen_show_seconds">锁屏时间显秒</string>
     <string name="systemui_lockscreen_show_seconds_summary">锁屏界面的时间以秒为单位显示</string>
     <string name="powerkeeper">电量和性能</string>
@@ -138,4 +140,8 @@
     <string name="packageinstaller_app_sdk_title">SDK</string>
     <string name="packageinstaller_app_size_title">大小</string>
     <string name="packageinstaller_disable_count_check">禁用频繁安装应用检查</string>
+    <string name="ResetModule">Reset Module</string>
+    <string name="ResetModuleDialogTips">The module is fine, please do not reset it at will</string>
+    <string name="ResetModuleDialog">Do you want to reset the module?</string>
+    <string name="ResetSuccess">The reset was successful</string>
 </resources>
