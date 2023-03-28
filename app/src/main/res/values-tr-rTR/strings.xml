@@ -109,6 +109,8 @@
     <string name="systemui_wave_charge_animation_summary">Varsayılan şarj animasyonu yerine Mix Alpha şarj animasyonunu kullanın</string>
     <string name="systemui_show_wifi_standard">WiFi Rozetini Göster</string>
     <string name="systemui_show_wifi_standard_summary">WiFi simgesinin sağ alt köşesi mevcut Wi-Fi protokolünü gösterir.</string>
+    <string name="systemui_show_statusbar_battery">StatusBar Show about Battery</string>
+    <string name="systemui_show_statusbar_battery_summary">Charging display only, refresh rate is determined by the system</string>
     <string name="systemui_lockscreen_show_seconds">Kilit ekranında saniye cinsinden süre</string>
     <string name="systemui_lockscreen_show_seconds_summary">Kilit ekranı konumundaki süre saniye cinsinden görüntülenir</string>
     <string name="powerkeeper">Güç ve performans</string>
@@ -138,4 +140,8 @@
     <string name="packageinstaller_app_sdk_title">Desteklenen SDK</string>
     <string name="packageinstaller_app_size_title">Uygulama Boyutu</string>
     <string name="packageinstaller_disable_count_check">Uygulama yüklemesinin sayım denetimini devre dışı bırakın</string>
+    <string name="ResetModule">Reset Module</string>
+    <string name="ResetModuleDialogTips">The module is fine, please do not reset it at will</string>
+    <string name="ResetModuleDialog">Do you want to reset the module?</string>
+    <string name="ResetSuccess">The reset was successful</string>
 </resources>
