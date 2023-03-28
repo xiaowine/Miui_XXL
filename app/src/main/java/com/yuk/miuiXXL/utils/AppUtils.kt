@@ -1,7 +1,13 @@
 package com.yuk.miuiXXL.utils
 
 import android.annotation.SuppressLint
+import android.app.Activity
 import android.os.Build
+import android.os.Handler
+import android.os.Looper
+import android.util.Log
+import android.widget.Toast
+import com.yuk.miuiXXL.BuildConfig
 import java.io.BufferedReader
 import java.io.DataOutputStream
 import java.io.IOException
@@ -77,3 +83,11 @@ fun exec(commands: Array<String>): String {
     return stringBuilder.toString()
 }
 
+private val handler by lazy { Handler(Looper.getMainLooper()) }
+
+fun showToastOnLooper(activity: Activity, message: Any?) {
+    handler.post {
+        Toast.makeText(activity, message.toString(), Toast.LENGTH_SHORT).show()
+    }
+    Log.i(BuildConfig.APPLICATION_ID, message.toString())
+}

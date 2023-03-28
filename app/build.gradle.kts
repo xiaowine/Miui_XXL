@@ -12,6 +12,7 @@ android {
     compileSdk = 33
     buildToolsVersion = "33.0.2"
     namespace = "com.yuk.miuiXXL"
+    val buildTime = System.currentTimeMillis()
     defaultConfig {
         applicationId = namespace
         minSdk = 31
@@ -19,6 +20,7 @@ android {
         versionCode = 1
         versionName = "0.0.1"
         ndk.abiFilters += "arm64-v8a"
+        buildConfigField("Long", "BUILD_TIME", "${buildTime}L")
     }
     val properties = Properties()
     runCatching { properties.load(project.rootProject.file("local.properties").inputStream()) }
