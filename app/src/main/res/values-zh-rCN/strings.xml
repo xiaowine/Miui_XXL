@@ -140,8 +140,8 @@
     <string name="packageinstaller_app_sdk_title">SDK</string>
     <string name="packageinstaller_app_size_title">大小</string>
     <string name="packageinstaller_disable_count_check">禁用频繁安装应用检查</string>
-    <string name="ResetModule">Reset Module</string>
-    <string name="ResetModuleDialogTips">The module is fine, please do not reset it at will</string>
-    <string name="ResetModuleDialog">Do you want to reset the module?</string>
-    <string name="ResetSuccess">The reset was successful</string>
+    <string name="ResetModule">重置模块</string>
+    <string name="ResetModuleDialogTips">模块没有问题，请不要随意重置</string>
+    <string name="ResetModuleDialog">是否要重置模块？</string>
+    <string name="ResetSuccess">重置成功</string>
 </resources>
