@@ -5,6 +5,7 @@ on:
     branches: [ main ]
     paths-ignore:
       - 'README.md'
+      - 'README_EN.md'
 
 jobs:
   build:
