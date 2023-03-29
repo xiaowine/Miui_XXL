@@ -10,7 +10,7 @@
 ![GitHub Repo size](https://img.shields.io/github/repo-size/Wine-Network/Miui_XXL?style=flat-square&color=3cb371)  
 [![GitHub Repo Languages](https://img.shields.io/github/languages/top/Wine-Network/Miui_XXL?style=flat-square)](https://github.com/xiaowine/Miui_XXL/search?l=java)
 [![Build Status](https://img.shields.io/endpoint.svg?url=https://actions-badge.atrox.dev/Wine-Network/Miui_XXL/badge?ref=main&style=flat)](https://actions-badge.atrox.dev/Wine-Network/Miui_XXL/goto?ref=main)  
-
+[![Telegram](https://img.shields.io/badge/Telegram-Miui_XXL-blue.svg?style=flat-square&color=12b7f5)](https://t.me/Miui_XXL)
 
 | 中文               | English                |
 |------------------|------------------------|
