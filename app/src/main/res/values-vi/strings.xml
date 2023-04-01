@@ -70,6 +70,8 @@
     <string name="miuihome_blur_when_open_folder_summary">Bật làm mờ khi mở thư mục</string>
     <string name="miuihome_real_memory">Nền hiển thị mức sử dụng thực tế và tổng bộ nhớ</string>
     <string name="miuihome_real_memory_summary">Chuyển đến bộ nhớ giả MIUI</string>
+    <string name="miuihome_infinite_scroll">Enable launcher infinite scroll</string>
+    <string name="miuihome_infinite_scroll_summary">Continuing right swipe from the last page will take you back to the first page</string>
     <string name="miuihome_always_show_statusbar_clock">Luôn hiển thị đồng hồ thanh trạng thái</string>
     <string name="miuihome_always_show_statusbar_clock_summary">Khi có widget đồng hồ ngoài desktop, đồng hồ trên thanh trạng thái không bị ẩn</string>
     <string name="miuihome_task_view_card_size_binding">Tùy chỉnh kích thước thẻ nhiệm vụ gần đây</string>
