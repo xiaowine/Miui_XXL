@@ -19,6 +19,7 @@ import com.yuk.miuiXXL.hooks.modules.miuihome.CategoryFeatures
 import com.yuk.miuiXXL.hooks.modules.miuihome.DisableRecentViewWallpaperDarkening
 import com.yuk.miuiXXL.hooks.modules.miuihome.DoubleTapToSleep
 import com.yuk.miuiXXL.hooks.modules.miuihome.IconCellCount
+import com.yuk.miuiXXL.hooks.modules.miuihome.InfiniteScroll
 import com.yuk.miuiXXL.hooks.modules.miuihome.MinusOneOverlapMode
 import com.yuk.miuiXXL.hooks.modules.miuihome.RealMemory
 import com.yuk.miuiXXL.hooks.modules.miuihome.RecentViewRemoveCardAnim
@@ -170,6 +171,7 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit {
                         MinusOneOverlapMode,
                         IconCellCount,
                         RealMemory,
+                        InfiniteScroll,
                     )
                 }
 
