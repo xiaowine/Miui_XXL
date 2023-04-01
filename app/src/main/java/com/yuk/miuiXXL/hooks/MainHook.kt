@@ -18,6 +18,7 @@ import com.yuk.miuiXXL.hooks.modules.miuihome.BlurWhenShowShortcutMenu
 import com.yuk.miuiXXL.hooks.modules.miuihome.CategoryFeatures
 import com.yuk.miuiXXL.hooks.modules.miuihome.DisableRecentViewWallpaperDarkening
 import com.yuk.miuiXXL.hooks.modules.miuihome.DoubleTapToSleep
+import com.yuk.miuiXXL.hooks.modules.miuihome.HideSeekPoint
 import com.yuk.miuiXXL.hooks.modules.miuihome.IconCellCount
 import com.yuk.miuiXXL.hooks.modules.miuihome.InfiniteScroll
 import com.yuk.miuiXXL.hooks.modules.miuihome.MinusOneOverlapMode
@@ -172,6 +173,7 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit {
                         IconCellCount,
                         RealMemory,
                         InfiniteScroll,
+                        HideSeekPoint,
                     )
                 }
 

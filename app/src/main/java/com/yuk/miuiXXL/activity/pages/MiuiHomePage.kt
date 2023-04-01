@@ -19,6 +19,10 @@ class MiuiHomePage : BasePage() {
 
     override fun onCreate() {
         TextSummaryWithSwitch(
+            TextSummaryV(textId = R.string.miuihome_hide_seek_point, tipsId = R.string.miuihome_hide_seek_point_summary),
+            SwitchV("miuihome_hide_seek_point", false)
+        )
+        TextSummaryWithSwitch(
             TextSummaryV(textId = R.string.miuihome_infinite_scroll, tipsId = R.string.miuihome_infinite_scroll_summary),
             SwitchV("miuihome_infinite_scroll", false)
         )
