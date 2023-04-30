@@ -129,6 +129,9 @@
     <string name="updater">Менеджер обновлений</string>
     <string name="updater_fuck_vab_update">Удалить проверку OTA</string>
     <string name="updater_fuck_vab_update_summary">-Поддерживаются <font color="#FF0000"><b>VAB</b></font> модели. Пожалуйта не используйте на других устройствах. \n-Для включения в круг внутренних тестов не требуется квалификация по внутреннему тестированию. \nПользователи с разрешениями не смогут получать обновления, а также их можно использовать для маскировки обновлений. \n--Использовать только с официальной системой</string>
+    <string name="file_explorer">File Explorer</string>
+    <string name="file_explorer_can_selectable">File Explorer Can Selectable</string>
+    <string name="file_explorer_is_single_line">File Explorer Is Single Line</string>
     <string name="settings">Настройки</string>
     <string name="settings_notification_importance">Важные уведомления</string>
     <string name="settings_notification_importance_summary">Показывает настройки важности уведомлений, которые скрыты в MIUI</string>
@@ -144,8 +147,16 @@
     <string name="packageinstaller_app_sdk_title">Поддерживаемый SDK</string>
     <string name="packageinstaller_app_size_title">Размер приложения</string>
     <string name="packageinstaller_disable_count_check">Отключает проверку количества установок приложения</string>
-    <string name="ResetModule">Сбросить настройки модуля</string>
-    <string name="ResetModuleDialogTips">Модуль в порядке, пожалуйста, не сбоасывайте его просто так</string>
-    <string name="ResetModuleDialog">Вы хотите сбросить модуль?</string>
-    <string name="ResetSuccess">Сброс прошел успешно</string>
+    <string name="reset_module">Сбросить настройки модуля</string>
+    <string name="reset_module_dialog_tips">Модуль в порядке, пожалуйста, не сбоасывайте его просто так</string>
+    <string name="reset_module_dialog">Вы хотите сбросить модуль?</string>
+    <string name="reset_success">Сброс прошел успешно</string>
+    <string name="addinfo_memory">Display RAM</string>
+    <string name="addinfo_zarm">Display zRAM</string>
+    <string name="addinfo_storage">Display ROM</string>
+    <string name="addinfo_uptime">Uptime</string>
+    <string name="addinfo_running_app_total">Displaying the total number of running software</string>
+    <string name="addinfo_running_service_total">Displaying the total number of running services</string>
+    <string name="addinfo_warning">Warning if the remaining memory is less than 20%</string>
+    <string name="addinfo_clean_mode">Clean mode</string>
 </resources>
