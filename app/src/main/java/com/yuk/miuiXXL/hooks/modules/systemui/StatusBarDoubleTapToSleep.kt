@@ -9,6 +9,7 @@ import com.github.kyuubiran.ezxhelper.utils.findMethod
 import com.github.kyuubiran.ezxhelper.utils.hookBefore
 import com.yuk.miuiXXL.hooks.modules.BaseHook
 import com.yuk.miuiXXL.utils.callMethod
+import com.yuk.miuiXXL.utils.getBoolean
 import de.robv.android.xposed.XposedHelpers
 import kotlin.math.abs
 
@@ -16,6 +17,7 @@ import kotlin.math.abs
 object StatusBarDoubleTapToSleep : BaseHook() {
 
     override fun init() {
+        if (!getBoolean("systemui_status_bar_double_tap_to_sleep", false)) return
         findMethod("com.android.systemui.statusbar.phone.MiuiPhoneStatusBarView") { name == "onFinishInflate" }.hookBefore {
             val view = it.thisObject as ViewGroup
             XposedHelpers.setAdditionalInstanceField(view, "currentTouchTime", 0L)

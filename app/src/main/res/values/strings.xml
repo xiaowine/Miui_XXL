@@ -126,6 +126,8 @@
     <string name="systemui_show_statusbar_battery_summary">Charging display only, refresh rate is determined by the system</string>
     <string name="systemui_lockscreen_show_seconds">Time in seconds on Lock screen</string>
     <string name="systemui_lockscreen_show_seconds_summary">The time of the position of the lock screen is displayed in seconds</string>
+    <string name="systemui_status_bar_double_tap_to_sleep">Status Bar Double Tap To Sleep</string>
+    <string name="systemui_status_bar_double_tap_to_sleep_summary">Status Bar Double Tap To Sleep</string>
 
     <string name="powerkeeper">Power and Performance</string>
     <string name="powerkeeper_disable_dynamic_refresh_rate">Lock refresh rate</string>

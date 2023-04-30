@@ -10,9 +10,8 @@ import com.yuk.miuiXXL.utils.getBoolean
 
 object SelectName : BaseHook() {
     override fun init() {
-        if (!getBoolean("file_explorer_can_selectable", false) && !getBoolean("file_explorer_is_single_line", false)) {
-            return
-        }
+        if (!getBoolean("file_explorer_can_selectable", false) && !getBoolean("file_explorer_is_single_line", false)) return
+
         findMethod("com.android.fileexplorer.view.FileListItem") { name == "onFinishInflate" }.hookAfter {
             (it.thisObject.getObject("mFileNameTextView") as TextView).apply {
                 setTextIsSelectable(getBoolean("file_explorer_can_selectable", false))
