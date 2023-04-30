@@ -15,5 +15,6 @@
         <item>com.miui.powerkeeper</item>
         <item>com.miui.screenshot</item>
         <item>com.miui.securitycenter</item>
+        <item>com.android.fileexplorer</item>
     </string-array>
 </resources>

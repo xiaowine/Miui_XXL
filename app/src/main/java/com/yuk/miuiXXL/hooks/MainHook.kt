@@ -9,6 +9,7 @@ import com.yuk.miuiXXL.hooks.modules.android.MaxWallpaperScale
 import com.yuk.miuiXXL.hooks.modules.android.RemoveScreenshotRestriction
 import com.yuk.miuiXXL.hooks.modules.android.RemoveSmallWindowRestriction1
 import com.yuk.miuiXXL.hooks.modules.android.corepatch.CorePatchMainHook
+import com.yuk.miuiXXL.hooks.modules.fileexplorer.SelectName
 import com.yuk.miuiXXL.hooks.modules.guardprovider.AntiDefraudAppManager
 import com.yuk.miuiXXL.hooks.modules.mediaeditor.RemoveCropRestriction
 import com.yuk.miuiXXL.hooks.modules.miuihome.AlwaysShowStatusBarClock
@@ -61,26 +62,27 @@ import de.robv.android.xposed.IXposedHookLoadPackage
 import de.robv.android.xposed.IXposedHookZygoteInit
 import de.robv.android.xposed.callbacks.XC_LoadPackage
 
-private const val TAG = "Miui XXL"
-private val PACKAGE_NAME_HOOKED = setOf(
-    "android",
-    "com.android.settings",
-    "com.android.systemui",
-    "com.android.thememanager",
-    "com.android.updater",
-    "com.miui.gallery",
-    "com.miui.guardprovider",
-    "com.miui.home",
-    "com.miui.mediaeditor",
-    "com.miui.packageinstaller",
-    "com.miui.personalassistant",
-    "com.miui.powerkeeper",
-    "com.miui.screenshot",
-    "com.miui.securitycenter"
-)
+
 
 class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit {
-
+    private val TAG = "Miui XXL"
+    private val PACKAGE_NAME_HOOKED = setOf(
+        "android",
+        "com.android.settings",
+        "com.android.systemui",
+        "com.android.thememanager",
+        "com.android.updater",
+        "com.miui.gallery",
+        "com.miui.guardprovider",
+        "com.miui.home",
+        "com.miui.mediaeditor",
+        "com.miui.packageinstaller",
+        "com.miui.personalassistant",
+        "com.miui.powerkeeper",
+        "com.miui.screenshot",
+        "com.miui.securitycenter",
+        "com.android.fileexplorer",
+    )
     override fun initZygote(startupParam: IXposedHookZygoteInit.StartupParam) {
         EzXHelperInit.initZygote(startupParam)
         CorePatchMainHook().initZygote(startupParam)
@@ -180,6 +182,11 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit {
                 "com.miui.mediaeditor" -> {
                     initHooks(
                         RemoveCropRestriction,
+                    )
+                }
+                "com.android.fileexplorer" -> {
+                    initHooks(
+                        SelectName,
                     )
                 }
 

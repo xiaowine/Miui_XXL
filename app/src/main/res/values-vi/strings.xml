@@ -140,8 +140,8 @@
     <string name="packageinstaller_app_sdk_title">SDK hỗ trợ</string>
     <string name="packageinstaller_app_size_title">Kích thước ứng dụng</string>
     <string name="packageinstaller_disable_count_check">Tắt kiểm tra số lần cài đặt ứng dụng</string>
-    <string name="ResetModule">Đặt lại Module</string>
-    <string name="ResetModuleDialogTips">Mô-đun vẫn ổn, vui lòng không tùy ý đặt lại</string>
-    <string name="ResetModuleDialog">Bạn có muốn đặt lại module không?</string>
-    <string name="ResetSuccess">Đặt lại thành công</string>
+    <string name="reset_module">Đặt lại Module</string>
+    <string name="reset_module_dialog_tips">Mô-đun vẫn ổn, vui lòng không tùy ý đặt lại</string>
+    <string name="reset_module_dialog">Bạn có muốn đặt lại module không?</string>
+    <string name="reset_success">Đặt lại thành công</string>
 </resources>

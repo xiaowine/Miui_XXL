@@ -140,8 +140,8 @@
     <string name="packageinstaller_app_sdk_title">Поддерживаемый SDK</string>
     <string name="packageinstaller_app_size_title">Размер приложения</string>
     <string name="packageinstaller_disable_count_check">Отключает проверку количества установок приложения</string>
-    <string name="ResetModule">Сбросить настройки модуля</string>
-    <string name="ResetModuleDialogTips">Модуль в порядке, пожалуйста, не сбоасывайте его просто так</string>
-    <string name="ResetModuleDialog">Вы хотите сбросить модуль?</string>
-    <string name="ResetSuccess">Сброс прошел успешно</string>
+    <string name="reset_module">Сбросить настройки модуля</string>
+    <string name="reset_module_dialog_tips">Модуль в порядке, пожалуйста, не сбоасывайте его просто так</string>
+    <string name="reset_module_dialog">Вы хотите сбросить модуль?</string>
+    <string name="reset_success">Сброс прошел успешно</string>
 </resources>

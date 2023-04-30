@@ -7,6 +7,7 @@ import cn.fkj233.ui.activity.MIUIActivity
 import cn.fkj233.ui.dialog.MIUIDialog
 import com.yuk.miuiXXL.R
 import com.yuk.miuiXXL.activity.pages.AndroidPage
+import com.yuk.miuiXXL.activity.pages.FileExplorer
 import com.yuk.miuiXXL.activity.pages.MainPage
 import com.yuk.miuiXXL.activity.pages.MediaEditorPage
 import com.yuk.miuiXXL.activity.pages.MenuPage
@@ -60,6 +61,7 @@ class MainActivity : MIUIActivity() {
         registerPage(MediaEditorPage::class.java)
         registerPage(PersonalAssistantPage::class.java)
         registerPage(PackageInstallerPage::class.java)
+        registerPage(FileExplorer::class.java)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
