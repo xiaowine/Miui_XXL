@@ -129,6 +129,9 @@
     <string name="updater">Sistem güncellemesi</string>
     <string name="updater_fuck_vab_update">Güncelleme doğrulamasını kaldır</string>
     <string name="updater_fuck_vab_update_summary">-Sadece  <font color="#FF0000"><b>VAB</b></font>  modelleri desteklenir. Lütfen diğer modelleri açmayın \n-Dahili test paketinin tamamını fırçalamak için dahili test yeterliliği gerekmez \n-İzinleri olan kullanıcılar güncellemeleri alamayacak ve güncellemeleri maskelemek için de kullanılabilir \n-Sadece resmi sistem tarafından kullanılır</string>
+    <string name="file_explorer">File Explorer</string>
+    <string name="file_explorer_can_selectable">File Explorer Can Selectable</string>
+    <string name="file_explorer_is_single_line">File Explorer Is Single Line</string>
     <string name="settings">Ayarlar</string>
     <string name="settings_notification_importance">Bildirim önemi</string>
     <string name="settings_notification_importance_summary">MIUI tarafından gizlenen bildirim önem ayarlarını göster</string>
@@ -144,8 +147,16 @@
     <string name="packageinstaller_app_sdk_title">Desteklenen SDK</string>
     <string name="packageinstaller_app_size_title">Uygulama Boyutu</string>
     <string name="packageinstaller_disable_count_check">Uygulama yüklemesinin sayım denetimini devre dışı bırakın</string>
-    <string name="ResetModule">Reset Module</string>
-    <string name="ResetModuleDialogTips">The module is fine, please do not reset it at will</string>
-    <string name="ResetModuleDialog">Do you want to reset the module?</string>
-    <string name="ResetSuccess">The reset was successful</string>
+    <string name="reset_module">Reset Module</string>
+    <string name="reset_module_dialog_tips">The module is fine, please do not reset it at will</string>
+    <string name="reset_module_dialog">Do you want to reset the module?</string>
+    <string name="reset_success">The reset was successful</string>
+    <string name="addinfo_memory">Display RAM</string>
+    <string name="addinfo_zarm">Display zRAM</string>
+    <string name="addinfo_storage">Display ROM</string>
+    <string name="addinfo_uptime">Uptime</string>
+    <string name="addinfo_running_app_total">Displaying the total number of running software</string>
+    <string name="addinfo_running_service_total">Displaying the total number of running services</string>
+    <string name="addinfo_warning">Warning if the remaining memory is less than 20%</string>
+    <string name="addinfo_clean_mode">Clean mode</string>
 </resources>
