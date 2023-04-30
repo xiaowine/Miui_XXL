@@ -117,6 +117,8 @@
     <string name="systemui_show_statusbar_battery_summary">Только при зарядке, частота обновления определяется системой</string>
     <string name="systemui_lockscreen_show_seconds">Показывать секунды на экране блокировки</string>
     <string name="systemui_lockscreen_show_seconds_summary">Показывает секунды в часах экрана блокировки</string>
+    <string name="systemui_status_bar_double_tap_to_sleep">Двойное нажатие на строке состояния</string>
+    <string name="systemui_status_bar_double_tap_to_sleep_summary">Двойное нажатие на строке состояния для перехода в спящий режим</string>
     <string name="powerkeeper">Питание и производительность</string>
     <string name="powerkeeper_disable_dynamic_refresh_rate">Заблокировать частоту обновления</string>
     <string name="powerkeeper_disable_dynamic_refresh_rate_summary">Отключает динамическую частоту обновления</string>
@@ -129,6 +131,9 @@
     <string name="updater">Менеджер обновлений</string>
     <string name="updater_fuck_vab_update">Удалить проверку OTA</string>
     <string name="updater_fuck_vab_update_summary">-Поддерживаются <font color="#FF0000"><b>VAB</b></font> модели. Пожалуйта не используйте на других устройствах. \n-Для включения в круг внутренних тестов не требуется квалификация по внутреннему тестированию. \nПользователи с разрешениями не смогут получать обновления, а также их можно использовать для маскировки обновлений. \n--Использовать только с официальной системой</string>
+    <string name="file_explorer">Проводник</string>
+    <string name="file_explorer_can_selectable">Проводник можно выбрать</string>
+    <string name="file_explorer_is_single_line">Проводник файлов - это одна линия????</string>
     <string name="settings">Настройки</string>
     <string name="settings_notification_importance">Важные уведомления</string>
     <string name="settings_notification_importance_summary">Показывает настройки важности уведомлений, которые скрыты в MIUI</string>
@@ -138,7 +143,7 @@
     <string name="packageinstaller">Установщик пакетов</string>
     <string name="packageinstaller_allow_update_system_app">Разрешить обновление системных приложений</string>
     <string name="packageinstaller_remove_ads">Удалить рекламу</string>
-    <string name="packageinstaller_show_more_apk_info">Показать больше информации об устанавливаемомприложении</string>
+    <string name="packageinstaller_show_more_apk_info">Показать больше информации об устанавливаемом приложении</string>
     <string name="packageinstaller_app_versionname_title">Имя версии</string>
     <string name="packageinstaller_app_versioncode_title">Код версии</string>
     <string name="packageinstaller_app_sdk_title">Поддерживаемый SDK</string>
