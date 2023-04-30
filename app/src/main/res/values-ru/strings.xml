@@ -153,12 +153,4 @@
     <string name="reset_module_dialog_tips">Модуль в порядке, пожалуйста, не сбоасывайте его просто так</string>
     <string name="reset_module_dialog">Вы хотите сбросить модуль?</string>
     <string name="reset_success">Сброс прошел успешно</string>
-    <string name="addinfo_memory">Отображать ОЗУ</string>
-    <string name="addinfo_zarm">Отображать zRAM</string>
-    <string name="addinfo_storage">Показывать прошивку</string>
-    <string name="addinfo_uptime">Время работы</string>
-    <string name="addinfo_running_app_total">Отображение общего количества запущенных программ</string>
-    <string name="addinfo_running_service_total">Отображение общего количества запущенных сервисов</string>
-    <string name="addinfo_warning">Предупреждать если оставшаяся память меньше 20%</string>
-    <string name="addinfo_clean_mode">Режим очистки</string>
 </resources>

@@ -153,12 +153,4 @@
     <string name="reset_module_dialog_tips">The module is fine, please do not reset it at will</string>
     <string name="reset_module_dialog">Do you want to reset the module?</string>
     <string name="reset_success">The reset was successful</string>
-    <string name="addinfo_memory">Display RAM</string>
-    <string name="addinfo_zarm">Display zRAM</string>
-    <string name="addinfo_storage">Display ROM</string>
-    <string name="addinfo_uptime">Uptime</string>
-    <string name="addinfo_running_app_total">Displaying the total number of running software</string>
-    <string name="addinfo_running_service_total">Displaying the total number of running services</string>
-    <string name="addinfo_warning">Warning if the remaining memory is less than 20%</string>
-    <string name="addinfo_clean_mode">Clean mode</string>
 </resources>

@@ -153,12 +153,4 @@
     <string name="reset_module_dialog_tips">Mô-đun vẫn ổn, vui lòng không tùy ý đặt lại</string>
     <string name="reset_module_dialog">Bạn có muốn đặt lại module không?</string>
     <string name="reset_success">Đặt lại thành công</string>
-    <string name="addinfo_memory">Display RAM</string>
-    <string name="addinfo_zarm">Display zRAM</string>
-    <string name="addinfo_storage">Display ROM</string>
-    <string name="addinfo_uptime">Uptime</string>
-    <string name="addinfo_running_app_total">Displaying the total number of running software</string>
-    <string name="addinfo_running_service_total">Displaying the total number of running services</string>
-    <string name="addinfo_warning">Warning if the remaining memory is less than 20%</string>
-    <string name="addinfo_clean_mode">Clean mode</string>
 </resources>

@@ -72,19 +72,19 @@ jobs:
       - name: Upload Release APK
         uses: actions/upload-artifact@v2
         with:
-          name: StatusBarLyric_release
+          name: MIUI XXL release
           path: ${{ steps.sign_release.outputs.signedReleaseFile }}
 
       - name: Upload Debug APK
         uses: actions/upload-artifact@v2
         with:
-          name: StatusBarLyric_debug
+          name: MIUI XXL debug
           path: ${{ steps.sign_debug.outputs.signedReleaseFile }}
 
       - name: Upload Release Mapping
         uses: actions/upload-artifact@v2
         with:
-          name: StatusBarLyric_release_mapping
+          name: MIUI XXL mapping
           path: ./app/build/outputs/mapping/release/mapping.txt
 
       - name: Post to channel

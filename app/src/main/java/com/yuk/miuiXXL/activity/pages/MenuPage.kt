@@ -61,6 +61,7 @@ class MenuPage : BasePage() {
                         "am force-stop com.miui.powerkeeper",
                         "am force-stop com.miui.screenshot",
                         "am force-stop com.miui.securitycenter",
+                        "am force-stop com.android.fileexplorer",
                         "killall com.android.systemui"
                     )
                     exec(command)
@@ -82,13 +83,13 @@ class MenuPage : BasePage() {
                 }
             }.show()
         })
-        TextWithArrow(TextV(textId = R.string.ResetModule, onClickListener = {
+        TextWithArrow(TextV(textId = R.string.reset_module, onClickListener = {
             MIUIDialog(activity) {
-                setTitle(R.string.ResetModuleDialog)
-                setMessage(R.string.ResetModuleDialogTips)
+                setTitle(R.string.reset_module_dialog)
+                setMessage(R.string.reset_module_dialog_tips)
                 setLButton(R.string.done) {
                     activity.getSharedPreferences("MiuiXXL_Config", Activity.MODE_WORLD_READABLE).edit().clear().apply()
-                    Toast.makeText(activity, activity.getString(R.string.ResetSuccess), Toast.LENGTH_LONG).show()
+                    Toast.makeText(activity, activity.getString(R.string.reset_success), Toast.LENGTH_LONG).show()
                 }
                 setRButton(R.string.cancel)
                 finally { dismiss() }

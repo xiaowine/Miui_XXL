@@ -1,21 +1,10 @@
 package com.yuk.miuiXXL.activity.pages
 
 import android.annotation.SuppressLint
-import android.content.ComponentName
-import android.content.Context
-import android.content.pm.PackageManager
-import android.widget.Toast
-import cn.fkj233.ui.activity.MIUIActivity
 import cn.fkj233.ui.activity.annotation.BMMainPage
 import cn.fkj233.ui.activity.data.BasePage
-import cn.fkj233.ui.activity.view.SwitchV
-import cn.fkj233.ui.activity.view.TextV
-import cn.fkj233.ui.dialog.MIUIDialog
 import com.yuk.miuiXXL.R
-import com.yuk.miuiXXL.activity.MainActivity
-import com.yuk.miuiXXL.utils.BackupUtils
 import com.yuk.miuiXXL.utils.atLeastAndroidT
-import com.yuk.miuiXXL.utils.exec
 
 @BMMainPage("Miui XXL")
 class MainPage : BasePage() {
@@ -30,6 +19,7 @@ class MainPage : BasePage() {
         Page(activity.getDrawable(R.drawable.ic_settings)!!, pageNameId = R.string.settings, round = 8f, onClickListener = { showFragment("SettingsPage") })
         Page(activity.getDrawable(R.drawable.ic_miuihome)!!, pageNameId = R.string.miuihome, round = 8f, onClickListener = { showFragment("MiuiHomePage") })
         Page(activity.getDrawable(R.drawable.ic_update)!!, pageNameId = R.string.updater, round = 8f, onClickListener = { showFragment("UpdaterPage") })
+        Page(activity.getDrawable(R.drawable.ic_packageinstaller)!!, pageNameId = R.string.file_explorer, round = 8f, onClickListener = { showFragment("FileExplorerPage") })
         Page(
             activity.getDrawable(R.drawable.ic_personalassistant)!!,
             pageNameId = R.string.personalassistant,

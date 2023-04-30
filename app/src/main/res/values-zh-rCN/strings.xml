@@ -153,12 +153,4 @@
     <string name="reset_module_dialog_tips">模块没有问题，请不要随意重置</string>
     <string name="reset_module_dialog">是否要重置模块？</string>
     <string name="reset_success">重置成功</string>
-    <string name="addinfo_memory">Display RAM</string>
-    <string name="addinfo_zarm">Display zRAM</string>
-    <string name="addinfo_storage">Display ROM</string>
-    <string name="addinfo_uptime">Uptime</string>
-    <string name="addinfo_running_app_total">Displaying the total number of running software</string>
-    <string name="addinfo_running_service_total">Displaying the total number of running services</string>
-    <string name="addinfo_warning">Warning if the remaining memory is less than 20%</string>
-    <string name="addinfo_clean_mode">Clean mode</string>
 </resources>
