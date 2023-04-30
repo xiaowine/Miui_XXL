@@ -3,6 +3,7 @@ package com.yuk.miuiXXL.hooks
 import com.github.kyuubiran.ezxhelper.init.EzXHelperInit
 import com.github.kyuubiran.ezxhelper.utils.Log
 import com.github.kyuubiran.ezxhelper.utils.Log.logexIfThrow
+import com.yuk.miuiXXL.hooks.modules.systemui.StatusBarDoubleTapToSleep
 import com.yuk.miuiXXL.hooks.modules.BaseHook
 import com.yuk.miuiXXL.hooks.modules.android.FuckValidateTheme3
 import com.yuk.miuiXXL.hooks.modules.android.MaxWallpaperScale
@@ -126,6 +127,7 @@ class MainHook : IXposedHookLoadPackage, IXposedHookZygoteInit {
                         LockScreenShowSeconds,
                         UseNewHD,
                         StatusBarBattery,
+                        StatusBarDoubleTapToSleep,
                     )
                 }
 
