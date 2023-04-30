@@ -117,6 +117,8 @@
     <string name="systemui_show_statusbar_battery_summary">仅充电显示，刷新率由系统决定</string>
     <string name="systemui_lockscreen_show_seconds">锁屏时间显秒</string>
     <string name="systemui_lockscreen_show_seconds_summary">锁屏界面的时间以秒为单位显示</string>
+    <string name="systemui_status_bar_double_tap_to_sleep">Status Bar Double Tap To Sleep</string>
+    <string name="systemui_status_bar_double_tap_to_sleep_summary">Status Bar Double Tap To Sleep</string>
     <string name="powerkeeper">电量和性能</string>
     <string name="powerkeeper_disable_dynamic_refresh_rate">锁定刷新率</string>
     <string name="powerkeeper_disable_dynamic_refresh_rate_summary">禁用动态刷新率，实现除相机外全局高帧率</string>
