@@ -70,6 +70,10 @@
     <string name="miuihome_blur_when_open_folder_summary">打开文件夹时启用模糊</string>
     <string name="miuihome_real_memory">后台显示实际使用和总内存</string>
     <string name="miuihome_real_memory_summary">去TM MIUI虚假的内存</string>
+    <string name="miuihome_infinite_scroll">桌面无限滚动</string>
+    <string name="miuihome_infinite_scroll_summary">从最后一页继续右滑将回到第一页，如不开启智能助理则反之亦然</string>
+    <string name="miuihome_hide_seek_point">移除页面指示器</string>
+    <string name="miuihome_hide_seek_point_summary">移除页面指示器</string>
     <string name="miuihome_always_show_statusbar_clock">时钟常显</string>
     <string name="miuihome_always_show_statusbar_clock_summary">桌面上有时钟小部件时，不隐藏状态栏时钟</string>
     <string name="miuihome_task_view_card_size_binding">自定义最近任务卡片大小</string>

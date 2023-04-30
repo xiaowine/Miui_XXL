@@ -70,6 +70,10 @@
     <string name="miuihome_blur_when_open_folder_summary">Klasörü Açarken Bulanıklaştırmayı Etkinleştir</string>
     <string name="miuihome_real_memory">Фон показывает фактическое использование и общий объем памяти</string>
     <string name="miuihome_real_memory_summary">Взлом поддельной памяти MIUI</string>
+    <string name="miuihome_infinite_scroll">Enable launcher infinite scroll</string>
+    <string name="miuihome_infinite_scroll_summary">Continuing right swipe from the last page will take you back to the first page</string>
+    <string name="miuihome_hide_seek_point">Remove Page Indicator</string>
+    <string name="miuihome_hide_seek_point_summary">Remove Page Indicator</string>
     <string name="miuihome_always_show_statusbar_clock">Her zaman durum çubuğu saatini göster</string>
     <string name="miuihome_always_show_statusbar_clock_summary">Başlatıcıda herhangi bir saat widget\'ı varken durum çubuğu saatini kaldırmayın</string>
     <string name="miuihome_task_view_card_size_binding">Görev görünümü kartı boyutunu özelleştirin</string>
