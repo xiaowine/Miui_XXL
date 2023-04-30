@@ -117,6 +117,8 @@
     <string name="systemui_show_statusbar_battery_summary">Chỉ sạc màn hình, tốc độ làm mới được xác định bởi hệ thống</string>
     <string name="systemui_lockscreen_show_seconds">Thời gian khóa màn hình tính bằng giây</string>
     <string name="systemui_lockscreen_show_seconds_summary">Thời gian khóa màn hình được hiển thị trong vài giây</string>
+    <string name="systemui_status_bar_double_tap_to_sleep">Status Bar Double Tap To Sleep</string>
+    <string name="systemui_status_bar_double_tap_to_sleep_summary">Status Bar Double Tap To Sleep</string>
     <string name="powerkeeper">Sức mạnh và hiệu suất</string>
     <string name="powerkeeper_disable_dynamic_refresh_rate">Khóa tốc độ làm mới</string>
     <string name="powerkeeper_disable_dynamic_refresh_rate_summary">Tắt tốc độ làm mới động để đạt được tốc độ khung hình cao toàn cầu ngoại trừ máy ảnh</string>
