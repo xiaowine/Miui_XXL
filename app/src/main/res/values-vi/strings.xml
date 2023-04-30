@@ -129,6 +129,9 @@
     <string name="updater">Cập nhật</string>
     <string name="updater_fuck_vab_update">Xóa xác minh cập nhật</string>
     <string name="updater_fuck_vab_update_summary">- Chỉ hỗ trợ các kiểu máy <font color="#FF0000"><b>VAB</b></font>, vui lòng không bật các kiểu máy khác\n- Bạn có thể flash gói thử nghiệm nội bộ hoàn chỉnh mà không cần chứng nhận kiểm tra nội bộ\n - Người dùng có quyền sẽ không thể nhận các bản cập nhật và cũng có thể được sử dụng để chặn các bản cập nhật\n- Chỉ được sử dụng bởi các hệ thống chính thức</string>
+    <string name="file_explorer">File Explorer</string>
+    <string name="file_explorer_can_selectable">File Explorer Can Selectable</string>
+    <string name="file_explorer_is_single_line">File Explorer Is Single Line</string>
     <string name="settings">Cài đặt</string>
     <string name="settings_notification_importance">Thông báo quan trọng</string>
     <string name="settings_notification_importance_summary">Hiển thị cài đặt mức độ quan trọng của thông báo bị ẩn trong MIUI</string>
@@ -144,8 +147,16 @@
     <string name="packageinstaller_app_sdk_title">SDK hỗ trợ</string>
     <string name="packageinstaller_app_size_title">Kích thước ứng dụng</string>
     <string name="packageinstaller_disable_count_check">Tắt kiểm tra số lần cài đặt ứng dụng</string>
-    <string name="ResetModule">Đặt lại Module</string>
-    <string name="ResetModuleDialogTips">Mô-đun vẫn ổn, vui lòng không tùy ý đặt lại</string>
-    <string name="ResetModuleDialog">Bạn có muốn đặt lại module không?</string>
-    <string name="ResetSuccess">Đặt lại thành công</string>
+    <string name="reset_module">Đặt lại Module</string>
+    <string name="reset_module_dialog_tips">Mô-đun vẫn ổn, vui lòng không tùy ý đặt lại</string>
+    <string name="reset_module_dialog">Bạn có muốn đặt lại module không?</string>
+    <string name="reset_success">Đặt lại thành công</string>
+    <string name="addinfo_memory">Display RAM</string>
+    <string name="addinfo_zarm">Display zRAM</string>
+    <string name="addinfo_storage">Display ROM</string>
+    <string name="addinfo_uptime">Uptime</string>
+    <string name="addinfo_running_app_total">Displaying the total number of running software</string>
+    <string name="addinfo_running_service_total">Displaying the total number of running services</string>
+    <string name="addinfo_warning">Warning if the remaining memory is less than 20%</string>
+    <string name="addinfo_clean_mode">Clean mode</string>
 </resources>
